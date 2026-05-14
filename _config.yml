@@ -1,8 +1,8 @@
 title: Trading Tech Review
 description: Developer-first guide to trading tools and bots
 theme: minima
-baseurl: ""
-url: "https://tradingtechreview.io"
+baseurl: "/tradingtechreview"
+url: "https://siavashsed.github.io"
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 show_excerpts: true
