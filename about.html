@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — TradingTech Review</title>
+<meta name="description" content="Honest tool reviews for developers who trade algorithmically.">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{  --bg:#0d1117;--bg2:#161b22;--sur:#1c2128;
+  --pri:#58a6ff;--pri2:#1f6feb;
+  --txt:#e6edf3;--mut:#8b949e;--brd:#21262d;
+  --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:'Courier New',Courier,monospace;}
+html,body{min-height:100%;font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:15px;line-height:1.7}
+a{color:var(--pri);text-decoration:none}a:hover{text-decoration:underline}
+.trm-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px;border-bottom:1px solid var(--brd);background:var(--bg2);position:sticky;top:0;z-index:99}
+.trm-logo{font-family:var(--fm);font-size:17px;font-weight:700;color:var(--pri);text-decoration:none}
+.trm-logo em{color:var(--mut);font-style:normal;font-weight:400;font-size:12px;margin-left:8px}
+.trm-nav-links{display:flex;gap:28px}.trm-nav-links a{font-size:13px;color:var(--mut);font-family:var(--fm);transition:color .2s}.trm-nav-links a:hover{color:var(--txt);text-decoration:none}
+.abt-wrap{max-width:760px;margin:0 auto;padding:60px 40px}
+.abt-avatar{width:72px;height:72px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#000;font-family:var(--fm);margin-bottom:24px}
+.abt-name{font-size:28px;font-weight:700;margin-bottom:4px}
+.abt-title{font-family:var(--fm);font-size:13px;color:var(--pri);margin-bottom:28px}
+.abt-section{margin-bottom:32px}
+.abt-section-label{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:14px}
+.abt-section p{color:var(--mut);font-size:15px;line-height:1.85;margin-bottom:14px}
+.abt-nl{background:var(--bg2);border:1px solid var(--brd);border-radius:3px;padding:24px;margin-top:40px}
+.abt-nl h3{font-family:var(--fm);font-size:13px;font-weight:700;color:var(--txt);margin-bottom:8px}
+.abt-nl p{font-size:13px;color:var(--mut);margin-bottom:16px}
+.trm-nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);border-radius:2px;padding:9px 12px;color:var(--txt);font-size:13px;font-family:var(--fm);outline:none;margin-bottom:8px;transition:border-color .2s}
+.trm-nl-input:focus{border-color:var(--pri)}.trm-nl-input::placeholder{color:var(--mut)}
+.trm-nl-btn{background:var(--pri);color:#000;border:none;border-radius:2px;padding:10px 20px;font-size:12px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:background .2s}
+.trm-nl-btn:hover{background:var(--pri2)}
+.trm-nl-ok{font-family:var(--fm);font-size:12px;color:var(--pri);padding:6px 0}
+.trm-foot{margin-top:60px;border-top:1px solid var(--brd);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.trm-foot-copy{font-family:var(--fm);font-size:11px;color:var(--mut)}
+.trm-foot-links{display:flex;gap:18px}.trm-foot-links a{font-size:11px;color:var(--mut);font-family:var(--fm)}
+@media(max-width:600px){.trm-nav{padding:12px 16px}.abt-wrap{padding:36px 16px}.trm-foot{padding:16px;flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<nav class="trm-nav">
+  <a href="/" class="trm-logo">TradingTech Review<em>/ Trading Technology</em></a>
+  <div class="trm-nav-links"><a href="/">Home</a><a href="/about.html">About</a></div>
+</nav>
+<div class="abt-wrap">
+  <div class="abt-avatar">AR</div>
+  <div class="abt-name">Alex Rivera</div>
+  <div class="abt-title">Software Engineer & Algorithmic Trader</div>
+  <div class="abt-section">
+    <div class="abt-section-label">// background</div>
+    <p>I started as a software engineer writing data pipelines, then spent three years building and running my own algo strategies. I've used, broken, and benchmarked most of the tools in this space.</p>
+    <p>TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p>
+  </div>
+  <div class="abt-section">
+    <div class="abt-section-label">// this site</div>
+    <p>Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.</p>
+  </div>
+  <div class="abt-nl">
+    <h3>The Dev Trader Newsletter</h3>
+    <p>Tool reviews, code snippets, and platform updates worth knowing about.</p>
+    <form id="abt-nl" onsubmit="nlSub(event)">
+      <input type="email" class="trm-nl-input" placeholder="your@email.com" required>
+      <button type="submit" class="trm-nl-btn">Subscribe</button>
+    </form>
+  </div>
+</div>
+<footer class="trm-foot">
+  <span class="trm-foot-copy">© TradingTech Review</span>
+  <div class="trm-foot-links"><a href="/">Home</a><a href="/about.html">About</a></div>
+</footer>
+<script>function nlSub(e){e.preventDefault();e.target.innerHTML='<div class="trm-nl-ok">✓ Subscribed. Thank you.</div>';}</script>
+</body></html>
