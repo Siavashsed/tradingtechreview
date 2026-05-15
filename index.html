@@ -1,54 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>siavashsed.github.io/tradingtechreview — Trading Tools & Technology</title>
-<meta name="description" content="Expert insights on trading tools & technology">
-
-
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TradingTech Review — Tools, Code & Platforms for Algo Traders</title>
+<meta name="description" content="Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#0d0d0d;color:#e8e8e8;line-height:1.65;font-size:16px}
-a{color:#6c63ff;text-decoration:none}
-a:hover{color:#9d97ff}
-img{max-width:100%;display:block;height:auto}
-
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-.top-bar{background:#141414;border-bottom:1px solid #252525;padding:0}
-.logo{font-size:22px;font-weight:800;color:#6c63ff}
-.split{display:grid;grid-template-columns:2fr 1fr;gap:36px;margin:40px 0 48px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-@media(max-width:780px){.split{grid-template-columns:1fr}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{  --bg:#0d1117;--bg2:#161b22;--sur:#1c2128;
+  --pri:#58a6ff;--pri2:#1f6feb;
+  --txt:#e6edf3;--mut:#8b949e;--brd:#21262d;
+  --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:'Courier New',Courier,monospace;}
+html,body{min-height:100%;font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:15px;line-height:1.7}
+a{color:var(--pri);text-decoration:none}a:hover{text-decoration:underline}
+.trm-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px;border-bottom:1px solid var(--brd);background:var(--bg2);position:sticky;top:0;z-index:99}
+.trm-logo{font-family:var(--fm);font-size:17px;font-weight:700;color:var(--pri);letter-spacing:-0.5px;text-decoration:none}
+.trm-logo em{color:var(--mut);font-style:normal;font-weight:400;font-size:12px;margin-left:8px}
+.trm-nav-links{display:flex;gap:28px}
+.trm-nav-links a{font-size:13px;color:var(--mut);font-family:var(--fm);transition:color .2s}
+.trm-nav-links a:hover{color:var(--txt);text-decoration:none}
+.trm-hero{padding:56px 40px 36px;max-width:820px}
+.trm-hero-cat{font-family:var(--fm);font-size:11px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:14px}
+.trm-hero h1{font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.15;margin-bottom:14px;color:var(--txt)}
+.trm-hero p{color:var(--mut);font-size:15px;max-width:540px;line-height:1.85}
+.trm-body{display:grid;grid-template-columns:1fr 300px;gap:40px;padding:0 40px 60px;max-width:1180px;margin:0 auto;align-items:start}
+.trm-feed-hd{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;padding-bottom:12px;border-bottom:1px solid var(--brd);margin-bottom:22px}
+.trm-post{border:1px solid var(--brd);border-radius:3px;padding:20px 22px;background:var(--bg2);margin-bottom:14px;transition:border-color .18s}
+.trm-post:hover{border-color:var(--pri2)}
+.trm-post-meta{font-family:var(--fm);font-size:10px;color:var(--mut);margin-bottom:7px;display:flex;gap:14px}
+.trm-post-cat{color:var(--pri)}
+.trm-post h2{font-size:16px;font-weight:600;color:var(--txt);margin-bottom:8px;line-height:1.4}
+.trm-post p{font-size:13px;color:var(--mut);line-height:1.75;margin-bottom:10px}
+.trm-post-link{font-family:var(--fm);font-size:11px;color:var(--pri)}
+.trm-aside-box{background:var(--bg2);border:1px solid var(--brd);border-radius:3px;padding:18px;margin-bottom:16px}
+.trm-aside-hd{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:14px}
+.trm-aside-box p{font-size:12px;color:var(--mut);line-height:1.8;margin-bottom:10px}
+.trm-aside-box p:last-child{margin-bottom:0}
+.trm-nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);border-radius:2px;padding:9px 12px;color:var(--txt);font-size:12px;font-family:var(--fm);outline:none;margin-bottom:8px;transition:border-color .2s}
+.trm-nl-input:focus{border-color:var(--pri)}
+.trm-nl-input::placeholder{color:var(--mut)}
+.trm-nl-btn{width:100%;background:var(--pri);color:#000;border:none;border-radius:2px;padding:9px;font-size:12px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:background .2s}
+.trm-nl-btn:hover{background:var(--pri2)}
+.trm-nl-ok{font-family:var(--fm);font-size:12px;color:var(--pri);padding:6px 0;text-align:center}
+.trm-foot{margin-top:20px;border-top:1px solid var(--brd);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.trm-foot-copy{font-family:var(--fm);font-size:11px;color:var(--mut)}
+.trm-foot-links{display:flex;gap:18px}
+.trm-foot-links a{font-size:11px;color:var(--mut);font-family:var(--fm)}
+@media(max-width:760px){.trm-body{grid-template-columns:1fr}.trm-aside{display:none}.trm-nav{padding:12px 16px}.trm-hero{padding:36px 16px 24px}.trm-body{padding:0 16px 40px}.trm-foot{padding:16px;flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
-<div class="top-bar">
-  <div class="wrap" style="padding:16px 24px;display:flex;justify-content:space-between;align-items:center">
-    <a href="/" class="logo">siavashsed.github.io/tradingtechreview</a>
-    <span style="font-size:11px;color:#555;text-transform:uppercase;letter-spacing:2px">Trading Tools & Technology</span>
-  </div>
+<nav class="trm-nav">
+  <a href="/" class="trm-logo">TradingTech Review<em>/ Trading Technology</em></a>
+  <div class="trm-nav-links"><a href="/">Home</a><a href="/about.html">About</a></div>
+</nav>
+<div class="trm-hero">
+  <div class="trm-hero-cat">Trading Technology</div>
+  <h1>Tools, Code & Platforms for Algo Traders</h1>
+  <p>Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.</p>
 </div>
-<div class="wrap">
-  <div class="split">
-    <div>
-        <img src="https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)" loading="lazy" style="width:100%;height:300px;object-fit:cover;border-radius:8px;margin-bottom:16px">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c63ff;margin-bottom:8px">Trading Tools & Technology</div>
-        <a href="/python-backtesting-libraries-trading-strategies/" style="font-size:clamp(20px,3vw,28px);font-weight:700;line-height:1.25;color:#e8e8e8;display:block;margin-bottom:12px">The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)</a>
-        <p style="font-size:15px;color:#aaa;line-height:1.6;margin-bottom:16px">Alex Rivera reviews the top Python backtesting libraries for algorithmic traders — what actually works, what breaks in prod, and which one to start with.</p>
-        <a href="/python-backtesting-libraries-trading-strategies/" style="font-size:13px;font-weight:700;color:#6c63ff">Read full article →</a>
-        <div style="font-size:11px;color:#555;margin-top:8px">May 15, 2026</div></div>
-    <div>
-      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c63ff;padding-bottom:10px;border-bottom:2px solid #6c63ff;margin-bottom:0">Latest</div>
-      
+<div class="trm-body">
+  <main>
+    <div class="trm-feed-hd">// latest articles</div>
+    <div id="trm-feed"></div>
+  </main>
+  <aside>
+    <div class="trm-aside-box">
+      <div class="trm-aside-hd">About</div>
+      <p><strong>Alex Rivera</strong><br>Software Engineer & Algorithmic Trader</p>
+      <p>I started as a software engineer writing data pipelines, then spent three years building and running my own algo strateg…</p>
+      <p><a href="/about.html">Full bio →</a></p>
     </div>
-  </div>
-  
-  <div class="grid"></div>
+    <div class="trm-aside-box">
+      <div class="trm-aside-hd">Newsletter</div>
+      <p>Tool reviews, code snippets, and platform updates worth knowing about.</p>
+      <form id="trm-nl" onsubmit="nlSub(event)">
+        <input type="email" class="trm-nl-input" placeholder="your@email.com" required>
+        <button type="submit" class="trm-nl-btn">Subscribe</button>
+      </form>
+    </div>
+  </aside>
 </div>
-<footer style="background:#141414;border-top:1px solid #252525;padding:40px 24px;text-align:center;font-size:13px;color:#555;margin-top:60px">
-<p>&copy; 2026 siavashsed.github.io/tradingtechreview &nbsp;&middot;&nbsp; Trading Tools & Technology</p>
-<p style="margin-top:6px;font-size:11px">For informational purposes only. Not financial or investment advice.</p>
-<p style="margin-top:6px;font-size:11px"><a href="/about/" style="color:#555">About</a> &nbsp;&middot;&nbsp; <a href="/contact/" style="color:#555">Contact</a> &nbsp;&middot;&nbsp; <a href="/privacy/" style="color:#555">Privacy Policy</a></p>
-</footer></body></html>
+<footer class="trm-foot">
+  <span class="trm-foot-copy">© TradingTech Review — Honest tool reviews for developers who trade algorithmically.</span>
+  <div class="trm-foot-links"><a href="/">Home</a><a href="/about.html">About</a></div>
+</footer>
+<script>
+async function loadPosts(){
+  const el=document.getElementById('trm-feed');
+  try{
+    const r=await fetch('./articles.json');if(!r.ok)throw 0;
+    const posts=await r.json();if(!posts.length)throw 0;
+    el.innerHTML=posts.slice(0,8).map(p=>`<div class="trm-post">
+      <div class="trm-post-meta"><span class="trm-post-cat">Trading Technology</span><span>${p.date_iso||''}</span><span>${p.author||'Alex Rivera'}</span></div>
+      <h2>${p.title}</h2>
+      <p>${p.meta_description||''}</p>
+      <a class="trm-post-link" href="./${p.slug||'#'}">read more →</a>
+    </div>`).join('');
+  }catch(e){
+    el.innerHTML='<div class="trm-post"><div class="trm-post-meta"><span class="trm-post-cat">Coming Soon</span></div><h2>First articles publishing soon</h2><p>Check back shortly — the bot is warming up.</p></div>';
+  }
+}
+function nlSub(e){e.preventDefault();document.getElementById('trm-nl').innerHTML='<div class="trm-nl-ok">✓ You're subscribed. Welcome.</div>';}
+loadPosts();
+</script>
+</body></html>
