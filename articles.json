@@ -38,5 +38,19 @@
       "stackoverflow.com",
       "tradingview.com"
     ]
+  },
+  {
+    "title": "Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap",
+    "slug": "real-time-crypto-screener-websockets",
+    "meta_description": "Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Alex Rivera",
+    "image": "https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "kaiko.com",
+      "binance-docs.github.io",
+      "websockets.readthedocs.io"
+    ]
   }
 ]
