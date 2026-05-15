@@ -12,5 +12,18 @@
       "kernc.github.io/backtesting.py",
       "zipline-reloaded.readthedocs.io"
     ]
+  },
+  {
+    "title": "How to Connect to Binance API Without Getting Rate-Limited: A Practitioner's Guide",
+    "slug": "binance-api-rate-limit-guide",
+    "meta_description": "Connect to Binance API without hitting rate limits. Practical strategies from an algorithmic trader who's been banned and learned from it.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Alex Rivera",
+    "image": "https://images.pexels.com/photos/4960438/pexels-photo-4960438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "binance-docs.github.io",
+      "redis.io"
+    ]
   }
 ]
