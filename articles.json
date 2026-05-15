@@ -25,5 +25,18 @@
       "binance-docs.github.io",
       "redis.io"
     ]
+  },
+  {
+    "title": "Pine Script vs Python: Which Should Traders Learn First (And Why the Answer Isn't Obvious)",
+    "slug": "pine-script-vs-python-traders",
+    "meta_description": "Alex Rivera breaks down Pine Script vs Python for traders \u2014 which to learn first, what each does well, and where most people waste months of effort.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Alex Rivera",
+    "image": "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "stackoverflow.com",
+      "tradingview.com"
+    ]
   }
 ]
