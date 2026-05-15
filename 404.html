@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Page Not Found — TradingTech Review</title>
+<title>Page Not Found - TradingTech Review</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{  --bg:#0d1117;--bg2:#161b22;--sur:#1c2128;
@@ -22,7 +22,11 @@ body{font-family:var(--fb);background:var(--bg);color:var(--txt);min-height:100v
 <div class="e404-code">404</div>
 <div class="e404-title">This article isn't here yet</div>
 <div class="e404-sub">It may still be publishing, or the link changed. New articles appear on the homepage within 24 hours.</div>
-<a href="/" class="e404-back">← Back to TradingTech Review</a>
-<div class="e404-note">If you followed a bookmark, try refreshing — or check the homepage for the latest articles.</div>
-<script>setTimeout(()=>location.href='/',8000);</script>
+<a id="e404-back" class="e404-back">← Back to TradingTech Review</a>
+<div class="e404-note">If you followed a bookmark, try refreshing - or check the homepage for the latest articles.</div>
+<script>
+var _root=(function(){var p=location.pathname.split('/').filter(Boolean);return p.length?'/'+p[0]+'/':'/';})();
+document.getElementById('e404-back').href=_root;
+setTimeout(function(){location.href=_root;},8000);
+</script>
 </body></html>
