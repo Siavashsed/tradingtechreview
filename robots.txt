@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://siavashsed.github.io/tradingtechreview/sitemap.xml
