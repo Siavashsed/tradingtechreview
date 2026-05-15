@@ -52,5 +52,17 @@
       "binance-docs.github.io",
       "websockets.readthedocs.io"
     ]
+  },
+  {
+    "title": "Backtest vs Live Trading: Why Your Results Will Always Differ (And What To Do About It)",
+    "slug": "backtest-vs-live-trading-results-differ",
+    "meta_description": "Alex Rivera explains the real technical reasons backtest and live trading results diverge \u2014 and how to close the gap without fooling yourself.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Alex Rivera",
+    "image": "https://images.pexels.com/photos/16902140/pexels-photo-16902140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "aqr.com"
+    ]
   }
 ]
