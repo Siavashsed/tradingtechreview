@@ -81,9 +81,9 @@ a{color:var(--pri);text-decoration:none}a:hover{text-decoration:underline}
 </div>
 
 <!-- pexels-banner -->
-<!-- pexels-banner: loads if pexelsKey is in localStorage -->
+<!-- hero-banner -->
 <div id="pxl-wrap" style="width:100%;height:200px;overflow:hidden;position:relative;background:var(--bg2);">
-  <img id="pxl-img" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s;" alt="">
+  <img id="pxl-img" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s;display:block;" alt="">
   <a id="pxl-cred" href="https://www.pexels.com" target="_blank" rel="noopener" style="position:absolute;bottom:6px;right:10px;font-size:10px;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s;text-decoration:none;">Photo: Pexels</a>
 </div>
 
@@ -128,6 +128,7 @@ async function loadPosts(){
     const r=await fetch('./articles.json');if(!r.ok)throw 0;
     const posts=await r.json();if(!posts.length)throw 0;
     el.innerHTML=posts.slice(0,8).map(p=>`<div class="trm-post">
+      ${p.image?`<a href="./${p.slug||'#'}/" style="display:block;margin:-20px -22px 14px;overflow:hidden;height:180px;"><img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;display:block;"></a>`:''}
       <div class="trm-post-meta"><span class="trm-post-cat">Trading Technology</span><span>${p.date_iso||''}</span><span>${p.author||'Alex Rivera'}</span></div>
       <h2>${p.title}</h2>
       <p>${p.meta_description||''}</p>
@@ -139,19 +140,25 @@ async function loadPosts(){
 }
 function nlSub(e){e.preventDefault();document.getElementById('trm-nl').innerHTML='<div class="trm-nl-ok">✓ You're subscribed. Welcome.</div>';}
 loadPosts();
-/* pexels banner loader */
+/* banner loader: pexels → picsum fallback */
 (function(){
-  var q='trading software computer screens code',k=localStorage.getItem('pexelsKey');
-  if(!k)return;
-  fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent(q)+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
-    .then(function(r){return r.json();}).then(function(d){
-      if(!d.photos||!d.photos[0])return;
-      var el=document.getElementById('pxl-img');
-      var cr=document.getElementById('pxl-cred');
-      if(!el)return;
-      el.onload=function(){el.style.opacity='1';if(cr)cr.style.opacity='1';};
-      el.src=d.photos[0].src.large;
-    }).catch(function(){});
+  var el=document.getElementById('pxl-img');
+  var cr=document.getElementById('pxl-cred');
+  if(!el)return;
+  function showImg(src,cred){
+    el.onload=function(){el.style.opacity='1';if(cred&&cr){cr.textContent=cred;cr.style.opacity='1';}};
+    el.src=src;
+  }
+  var k=localStorage.getItem('pexelsKey');
+  if(k){
+    fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('trading software computer screens code')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
+      .then(function(r){return r.json();}).then(function(d){
+        if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
+        else{showImg('https://picsum.photos/seed/466/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/466/1400/400','');});
+  }else{
+    showImg('https://picsum.photos/seed/466/1400/400','');
+  }
 })();
 </script>
 </body></html>
