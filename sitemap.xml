@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://siavashsed.github.io/tradingtechreview/</loc><lastmod>2026-05-15</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/about/</loc><lastmod>2026-05-15</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/contact/</loc><lastmod>2026-05-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/privacy/</loc><lastmod>2026-05-15</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/</loc><lastmod>2026-05-16</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/about/</loc><lastmod>2026-05-16</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/contact/</loc><lastmod>2026-05-16</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/privacy/</loc><lastmod>2026-05-16</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/python-backtesting-libraries-trading-strategies/</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/binance-api-rate-limit-guide/</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/pine-script-vs-python-traders/</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/backtest-vs-live-trading-results-differ/</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/trading-desks-evaluate-new-tools/</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
