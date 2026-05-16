@@ -64,5 +64,17 @@
     "outbound_links": [
       "aqr.com"
     ]
+  },
+  {
+    "title": "How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test)",
+    "slug": "trading-desks-evaluate-new-tools",
+    "meta_description": "Alex Rivera breaks down how serious trading desks evaluate new tools \u2014 from latency benchmarks to integration reality checks. No vendor hype allowed.",
+    "date": "May 16, 2026",
+    "date_iso": "2026-05-16",
+    "author": "Alex Rivera",
+    "image": "https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "cfainstitute.org"
+    ]
   }
 ]
