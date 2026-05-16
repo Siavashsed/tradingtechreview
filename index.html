@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TradingTech Review - Tools, Code & Platforms for Algo Traders</title>
+<title>TradingTech Review — Tools, Code & Platforms for Algo Traders</title>
 <meta name="description" content="Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -10,135 +10,356 @@
   --pri:#58a6ff;--pri2:#1f6feb;
   --txt:#e6edf3;--mut:#8b949e;--brd:#21262d;
   --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:'Courier New',Courier,monospace;}
-html,body{min-height:100%;font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:15px;line-height:1.7}
-a{color:var(--pri);text-decoration:none}a:hover{text-decoration:underline}
-.trm-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px;border-bottom:1px solid var(--brd);background:var(--bg2);position:sticky;top:0;z-index:99}
-.trm-logo{font-family:var(--fm);font-size:17px;font-weight:700;color:var(--pri);letter-spacing:-0.5px;text-decoration:none}
-.trm-logo em{color:var(--mut);font-style:normal;font-weight:400;font-size:12px;margin-left:8px}
-.trm-nav-links{display:flex;gap:28px}
-.trm-nav-links a{font-size:13px;color:var(--mut);font-family:var(--fm);transition:color .2s}
-.trm-nav-links a:hover{color:var(--txt);text-decoration:none}
-.trm-hero{padding:56px 40px 36px;max-width:820px}
-.trm-hero-cat{font-family:var(--fm);font-size:11px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:14px}
-.trm-hero h1{font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.15;margin-bottom:14px;color:var(--txt)}
-.trm-hero p{color:var(--mut);font-size:15px;max-width:540px;line-height:1.85}
-.trm-body{display:grid;grid-template-columns:1fr 300px;gap:40px;padding:0 40px 60px;max-width:1180px;margin:0 auto;align-items:start}
-.trm-feed-hd{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;padding-bottom:12px;border-bottom:1px solid var(--brd);margin-bottom:22px}
-.trm-post{border:1px solid var(--brd);border-radius:3px;padding:20px 22px;background:var(--bg2);margin-bottom:14px;transition:border-color .18s}
-.trm-post:hover{border-color:var(--pri2)}
-.trm-post-meta{font-family:var(--fm);font-size:10px;color:var(--mut);margin-bottom:7px;display:flex;gap:14px}
-.trm-post-cat{color:var(--pri)}
-.trm-post h2{font-size:16px;font-weight:600;color:var(--txt);margin-bottom:8px;line-height:1.4}
-.trm-post p{font-size:13px;color:var(--mut);line-height:1.75;margin-bottom:10px}
-.trm-post-link{font-family:var(--fm);font-size:11px;color:var(--pri)}
-.trm-aside-box{background:var(--bg2);border:1px solid var(--brd);border-radius:3px;padding:18px;margin-bottom:16px}
-.trm-aside-hd{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:14px}
-.trm-aside-box p{font-size:12px;color:var(--mut);line-height:1.8;margin-bottom:10px}
-.trm-aside-box p:last-child{margin-bottom:0}
-.trm-nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);border-radius:2px;padding:9px 12px;color:var(--txt);font-size:12px;font-family:var(--fm);outline:none;margin-bottom:8px;transition:border-color .2s}
-.trm-nl-input:focus{border-color:var(--pri)}
-.trm-nl-input::placeholder{color:var(--mut)}
-.trm-nl-btn{width:100%;background:var(--pri);color:#000;border:none;border-radius:2px;padding:9px;font-size:12px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:background .2s}
-.trm-nl-btn:hover{background:var(--pri2)}
-.trm-nl-ok{font-family:var(--fm);font-size:12px;color:var(--pri);padding:6px 0;text-align:center}
-.trm-foot{margin-top:20px;border-top:1px solid var(--brd);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.trm-foot-copy{font-family:var(--fm);font-size:11px;color:var(--mut)}
-.trm-foot-links{display:flex;gap:18px}
-.trm-foot-links a{font-size:11px;color:var(--mut);font-family:var(--fm)}
-@media(max-width:760px){.trm-body{grid-template-columns:1fr}.trm-aside{display:none}.trm-nav{padding:12px 16px}.trm-hero{padding:36px 16px 24px}.trm-body{padding:0 16px 40px}.trm-foot{padding:16px;flex-direction:column;text-align:center}}
+body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;line-height:1.65;min-height:100vh}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ── ticker bar ── */
+.tk-bar{background:#000;border-bottom:1px solid #1a1a1a;padding:0;overflow:hidden;height:32px;display:flex;align-items:center}
+.tk-label{font-family:var(--fm);font-size:10px;font-weight:700;color:#000;background:var(--pri);padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:1px;text-transform:uppercase}
+.tk-scroll{display:flex;gap:32px;padding:0 24px;overflow:hidden;white-space:nowrap}
+.tk-item{font-family:var(--fm);font-size:11px;color:#888;display:flex;gap:8px;align-items:center;flex-shrink:0}
+.tk-sym{color:#ccc;font-weight:700}
+.tk-up{color:#00e676}
+.tk-dn{color:#ff5252}
+
+/* ── nav ── */
+.nav{background:var(--bg2);border-bottom:2px solid var(--pri);position:sticky;top:0;z-index:99}
+.nav-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:0;height:56px}
+.nav-logo{font-family:var(--fm);font-size:20px;font-weight:900;color:var(--pri);letter-spacing:-1px;margin-right:40px;flex-shrink:0}
+.nav-logo span{color:var(--mut);font-size:12px;font-weight:400;margin-left:6px}
+.nav-links{display:flex;gap:0;height:100%;margin-right:auto}
+.nav-links a{font-family:var(--fm);font-size:12px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:1px;padding:0 16px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-2px}
+.nav-links a:hover{color:var(--txt);border-bottom-color:var(--pri)}
+.nav-date{font-family:var(--fm);font-size:11px;color:var(--mut)}
+
+/* ── hero ── */
+.hero{position:relative;width:100%;height:520px;overflow:hidden;background:var(--bg2)}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.45) 55%,transparent 100%)}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:36px 48px;max-width:860px}
+.hero-tag{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.hero-tag::before{content:'';display:inline-block;width:24px;height:2px;background:var(--pri)}
+.hero h1{font-size:clamp(24px,3.5vw,42px);font-weight:800;line-height:1.12;color:#fff;margin-bottom:14px}
+.hero-desc{font-size:15px;color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:18px;max-width:620px}
+.hero-meta{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:16px}
+.hero-read{font-family:var(--fm);font-size:12px;font-weight:700;color:var(--pri);border:1px solid var(--pri);padding:7px 18px;border-radius:2px;transition:all .2s;flex-shrink:0}
+.hero-read:hover{background:var(--pri);color:#000}
+
+/* ── section heading ── */
+.sec-head{font-family:var(--fm);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pri);padding-bottom:10px;border-bottom:2px solid var(--brd);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.sec-head::before{content:'//';opacity:.5}
+
+/* ── main layout ── */
+.layout{max-width:1240px;margin:0 auto;padding:40px 24px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+
+/* ── article card (main column) ── */
+.card{display:grid;grid-template-columns:220px 1fr;gap:0;border:1px solid var(--brd);background:var(--bg2);margin-bottom:16px;transition:border-color .2s;overflow:hidden}
+.card:hover{border-color:var(--pri)}
+.card-img{width:220px;height:148px;object-fit:cover;flex-shrink:0}
+.card-img-ph{width:220px;height:148px;background:var(--sur);flex-shrink:0}
+.card-body{padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.card-tag{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;font-weight:700}
+.card-title{font-size:16px;font-weight:700;line-height:1.3;color:var(--txt)}
+.card-title:hover{color:var(--pri)}
+.card-desc{font-size:13px;color:var(--mut);line-height:1.7;flex:1}
+.card-meta{font-family:var(--fm);font-size:10px;color:var(--mut);margin-top:4px}
+
+/* ── sidebar ── */
+.side-item{padding:14px 0;border-bottom:1px solid var(--brd);display:grid;grid-template-columns:80px 1fr;gap:12px;align-items:center}
+.side-item:last-child{border-bottom:none}
+.side-img{width:80px;height:54px;object-fit:cover;border-radius:2px}
+.side-img-ph{width:80px;height:54px;background:var(--sur);border-radius:2px}
+.side-title{font-size:13px;font-weight:600;line-height:1.35;color:var(--txt)}
+.side-title:hover{color:var(--pri)}
+.side-date{font-family:var(--fm);font-size:10px;color:var(--mut);margin-top:4px}
+
+/* ── newsletter box ── */
+.nl-box{background:var(--sur);border:1px solid var(--brd);border-left:3px solid var(--pri);padding:20px;margin-top:24px}
+.nl-box h3{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:6px}
+.nl-box p{font-size:12px;color:var(--mut);line-height:1.65;margin-bottom:14px}
+.nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);padding:9px 12px;color:var(--txt);font-size:12px;font-family:var(--fm);outline:none;margin-bottom:8px;border-radius:2px;transition:border-color .2s}
+.nl-input:focus{border-color:var(--pri)}
+.nl-input::placeholder{color:var(--mut)}
+.nl-btn{width:100%;background:var(--pri);color:#000;border:none;padding:10px;font-size:12px;font-weight:800;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:background .2s;border-radius:2px}
+.nl-btn:hover{background:var(--pri2)}
+
+/* ── more articles grid ── */
+.more{max-width:1240px;margin:0 auto;padding:0 24px 48px}
+.more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.mg-card{background:var(--bg2);border:1px solid var(--brd);overflow:hidden;transition:border-color .2s}
+.mg-card:hover{border-color:var(--pri)}
+.mg-img{width:100%;height:140px;object-fit:cover}
+.mg-img-ph{width:100%;height:140px;background:var(--sur)}
+.mg-body{padding:16px}
+.mg-tag{font-family:var(--fm);font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;font-weight:700}
+.mg-title{font-size:14px;font-weight:700;line-height:1.3;color:var(--txt);margin-bottom:6px}
+.mg-date{font-family:var(--fm);font-size:10px;color:var(--mut)}
+
+/* ── about section ── */
+.about-band{background:var(--bg2);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);padding:48px 24px}
+.about-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:start}
+.about-avatar{width:72px;height:72px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#000;flex-shrink:0;letter-spacing:-1px}
+.about-name{font-size:18px;font-weight:800;color:var(--txt);margin-bottom:2px}
+.about-role{font-family:var(--fm);font-size:12px;color:var(--pri);margin-bottom:14px;font-weight:600}
+.about-bio{font-size:14px;color:var(--mut);line-height:1.85}
+.about-bio p+p{margin-top:12px}
+.about-link{display:inline-block;margin-top:16px;font-family:var(--fm);font-size:11px;font-weight:700;color:var(--pri);border:1px solid var(--pri);padding:6px 16px;border-radius:2px;text-transform:uppercase;letter-spacing:1px}
+
+/* ── newsletter band ── */
+.nl-band{background:linear-gradient(135deg,#081a10 0%,#031008 100%);border-top:2px solid var(--pri);padding:56px 24px;text-align:center}
+.nl-band h2{font-size:clamp(22px,3vw,32px);font-weight:800;color:var(--txt);margin-bottom:8px}
+.nl-band p{font-size:15px;color:var(--mut);max-width:520px;margin:0 auto 28px;line-height:1.65}
+.nl-band-form{display:flex;gap:10px;max-width:460px;margin:0 auto}
+.nl-band-input{flex:1;background:rgba(255,255,255,.07);border:1px solid var(--brd);border-radius:3px;padding:12px 18px;color:var(--txt);font-size:14px;outline:none;transition:border-color .2s}
+.nl-band-input:focus{border-color:var(--pri)}
+.nl-band-input::placeholder{color:var(--mut)}
+.nl-band-btn{background:var(--pri);color:#000;border:none;border-radius:3px;padding:12px 28px;font-size:14px;font-weight:800;cursor:pointer;white-space:nowrap;transition:background .2s}
+.nl-band-btn:hover{background:var(--pri2)}
+
+/* ── footer ── */
+.foot{background:#000;border-top:1px solid #111;padding:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.foot-copy{font-family:var(--fm);font-size:11px;color:#444}
+.foot-links{display:flex;gap:20px}
+.foot-links a{font-family:var(--fm);font-size:11px;color:#444;transition:color .2s}
+.foot-links a:hover{color:var(--pri)}
+
+/* ── responsive ── */
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}.side{display:none}
+  .more-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{height:380px}.hero-content{padding:24px 20px}
+  .card{grid-template-columns:1fr}.card-img,.card-img-ph{width:100%;height:180px}
+  .nl-band-form{flex-direction:column}
+}
+@media(max-width:600px){
+  .more-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .tk-scroll{display:none}
+  .foot{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
 
-<!-- nav -->
-<nav class="trm-nav">
-  <a href="./" class="trm-logo">TradingTech Review<em>/ Trading Technology</em></a>
-  <div class="trm-nav-links"><a href="./">Home</a><a href="about.html">About</a></div>
-</nav>
-
-<!-- hero -->
-<div class="trm-hero">
-  <div class="trm-hero-cat">Trading Technology</div>
-  <h1>Tools, Code & Platforms for Algo Traders</h1>
-  <p>Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.</p>
-</div>
-
-<!-- about section -->
-<div style="background:#161b22;border-top:1px solid #21262d;border-bottom:1px solid #21262d;padding:40px">
-  <div style="max-width:800px;margin:0 auto">
-    <div style="font-family:'Courier New',Courier,monospace;font-size:10px;color:#58a6ff;text-transform:uppercase;letter-spacing:3px;margin-bottom:20px">// about this publication</div>
-    <div style="display:grid;grid-template-columns:60px 1fr;gap:20px;align-items:start;margin-bottom:24px">
-      <div style="width:56px;height:56px;border-radius:50%;background:#58a6ff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#000;flex-shrink:0;letter-spacing:-1px">AR</div>
-      <div>
-        <div style="font-size:16px;font-weight:700;color:#e6edf3;margin-bottom:2px">Alex Rivera</div>
-        <div style="font-size:12px;color:#58a6ff;margin-bottom:14px;font-weight:600">Software Engineer & Algorithmic Trader</div>
-        <p style="font-size:14px;color:#8b949e;line-height:1.85;margin-bottom:12px">I started as a software engineer writing data pipelines, then spent three years building and running my own algo strategies. I've used, broken, and benchmarked most of the tools in this space.</p>
-        <p style="font-size:14px;color:#8b949e;line-height:1.85">TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p>
-      </div>
-    </div>
-    <a href="about.html" style="display:inline-block;border:1px solid #58a6ff;color:#58a6ff;padding:8px 20px;border-radius:3px;font-size:12px;font-weight:700;text-decoration:none;font-family:'Courier New',Courier,monospace;text-transform:uppercase;letter-spacing:1px;transition:all .2s">Full bio →</a>
+<!-- ticker -->
+<div class="tk-bar">
+  <div class="tk-label">Live</div>
+  <div class="tk-scroll" id="ticker">
+    <div class="tk-item"><span class="tk-sym">BTC</span><span id="tk-btc">$67,234</span><span class="tk-up" id="tk-btc-ch">▲ 2.31%</span></div>
+    <div class="tk-item"><span class="tk-sym">ETH</span><span id="tk-eth">$3,421</span><span class="tk-dn" id="tk-eth-ch">▼ 0.84%</span></div>
+    <div class="tk-item"><span class="tk-sym">SOL</span><span id="tk-sol">$142.50</span><span class="tk-up" id="tk-sol-ch">▲ 4.12%</span></div>
+    <div class="tk-item"><span class="tk-sym">BNB</span><span id="tk-bnb">$612</span><span class="tk-up" id="tk-bnb-ch">▲ 1.05%</span></div>
+    <div class="tk-item"><span class="tk-sym">FEAR/GREED</span><span style="color:var(--pri)" id="tk-fg">72 — Greed</span></div>
+    <div class="tk-item"><span class="tk-sym">DOMINANCE</span><span id="tk-dom">BTC 54.2%</span></div>
   </div>
 </div>
 
-<!-- pexels-banner -->
-<!-- hero-banner -->
-<div id="pxl-wrap" style="width:100%;height:200px;overflow:hidden;position:relative;background:var(--bg2);">
-  <img id="pxl-img" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s;display:block;" alt="">
-  <a id="pxl-cred" href="https://www.pexels.com" target="_blank" rel="noopener" style="position:absolute;bottom:6px;right:10px;font-size:10px;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s;text-decoration:none;">Photo: Pexels</a>
-</div>
-
-<!-- articles + sidebar -->
-<div class="trm-body">
-  <main>
-    <!-- feed -->
-    <div class="trm-feed-hd">// latest articles</div>
-    <div id="trm-feed"></div>
-  </main>
-  <aside>
-    <!-- author-teaser -->
-    <div class="trm-aside-box">
-      <div class="trm-aside-hd">About</div>
-      <p><strong>Alex Rivera</strong><br>Software Engineer & Algorithmic Trader</p>
-      <p>I started as a software engineer writing data pipelines, then spent three years building and running my own algo strateg...</p>
-      <p><a href="about.html">Full bio →</a></p>
+<!-- nav -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="./" class="nav-logo">TradingTech Review<span>/ Trading Technology</span></a>
+    <div class="nav-links">
+      <a href="./">Latest</a>
+      <a href="./">Analysis</a>
+      <a href="./">On-Chain</a>
+      <a href="./">Algorithms</a>
+      <a href="about.html">About</a>
     </div>
+    <div class="nav-date" id="nav-date"></div>
+  </div>
+</nav>
+
+<!-- hero -->
+<div class="hero" id="hero-wrap">
+  <img id="pxl-img" src="https://picsum.photos/seed/416/1400/520" alt="Featured article" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s">
+  <div class="hero-overlay"></div>
+  <div class="hero-content" id="hero-content">
+    <div class="hero-tag">Trading Technology</div>
+    <h1 id="hero-title">Tools, Code & Platforms for Algo Traders</h1>
+    <p class="hero-desc" id="hero-desc">Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.</p>
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <div class="hero-meta" id="hero-meta"><span>By Alex Rivera</span></div>
+      <a class="hero-read" id="hero-link" href="./">Read Analysis →</a>
+    </div>
+  </div>
+</div>
+<a id="pxl-cred" href="https://www.pexels.com" target="_blank" rel="noopener" style="display:none"></a>
+
+<!-- main layout -->
+<div class="layout">
+  <main>
+    <div class="sec-head">Latest Analysis</div>
+    <div id="main-feed">
+      <!-- loading skeleton -->
+      <div class="card" style="pointer-events:none;opacity:.4">
+        <div class="card-img-ph"></div>
+        <div class="card-body"><div class="card-tag">Loading…</div><div class="card-title" style="height:16px;background:var(--brd);border-radius:3px;width:80%"></div></div>
+      </div>
+    </div>
+  </main>
+  <aside class="side">
+    <div class="sec-head">Recent</div>
+    <div id="side-feed"></div>
     <!-- newsletter -->
-    <div class="trm-aside-box">
-      <div class="trm-aside-hd">Newsletter</div>
+    <div class="nl-box">
+      <h3>The Dev Trader Newsletter</h3>
       <p>Tool reviews, code snippets, and platform updates worth knowing about.</p>
-      <form id="trm-nl" onsubmit="nlSub(event)">
-        <input type="email" class="trm-nl-input" placeholder="your@email.com" required>
-        <button type="submit" class="trm-nl-btn">Subscribe</button>
+      <form id="nl-side" onsubmit="nlSub('nl-side',event)">
+        <input type="email" class="nl-input" placeholder="your@email.com" required>
+        <button type="submit" class="nl-btn">Subscribe</button>
       </form>
     </div>
   </aside>
 </div>
 
+<!-- more articles grid -->
+<div class="more">
+  <div class="sec-head">More from TradingTech Review</div>
+  <div class="more-grid" id="more-grid"></div>
+</div>
+
+<!-- about band -->
+<div class="about-band">
+  <div class="about-inner">
+    <div class="about-avatar">AR</div>
+    <div>
+      <div class="about-name">Alex Rivera</div>
+      <div class="about-role">Software Engineer & Algorithmic Trader</div>
+      <div class="about-bio">
+        <p>I started as a software engineer writing data pipelines, then spent three years building and running my own algo strategies. I've used, broken, and benchmarked most of the tools in this space.</p>
+        <p>TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p>
+      </div>
+      <a href="about.html" class="about-link">Full bio →</a>
+    </div>
+  </div>
+</div>
+
+<!-- newsletter band -->
+<div class="nl-band">
+  <h2>The Dev Trader Newsletter</h2>
+  <p>Tool reviews, code snippets, and platform updates worth knowing about.</p>
+  <form id="nl-band" onsubmit="nlSub('nl-band',event)">
+    <div class="nl-band-form">
+      <input type="email" class="nl-band-input" placeholder="your@email.com" required>
+      <button type="submit" class="nl-band-btn">Subscribe</button>
+    </div>
+  </form>
+</div>
+
 <!-- footer -->
-<footer class="trm-foot">
-  <span class="trm-foot-copy">© TradingTech Review - Honest tool reviews for developers who trade algorithmically.</span>
-  <div class="trm-foot-links"><a href="./">Home</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="sms.html">SMS Policy</a><a href="meta-policy.html">Meta Policy</a></div>
+<footer class="foot">
+  <span class="foot-copy">© TradingTech Review · Honest tool reviews for developers who trade algorithmically.</span>
+  <div class="foot-links">
+    <a href="./">Home</a><a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+  </div>
 </footer>
 
 <script>
-/* load articles feed */
+/* date */
+document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
+
+/* ticker simulation */
+(function(){
+  var prices={btc:67234,eth:3421,sol:142.5,bnb:612};
+  var changes={btc:2.31,eth:-0.84,sol:4.12,bnb:1.05};
+  function fmt(v,d){return v>=1000?'$'+v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):'$'+v.toFixed(d||2);}
+  function upd(){
+    ['btc','eth','sol','bnb'].forEach(function(c){
+      prices[c]*=(1+(Math.random()-.5)*.002);
+      changes[c]+=(Math.random()-.5)*.05;
+      var d=changes[c]>=0;
+      var pe=document.getElementById('tk-'+c);
+      var ce=document.getElementById('tk-'+c+'-ch');
+      if(pe)pe.textContent=fmt(prices[c],c==='sol'?2:0);
+      if(ce){ce.textContent=(d?'▲ ':'▼ ')+Math.abs(changes[c]).toFixed(2)+'%';ce.className=d?'tk-up':'tk-dn';}
+    });
+  }
+  setInterval(upd,3000);
+})();
+
+/* load articles */
 async function loadPosts(){
-  const el=document.getElementById('trm-feed');
   try{
-    const r=await fetch('./articles.json');if(!r.ok)throw 0;
-    const posts=await r.json();if(!posts.length)throw 0;
-    el.innerHTML=posts.slice(0,8).map(p=>`<div class="trm-post">
-      ${p.image?`<a href="./${p.slug||'#'}/" style="display:block;margin:-20px -22px 14px;overflow:hidden;height:180px;"><img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;display:block;"></a>`:''}
-      <div class="trm-post-meta"><span class="trm-post-cat">Trading Technology</span><span>${p.date_iso||''}</span><span>${p.author||'Alex Rivera'}</span></div>
-      <h2>${p.title}</h2>
-      <p>${p.meta_description||''}</p>
-      <a class="trm-post-link" href="./${p.slug||'#'}/">read more →</a>
-    </div>`).join('');
+    const r=await fetch('./articles.json');
+    if(!r.ok)throw 0;
+    const posts=await r.json();
+    if(!posts||!posts.length)throw 0;
+
+    /* hero — use first article */
+    const h=posts[0];
+    if(h.image){
+      var hi=document.getElementById('pxl-img');
+      if(hi){hi.onload=function(){hi.style.opacity='1';};hi.src=h.image;}
+    }
+    var ht=document.getElementById('hero-title');
+    var hd=document.getElementById('hero-desc');
+    var hl=document.getElementById('hero-link');
+    var hm=document.getElementById('hero-meta');
+    if(ht)ht.textContent=h.title;
+    if(hd)hd.textContent=h.meta_description||'';
+    if(hl){hl.href='./'+h.slug+'/';hl.textContent='Read Analysis →';}
+    if(hm)hm.innerHTML='<span>By '+(h.author||'Alex Rivera')+'</span><span>'+(h.date_iso||'')+'</span>';
+
+    /* main feed — articles 2-5 */
+    var mf=document.getElementById('main-feed');
+    if(mf)mf.innerHTML=posts.slice(1,5).map(function(p){
+      return '<a href="./'+p.slug+'/" style="display:block;text-decoration:none;color:inherit">'+
+        '<div class="card">'+
+        (p.image?'<img class="card-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">'
+                :'<div class="card-img-ph"></div>')+
+        '<div class="card-body">'+
+        '<div class="card-tag">Trading Technology</div>'+
+        '<div class="card-title">'+p.title+'</div>'+
+        '<div class="card-desc">'+(p.meta_description||'').slice(0,120)+'…</div>'+
+        '<div class="card-meta">'+p.date_iso+(p.author?' · '+p.author:'')+'</div>'+
+        '</div></div></a>';
+    }).join('');
+
+    /* sidebar — articles 6-10 */
+    var sf=document.getElementById('side-feed');
+    if(sf)sf.innerHTML=posts.slice(5,10).map(function(p){
+      return '<a href="./'+p.slug+'/" style="display:block;text-decoration:none;color:inherit">'+
+        '<div class="side-item">'+
+        (p.image?'<img class="side-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">'
+                :'<div class="side-img-ph"></div>')+
+        '<div><div class="side-title">'+p.title+'</div>'+
+        '<div class="side-date">'+(p.date_iso||'')+'</div></div>'+
+        '</div></a>';
+    }).join('');
+
+    /* more grid — articles 11-14 */
+    var mg=document.getElementById('more-grid');
+    if(mg)mg.innerHTML=posts.slice(10,14).map(function(p){
+      return '<a href="./'+p.slug+'/" style="display:block;text-decoration:none;color:inherit">'+
+        '<div class="mg-card">'+
+        (p.image?'<img class="mg-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">'
+                :'<div class="mg-img-ph"></div>')+
+        '<div class="mg-body">'+
+        '<div class="mg-tag">Trading Technology</div>'+
+        '<div class="mg-title">'+p.title+'</div>'+
+        '<div class="mg-date">'+(p.date_iso||'')+'</div>'+
+        '</div></div></a>';
+    }).join('');
+
+    if(!posts[10]){
+      var mg2=document.getElementById('more-grid');
+      if(mg2)mg2.parentElement.style.display='none';
+    }
+
   }catch(e){
-    el.innerHTML='<div class="trm-post"><div class="trm-post-meta"><span class="trm-post-cat">Coming Soon</span></div><h2>First articles publishing soon</h2><p>Check back shortly - the bot is warming up.</p></div>';
+    /* empty state — still shows full layout */
+    var mf2=document.getElementById('main-feed');
+    if(mf2)mf2.innerHTML='<div class="card"><div class="card-img-ph"></div><div class="card-body"><div class="card-tag">Trading Technology</div><div class="card-title" style="font-size:18px">First analysis publishing soon</div><div class="card-desc">The bot is warming up. Deep algorithmic trading research is on the way.</div></div></div>';
   }
 }
-function nlSub(e){e.preventDefault();document.getElementById('trm-nl').innerHTML='<div class="trm-nl-ok">✓ You're subscribed. Welcome.</div>';}
+
+function nlSub(id,e){
+  e.preventDefault();
+  document.getElementById(id).innerHTML='<p style="color:var(--pri);font-family:var(--fm);font-size:13px;font-weight:700;padding:10px 0">✓ You're on the list. Welcome.</p>';
+}
+
 loadPosts();
 /* banner loader: pexels → picsum fallback */
 (function(){
@@ -154,10 +375,10 @@ loadPosts();
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('trading software computer screens code')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/466/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/466/1400/400','');});
+        else{showImg('https://picsum.photos/seed/416/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/416/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/466/1400/400','');
+    showImg('https://picsum.photos/seed/416/1400/400','');
   }
 })();
 </script>
