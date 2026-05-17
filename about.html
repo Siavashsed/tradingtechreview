@@ -2,215 +2,54 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About Alex Rivera - TradingTech Review</title>
+<title>About — TradingTech Review</title>
 <meta name="description" content="Honest tool reviews for developers who trade algorithmically.">
 <style>
-/* === reset === */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{  --bg:#0d1117;--bg2:#161b22;--sur:#1c2128;
-  --pri:#58a6ff;--pri2:#1f6feb;
-  --txt:#e6edf3;--mut:#8b949e;--brd:#21262d;
-  --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:'Courier New',Courier,monospace;}
-html,body{min-height:100%;font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:15px;line-height:1.7}
-a{color:var(--pri);text-decoration:none}a:hover{text-decoration:underline}
-/* === nav === */
-.trm-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px;border-bottom:1px solid var(--brd);background:var(--bg2);position:sticky;top:0;z-index:99}
-.trm-logo{font-family:var(--fm);font-size:17px;font-weight:700;color:var(--pri);text-decoration:none}
-.trm-logo em{color:var(--mut);font-style:normal;font-weight:400;font-size:12px;margin-left:8px}
-.trm-nav-links{display:flex;gap:28px}.trm-nav-links a{font-size:13px;color:var(--mut);font-family:var(--fm);transition:color .2s}.trm-nav-links a:hover{color:var(--txt);text-decoration:none}
-/* === author header === */
-.abt-header{background:var(--bg2);border-bottom:1px solid var(--brd);padding:40px 40px 32px}
-.abt-header-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:24px}
-.abt-avatar{width:72px;height:72px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#000;font-family:var(--fm);flex-shrink:0}
-.abt-name{font-size:26px;font-weight:700;margin-bottom:4px}
-.abt-title{font-family:var(--fm);font-size:12px;color:var(--pri)}
-/* === body === */
-.abt-wrap{max-width:760px;margin:0 auto;padding:48px 40px}
-.abt-section{margin-bottom:36px}
-.abt-section-label{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--brd)}
-.abt-p{color:var(--mut);font-size:15px;line-height:1.9;margin-bottom:14px}
-/* === credentials box === */
-.abt-cred{background:var(--bg2);border:1px solid var(--brd);border-left:3px solid var(--pri);border-radius:3px;padding:18px 20px;margin-bottom:36px}
-.abt-cred-label{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:10px}
-.abt-cred-text{font-family:var(--fm);font-size:13px;color:var(--txt)}
-/* === newsletter === */
-.abt-nl{background:var(--bg2);border:1px solid var(--brd);border-radius:3px;padding:24px;margin-top:8px}
-.abt-nl h3{font-family:var(--fm);font-size:13px;font-weight:700;color:var(--txt);margin-bottom:8px}
-.abt-nl p{font-size:13px;color:var(--mut);margin-bottom:16px}
-.trm-nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);border-radius:2px;padding:9px 12px;color:var(--txt);font-size:13px;font-family:var(--fm);outline:none;margin-bottom:8px;transition:border-color .2s}
-.trm-nl-input:focus{border-color:var(--pri)}.trm-nl-input::placeholder{color:var(--mut)}
-.trm-nl-btn{background:var(--pri);color:#000;border:none;border-radius:2px;padding:10px 20px;font-size:12px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:background .2s}
-.trm-nl-btn:hover{background:var(--pri2)}.trm-nl-ok{font-family:var(--fm);font-size:12px;color:var(--pri);padding:6px 0}
-/* === footer === */
-.trm-foot{margin-top:60px;border-top:1px solid var(--brd);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.trm-foot-copy{font-family:var(--fm);font-size:11px;color:var(--mut)}
-.trm-foot-links{display:flex;gap:18px}.trm-foot-links a{font-size:11px;color:var(--mut);font-family:var(--fm)}
-@media(max-width:600px){.trm-nav{padding:12px 16px}.abt-header{padding:28px 16px 24px}.abt-header-inner{flex-direction:column;align-items:flex-start;gap:14px}.abt-wrap{padding:32px 16px}.trm-foot{padding:16px;flex-direction:column;text-align:center}}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#0d1117;color:#e6edf3;font-size:15px;line-height:1.75}
+a{color:#58a6ff;text-decoration:none}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-bottom:3px solid #58a6ff;background:#161b22}
+.nav-logo{font-size:22px;font-weight:900;letter-spacing:-0.5px}
+.nav-links{display:flex;gap:20px}.nav-links a{font-size:13px;font-weight:600;color:#8b949e}.nav-links a:hover{color:#58a6ff}
+.banner{background:#58a6ff;padding:48px 28px;text-align:center}
+.banner h1{font-size:clamp(24px,4vw,44px);font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:8px}
+.banner p{color:rgba(255,255,255,.8);font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:48px 20px}
+.avi{width:72px;height:72px;border-radius:50%;background:#58a6ff;color:#fff;font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.abt-p{color:#8b949e;line-height:1.9;margin-bottom:16px}
+h2{font-size:18px;font-weight:800;margin:36px 0 12px;color:#58a6ff}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:20px 28px;border-top:1px solid #21262d;font-size:12px;color:#8b949e}
+.foot-links{display:flex;gap:16px}.foot-links a{color:#8b949e}
 </style>
 </head>
 <body>
-
-<!-- nav -->
-<nav class="trm-nav">
-  <a href="./" class="trm-logo">TradingTech Review<em>/ Trading Technology</em></a>
-  <div class="trm-nav-links"><a href="./">Home</a><a href="about.html">About</a></div>
+<nav class="nav">
+  <div class="nav-logo">TradingTech Review</div>
+  <div class="nav-links"><a href="./">Home</a><a href="about.html">About</a></div>
 </nav>
-
-<!-- author-header -->
-<div class="abt-header">
-  <div class="abt-header-inner">
-    <div class="abt-avatar">AR</div>
-    <div>
-      <div class="abt-name">Alex Rivera</div>
-      <div class="abt-title">Software Engineer & Algorithmic Trader</div>
-    </div>
-  </div>
+<div class="banner">
+  <h1>About TradingTech Review</h1>
+  <p>Tools, Code & Platforms for Algo Traders</p>
 </div>
-
-<!-- pexels-banner -->
-<!-- hero-banner -->
-<div id="pxl-wrap" style="width:100%;height:240px;overflow:hidden;position:relative;background:var(--bg2);">
-  <img id="pxl-img" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s;display:block;" alt="">
-  <a id="pxl-cred" href="https://www.pexels.com" target="_blank" rel="noopener" style="position:absolute;bottom:6px;right:10px;font-size:10px;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s;text-decoration:none;">Photo: Pexels</a>
-</div>
-
-<!-- main-content -->
-<div class="abt-wrap">
-
-  <!-- section: background story -->
-  <div class="abt-section">
-    <div class="abt-section-label">// background</div>
-    <p class="abt-p">My career started in data engineering, not trading. I spent four years building pipelines and dashboards for a logistics company before a friend introduced me to algorithmic trading as a side project. That side project consumed the next three years of evenings and weekends.</p>
+<div id="pxl-wrap" style="height:180px;overflow:hidden"><img id="pxl-img" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s;display:block" alt=""></div>
+<div class="wrap">
+  <div class="avi">AR</div>
+  <h2>Alex Rivera</h2>
+  <p style="color:#58a6ff;font-weight:700;margin-bottom:16px">Software Engineer & Algorithmic Trader</p>
+  <p class="abt-p">My career started in data engineering, not trading. I spent four years building pipelines and dashboards for a logistics company before a friend introduced me to algorithmic trading as a side project. That side project consumed the next three years of evenings and weekends.</p>
     <p class="abt-p">I started running real money with my own strategies while still working full time. The tooling problems hit immediately - data feeds that missed ticks, broker APIs that documented features they had not actually built, backtesting platforms that produced results impossible to replicate live. The gap between what vendors promised and what traders actually experienced was enormous.</p>
     <p class="abt-p">By the time I went full time into algo trading, I had tested or integrated with more platforms than I could count. I broke things other traders took for granted. I found edge cases that documentation never mentioned. I became the person other traders asked before committing to a new tool.</p>
     <p class="abt-p">TradingTech Review started as a private notes system - a running record of what I had tested, what failed, and what the actual limitations were. The notes got shared around. People found them more honest than any official review or vendor comparison.</p>
     <p class="abt-p">The site now covers the full stack: data providers, execution platforms, backtesting frameworks, broker APIs, and the code libraries that connect them. If a tool has a problem I missed initially, I update the review. The goal is the resource I wished had existed when I started.</p>
-  </div>
-
-  <!-- section: credentials -->
-  <div class="abt-cred">
-    <div class="abt-cred-label">// credentials</div>
-    <div class="abt-cred-text">Software Engineer & Algorithmic Trader</div>
-  </div>
-
-  <!-- section: what this site covers -->
-  <div class="abt-section">
-    <div class="abt-section-label">// what this site covers</div>
-    <p class="abt-p">Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.</p>
-    <p class="abt-p">Honest tool reviews for developers who trade algorithmically.</p>
-  </div>
-
-  <!-- section: newsletter -->
-  <div class="abt-nl">
-    <h3>The Dev Trader Newsletter</h3>
-    <p>Tool reviews, code snippets, and platform updates worth knowing about.</p>
-    <form id="abt-nl" onsubmit="nlSub(event)">
-      <input type="email" class="trm-nl-input" placeholder="your@email.com" required>
-      <button type="submit" class="trm-nl-btn">Subscribe</button>
-    </form>
-  </div>
-
+  <h2>Our Mission</h2>
+  <p class="abt-p">Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.</p>
+  <p style="margin-top:28px"><a href="./" style="color:#58a6ff;font-weight:700">← Back to TradingTech Review</a></p>
 </div>
-
-<!-- section: contributors -->
-<div class="abt-wrap" style="padding-top:0">
-  <div class="abt-section" style="margin-top:0">
-    <div class="abt-section-label">// contributors</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-      <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
-      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">MW</div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Marcus Webb</div>
-        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Senior Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">15 years in institutional sales at two major banks. Writes about macro dynamics and how they translate to retail positioning.</div>
-      </div>
-    </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
-      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">CS</div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Claire Sutton</div>
-        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Industry Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Worked in PR for major financial brands before switching sides. Understands how the narrative gets constructed, and how to cut through it.</div>
-      </div>
-    </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
-      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">TN</div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Tom Nakamura</div>
-        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Data Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Ex-quant at a Chicago prop firm. Builds custom scrapers and datasets, then writes about what the data actually shows.</div>
-      </div>
-    </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
-      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">DO</div>
-      <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Daniel Osei</div>
-        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Field Correspondent</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">On the ground covering conferences, product launches, and industry events. Focuses on what the press releases leave out.</div>
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-<!-- section: comments -->
-<div class="abt-wrap" style="padding-top:0">
-  <div class="abt-section">
-    <div class="abt-section-label">// reader comments</div>
-    <div style="margin-top:12px">
-      <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">D</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Denise L.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">I have been following this site for over a year. The consistency and quality have only gone up. Very few places I can say that about.</div>
-    </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">N</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Nadia F.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The writing here treats readers as intelligent adults. No dumbing down, no sensationalism, just clear analysis.</div>
-    </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">O</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Omar K.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">I have read things here that changed how I think about the field. That is a high bar and this site clears it regularly.</div>
-    </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">R</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Raj P.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The data-first approach here is exactly what I was looking for. Most analysis I find online is opinion dressed up as research.</div>
-    </div>
-    <div style="padding:14px 0;border-bottom:none">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">M</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Mike H.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
-      </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The level of detail here is what keeps me coming back. You actually back up the claims instead of just asserting them.</div>
-    </div>
-    </div>
-  </div>
-</div>
-
-<!-- footer -->
-<footer class="trm-foot">
-  <span class="trm-foot-copy">© TradingTech Review</span>
-  <div class="trm-foot-links"><a href="./">Home</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="sms.html">SMS Policy</a><a href="meta-policy.html">Meta Policy</a></div>
+<footer class="foot">
+  <span>© TradingTech Review · Honest tool reviews for developers who trade algorithmically.</span>
+  <div class="foot-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
 </footer>
-
-<script>
-function nlSub(e){e.preventDefault();e.target.innerHTML='<div class="trm-nl-ok">✓ Subscribed. Thank you.</div>';}
-/* banner loader: pexels → picsum fallback */
+<script>/* banner loader: pexels → picsum fallback */
 (function(){
   var el=document.getElementById('pxl-img');
   var cr=document.getElementById('pxl-cred');
@@ -224,11 +63,10 @@ function nlSub(e){e.preventDefault();e.target.innerHTML='<div class="trm-nl-ok">
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('trading software computer screens code')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/571/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/571/1400/400','');});
+        else{showImg('https://picsum.photos/seed/918/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/918/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/571/1400/400','');
+    showImg('https://picsum.photos/seed/918/1400/400','');
   }
-})();
-</script>
+})();</script>
 </body></html>
