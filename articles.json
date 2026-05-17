@@ -76,5 +76,19 @@
     "outbound_links": [
       "cfainstitute.org"
     ]
+  },
+  {
+    "title": "Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)",
+    "slug": "open-source-trading-bots-worth-using",
+    "meta_description": "Alex Rivera reviews the open-source trading bots that hold up in production \u2014 with honest takes on Freqtrade, Hummingbot, Jesse, and more.",
+    "date": "May 17, 2026",
+    "date_iso": "2026-05-17",
+    "author": "Alex Rivera",
+    "image": "https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "freqtrade.io",
+      "hummingbot.io",
+      "jesse.trade"
+    ]
   }
 ]
