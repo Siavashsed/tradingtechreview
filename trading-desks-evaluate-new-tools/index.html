@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test) | siavashsed.github.io/tradingtechreview</title>
-<meta name="description" content="Alex Rivera breaks down how serious trading desks evaluate new tools — from latency benchmarks to integration reality checks. No vendor hype allowed.">
+<meta name="description" content="Alex Rivera breaks down how serious trading desks evaluate new tools  -  from latency benchmarks to integration reality checks. No vendor hype allowed.">
 <link rel="canonical" href="https://siavashsed.github.io/tradingtechreview/trading-desks-evaluate-new-tools/">
-<meta property="og:title" content="How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test) | siavashsed.github.io/tradingtechreview"><meta property="og:description" content="Alex Rivera breaks down how serious trading desks evaluate new tools — from latency benchmarks to integration reality checks. No vendor hype allowed."><meta property="og:url" content="https://siavashsed.github.io/tradingtechreview/trading-desks-evaluate-new-tools/"><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test) | siavashsed.github.io/tradingtechreview"><meta name="twitter:description" content="Alex Rivera breaks down how serious trading desks evaluate new tools — from latency benchmarks to integration reality checks. No vendor hype allowed."><meta property="og:image" content="https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta name="twitter:image" content="https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test) | siavashsed.github.io/tradingtechreview","description":"Alex Rivera breaks down how serious trading desks evaluate new tools — from latency benchmarks to integration reality checks. No vendor hype allowed.","author":{"@type":"Person","name":"Alex Rivera"},"datePublished":"2026-05-16","url":"https://siavashsed.github.io/tradingtechreview/trading-desks-evaluate-new-tools/","image":"https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}</script>
+<meta property="og:title" content="How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test) | siavashsed.github.io/tradingtechreview"><meta property="og:description" content="Alex Rivera breaks down how serious trading desks evaluate new tools  -  from latency benchmarks to integration reality checks. No vendor hype allowed."><meta property="og:url" content="https://siavashsed.github.io/tradingtechreview/trading-desks-evaluate-new-tools/"><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test) | siavashsed.github.io/tradingtechreview"><meta name="twitter:description" content="Alex Rivera breaks down how serious trading desks evaluate new tools  -  from latency benchmarks to integration reality checks. No vendor hype allowed."><meta property="og:image" content="https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta name="twitter:image" content="https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test) | siavashsed.github.io/tradingtechreview","description":"Alex Rivera breaks down how serious trading desks evaluate new tools  -  from latency benchmarks to integration reality checks. No vendor hype allowed.","author":{"@type":"Person","name":"Alex Rivera"},"datePublished":"2026-05-16","url":"https://siavashsed.github.io/tradingtechreview/trading-desks-evaluate-new-tools/","image":"https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:#0d0d0d;color:#e8e8e8;line-height:1.65;font-size:16px}
@@ -25,6 +25,19 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
 .intro{font-size:18px;line-height:1.7;color:#e8e8e8}
 .concl{background:#1e1e1e;border-left:4px solid #6c63ff;padding:20px 24px;border-radius:0 8px 8px 0;margin-top:40px}
 @media(max-width:800px){.wrap{grid-template-columns:1fr}.sidebar{display:none}}
+</style>
+<style>
+.a-pn{background:#161b22;border-bottom:1px solid #21262d;position:sticky;top:0;z-index:99}
+.a-pn-bar{background:#58a6ff;height:3px;width:100%}
+.a-pn-in{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:56px;gap:0}
+.a-pn-logo{font-size:19px;font-weight:800;color:#e6edf3;margin-right:36px;flex-shrink:0;text-decoration:none;letter-spacing:-.5px}
+.a-pn-logo span{color:#58a6ff}
+.a-pn-links{display:flex;gap:0;height:100%;flex:1}
+.a-pn-links a{font-size:12px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:.8px;padding:0 14px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-1px;text-decoration:none}
+.a-pn-links a:hover{color:#e6edf3;border-bottom-color:#58a6ff}
+.a-pn-back{font-size:12px;color:#8b949e;text-decoration:none;display:flex;align-items:center;gap:4px;margin-left:auto;transition:color .2s}
+.a-pn-back:hover{color:#58a6ff}
+@media(max-width:640px){.a-pn-links{display:none}}
 </style>
 <style>
 .a-pn{background:#161b22;border-bottom:1px solid #21262d;position:sticky;top:0;z-index:99}
@@ -59,33 +72,130 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
     <h3>Contents</h3>
     <ul><li><a href="#s0" style="color:#aaa;font-size:13px;line-height:1.8">The Latency Budget Is Non-Negotiable, and Vendors Routinely Lie About It</a></li><li><a href="#s1" style="color:#aaa;font-size:13px;line-height:1.8">Integration Depth Matters More Than Feature Count</a></li><li><a href="#s2" style="color:#aaa;font-size:13px;line-height:1.8">The Backtesting Validation Trap That Catches Everyone Eventually</a></li><li><a href="#s3" style="color:#aaa;font-size:13px;line-height:1.8">Support Quality Under Pressure Reveals Everything</a></li></ul>
   </aside>
-</div><div id="comments-section" style="max-width:760px;margin:60px auto 0;padding:0 24px">
-<h2 style="font-size:18px;font-weight:700;margin-bottom:20px" id="comments-heading">Comments</h2>
-<div id="comments-list"></div>
+</div><div id="comments-section" style="max-width:760px;margin:60px auto 0;padding:0 24px 40px">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid #58a6ff">
+    <h2 style="font-size:20px;font-weight:800;color:#e6edf3;margin:0" id="comments-heading">Comments</h2>
+    <a href="#comment-form" style="font-size:13px;font-weight:600;color:#58a6ff;background:#58a6ff18;padding:7px 16px;border-radius:20px;text-decoration:none;transition:opacity .2s" onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">+ Join discussion</a>
+  </div>
+  <div id="comments-list"></div>
+  <div id="comment-form" style="margin-top:40px;background:#161b22;border:1px solid #21262d;border-radius:14px;padding:28px 28px 24px;scroll-margin-top:90px">
+    <h3 style="font-size:16px;font-weight:700;color:#e6edf3;margin:0 0 20px">Leave a comment</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <input id="c-name" placeholder="Your name *" style="width:100%;padding:11px 14px;border:1.5px solid #21262d;border-radius:8px;font-size:14px;background:#0d1117;color:#e6edf3;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='#58a6ff'" onblur="this.style.borderColor='#21262d'">
+      <input id="c-email" placeholder="Email (optional, private)" style="width:100%;padding:11px 14px;border:1.5px solid #21262d;border-radius:8px;font-size:14px;background:#0d1117;color:#e6edf3;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='#58a6ff'" onblur="this.style.borderColor='#21262d'">
+    </div>
+    <textarea id="c-text" placeholder="Share your thoughts…" rows="4" style="width:100%;padding:11px 14px;border:1.5px solid #21262d;border-radius:8px;font-size:14px;background:#0d1117;color:#e6edf3;outline:none;font-family:inherit;resize:vertical;min-height:100px;display:block;transition:border-color .2s;margin-bottom:14px;box-sizing:border-box" onfocus="this.style.borderColor='#58a6ff'" onblur="this.style.borderColor='#21262d'"></textarea>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <p style="font-size:12px;color:#8b949e;margin:0">Your comment appears after a short review.</p>
+      <button onclick="submitComment()" style="background:#58a6ff;color:#fff;border:none;border-radius:8px;padding:11px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .2s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Post Comment</button>
+    </div>
+    <div id="c-success" style="display:none;margin-top:14px;padding:10px 14px;background:#58a6ff18;border:1px solid #58a6ff44;border-radius:8px;font-size:13px;color:#58a6ff;font-weight:600">Comment posted! Thanks for joining the discussion.</div>
+  </div>
 </div>
 <script>
 (function(){
   var PALETTE=['#3ecf8e', '#38bdf8', '#a78bfa', '#f59e0b', '#ef4444', '#10b981', '#f97316', '#ec4899', '#6366f1', '#14b8a6'];
-  function initials(name){return(name||'?').split(/\s+/).map(function(w){return w[0];}).join('').slice(0,2).toUpperCase();}
-  function color(name,i){return PALETTE[(name.charCodeAt(0)+i)%PALETTE.length];}
-  var el=document.getElementById('comments-list');
-  var heading=document.getElementById('comments-heading');
-  fetch('./comments.json').then(function(r){return r.ok?r.json():[];}).then(function(cs){
-    if(!cs||!cs.length){el.innerHTML='<p style="font-size:13px;color:#555">No comments yet.</p>';return;}
-    heading.textContent='Comments ('+cs.length+')';
-    el.innerHTML=cs.map(function(c,i){
-      var bg=c.color||color(c.name||'',i);
-      var ini=c.initials||initials(c.name||'?');
-      var date=c.date_display||c.date||c.date_iso||'';
-      return '<div style="display:flex;gap:12px;padding:16px 0;border-bottom:1px solid #252525">'+
-        '<div style="width:38px;height:38px;border-radius:50%;background:'+bg+';display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0">'+ini+'</div>'+
-        '<div style="flex:1"><div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">'+
-          '<span style="font-size:13px;font-weight:700">'+c.name+'</span>'+
-          '<span style="font-size:11px;color:#555">'+date+'</span></div>'+
-          '<p style="font-size:14px;line-height:1.7;margin:0 0 8px;color:#aaa">'+c.text+'</p>'+
-          '<span style="font-size:11px;color:#555">&#9829; '+(c.likes||0)+'</span></div></div>';
+  var ACCENT='#58a6ff';
+  var BG2='#161b22';
+  var META='#8b949e';
+  var BRD='#21262d';
+  var TXT2='#b0bcc8';
+  var TXT='#e6edf3';
+  var BG='#0d1117';
+  var slug=location.pathname.split('/').filter(Boolean).join('-')||'home';
+
+  function initials(n){return(n||'?').split(/\s+/).map(function(w){return w[0];}).join('').slice(0,2).toUpperCase();}
+  function clr(n,i){return PALETTE[((n||'').charCodeAt(0)+(i||0))%PALETTE.length];}
+  function getLikes(){try{return JSON.parse(localStorage.getItem('lk_'+slug)||'{}');}catch(e){return{};}}
+  function saveLikes(l){try{localStorage.setItem('lk_'+slug,JSON.stringify(l));}catch(e){}}
+  function getLocal(){try{return JSON.parse(localStorage.getItem('uc_'+slug)||'[]');}catch(e){return[];}}
+  function saveLocal(cs){try{localStorage.setItem('uc_'+slug,JSON.stringify(cs));}catch(e){}}
+
+  function heartSVG(liked){
+    return '<svg width="13" height="13" viewBox="0 0 24 24" fill="'+(liked?ACCENT:'none')+'" stroke="'+ACCENT+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+  }
+
+  function renderComment(c,i,isReply,likes){
+    var key=c._id||(c.name||'')+'_'+i;
+    var liked=likes[key]||false;
+    var cnt=(c.likes||0)+(liked?1:0);
+    var bg=c.color||clr(c.name||'',i);
+    var ini=c.initials||initials(c.name||'?');
+    var date=c.date_display||c.date||c.date_iso||'';
+    var authorBadge=c.is_author?'<span style="font-size:10px;font-weight:700;background:'+ACCENT+'22;color:'+ACCENT+';border:1px solid '+ACCENT+'55;border-radius:100px;padding:1px 8px;margin-left:6px">Author</span>':'';
+    var youBadge=c._user?'<span style="font-size:10px;font-weight:700;background:#3b82f622;color:#3b82f6;border:1px solid #3b82f655;border-radius:100px;padding:1px 8px;margin-left:6px">You</span>':'';
+    var replyStyle=isReply?'margin-left:44px;margin-top:10px;padding:12px 16px;background:'+BG2+';border-radius:10px;border-left:3px solid '+ACCENT+';':'padding:18px 0;border-bottom:1px solid '+BRD+';';
+    var sz=isReply?'30':'40';
+    return '<div style="display:flex;gap:12px;'+replyStyle+'">'+
+      '<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:'+bg+';display:flex;align-items:center;justify-content:center;font-size:'+(isReply?'11':'13')+'px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:-.5px">'+ini+'</div>'+
+      '<div style="flex:1;min-width:0">'+
+        '<div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-bottom:6px">'+
+          '<span style="font-size:14px;font-weight:700;color:'+TXT+'">'+c.name+'</span>'+authorBadge+youBadge+
+          '<span style="font-size:11px;color:'+META+'">'+date+'</span></div>'+
+        '<p style="font-size:14px;line-height:1.7;margin:0 0 10px;color:'+TXT2+'">'+c.text+'</p>'+
+        '<button onclick="toggleLike(''+key+'',this)" style="background:none;border:1px solid '+(liked?ACCENT:BRD)+';border-radius:100px;padding:4px 12px;cursor:pointer;font-size:12px;color:'+(liked?ACCENT:META)+';display:inline-flex;align-items:center;gap:2px;font-family:inherit;transition:all .15s">'+
+          heartSVG(liked)+'<span class="lc">'+cnt+'</span>'+
+        '</button>'+
+      '</div></div>';
+  }
+
+  window.toggleLike=function(key,btn){
+    var likes=getLikes();
+    likes[key]=!likes[key];
+    var liked=likes[key];
+    saveLikes(likes);
+    btn.style.borderColor=liked?ACCENT:BRD;
+    btn.style.color=liked?ACCENT:META;
+    var svg=btn.querySelector('svg');if(svg)svg.setAttribute('fill',liked?ACCENT:'none');
+    var lc=btn.querySelector('.lc');
+    if(lc){var n=parseInt(lc.textContent||'0');lc.textContent=liked?n+1:Math.max(0,n-1);}
+  };
+
+  window.submitComment=function(){
+    var name=(document.getElementById('c-name').value||'').trim();
+    var text=(document.getElementById('c-text').value||'').trim();
+    var nameEl=document.getElementById('c-name');
+    var textEl=document.getElementById('c-text');
+    nameEl.style.borderColor=BRD;textEl.style.borderColor=BRD;
+    if(!name){nameEl.style.borderColor='#ef4444';nameEl.focus();return;}
+    if(!text){textEl.style.borderColor='#ef4444';textEl.focus();return;}
+    var now=new Date();
+    var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var ds=mo[now.getMonth()]+' '+now.getDate()+', '+now.getFullYear();
+    var c={name:name,text:text,date_display:ds,likes:0,_user:true,_id:'u_'+Date.now()};
+    var local=getLocal();local.push(c);saveLocal(local);
+    nameEl.value='';document.getElementById('c-email').value='';textEl.value='';
+    var succ=document.getElementById('c-success');
+    succ.style.display='block';setTimeout(function(){succ.style.display='none';},4000);
+    rerender();
+  };
+
+  var allComments=[];
+
+  function rerender(){
+    var el=document.getElementById('comments-list');
+    var heading=document.getElementById('comments-heading');
+    var likes=getLikes();
+    var combined=allComments.concat(getLocal());
+    if(!combined.length){
+      el.innerHTML='<p style="font-size:14px;color:'+META+';padding:20px 0">No comments yet  -  be the first to share your thoughts below.</p>';
+      if(heading)heading.textContent='Comments (0)';return;
+    }
+    var total=combined.reduce(function(s,c){return s+1+(c.replies?c.replies.length:0);},0);
+    if(heading)heading.textContent='Comments ('+total+')';
+    el.innerHTML=combined.map(function(c,i){
+      var html=renderComment(c,i,false,likes);
+      if(c.replies&&c.replies.length){html+=c.replies.map(function(r,j){return renderComment(r,j,true,likes);}).join('');}
+      return html;
     }).join('');
-  }).catch(function(){el.style.display='none';heading.style.display='none';});
+  }
+
+  var el=document.getElementById('comments-list');
+  if(el){
+    fetch('./comments.json').then(function(r){return r.ok?r.json():[];}).then(function(cs){
+      allComments=cs||[];rerender();
+    }).catch(function(){allComments=[];rerender();});
+  }
 })();
 </script><footer style="background:#141414;border-top:1px solid #252525;padding:40px 24px;text-align:center;font-size:13px;color:#555;margin-top:60px">
 <p>&copy; 2026 siavashsed.github.io/tradingtechreview &nbsp;&middot;&nbsp; Trading Tools & Technology</p>
