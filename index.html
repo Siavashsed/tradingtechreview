@@ -49,8 +49,6 @@ button{font-family:var(--font);cursor:pointer;border:none;background:none}
 .nav-link:hover{color:var(--text2)}
 .nav-link.active{color:var(--orange);border-bottom-color:var(--orange)}
 .nav-r{margin-left:auto;display:flex;align-items:center;gap:12px}
-.nav-cnt{font-family:var(--mono);font-size:11px;color:var(--text3)}
-.nav-cnt b{color:var(--orange)}
 .nav-sub{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--bg);background:var(--orange);padding:6px 14px;border-radius:3px;letter-spacing:.8px;text-transform:uppercase;transition:background .18s;cursor:pointer}
 .nav-sub:hover{background:var(--orange2)}
 @media(max-width:900px){.nav-links{display:none}}
@@ -223,7 +221,6 @@ button{font-family:var(--font);cursor:pointer;border:none;background:none}
       <a class="nav-link" data-f="execution" onclick="setFilter('execution');return false" href="#">execution</a>
     </div>
     <div class="nav-r">
-      <span class="nav-cnt"><b id="nav-cnt">--</b> reviews</span>
       <span class="nav-sub" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">subscribe</span>
     </div>
   </div>
@@ -512,7 +509,6 @@ async function loadArticles(){
     const data=await r.json();
     allArts=(Array.isArray(data)?data:[]).map(a=>({...a,_tag:getTag(a)}));
     document.getElementById('h-cnt').textContent=allArts.length+'+';
-    document.getElementById('nav-cnt').textContent=allArts.length;
     updateCounts();
     document.getElementById('loading-state').style.display='none';
     document.getElementById('feed-out').style.display='block';
