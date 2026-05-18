@@ -49,24 +49,40 @@ h2{font-size:18px;font-weight:800;margin:36px 0 12px;color:#58a6ff}
   <span>© TradingTech Review · Honest tool reviews for developers who trade algorithmically.</span>
   <div class="foot-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
 </footer>
-<script>/* banner loader: pexels → picsum fallback */
+<script>/* banner loader: pexels → unsplash → picsum */
 (function(){
   var el=document.getElementById('pxl-img');
   var cr=document.getElementById('pxl-cred');
   if(!el)return;
+  var SOURCES=['pexels', 'unsplash'];
+  var Q=encodeURIComponent('trading software computer screens code');
+  var FALLBACK='https://picsum.photos/seed/336/1400/400';
   function showImg(src,cred){
     el.onload=function(){el.style.opacity='1';if(cred&&cr){cr.textContent=cred;cr.style.opacity='1';}};
     el.src=src;
   }
-  var k=localStorage.getItem('pexelsKey');
-  if(k){
-    fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('trading software computer screens code')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
+  function tryUnsplash(){
+    var uk=localStorage.getItem('unsplashKey');
+    if(!uk){showImg(FALLBACK,'');return;}
+    fetch('https://api.unsplash.com/photos/random?query='+Q+'&count=1&orientation=landscape&client_id='+uk)
+      .then(function(r){return r.json();}).then(function(d){
+        var p=Array.isArray(d)?d[0]:d;
+        if(p&&p.urls&&p.urls.regular){showImg(p.urls.regular,'Photo: '+((p.user&&p.user.name)||'Unsplash')+' / Unsplash');}
+        else{showImg(FALLBACK,'');}
+      }).catch(function(){showImg(FALLBACK,'');});
+  }
+  function tryPexels(){
+    var k=localStorage.getItem('pexelsKey');
+    if(!k){if(SOURCES.indexOf('unsplash')>=0)tryUnsplash();else showImg(FALLBACK,'');return;}
+    fetch('https://api.pexels.com/v1/search?query='+Q+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/239/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/239/1400/400','');});
-  }else{
-    showImg('https://picsum.photos/seed/239/1400/400','');
+        else if(SOURCES.indexOf('unsplash')>=0){tryUnsplash();}
+        else{showImg(FALLBACK,'');}
+      }).catch(function(){if(SOURCES.indexOf('unsplash')>=0)tryUnsplash();else showImg(FALLBACK,'');});
   }
+  if(SOURCES.indexOf('pexels')>=0){tryPexels();}
+  else if(SOURCES.indexOf('unsplash')>=0){tryUnsplash();}
+  else{showImg(FALLBACK,'');}
 })();</script>
 </body></html>
