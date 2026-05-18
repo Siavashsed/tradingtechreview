@@ -75,13 +75,28 @@ a{color:inherit;text-decoration:none}
 @media(max-width:1100px){.card-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-side{display:none}.card-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.card-grid{grid-template-columns:1fr}.nav{padding:0 14px}.nav-links{display:none}.wrap{padding:0 14px}.nl-row{flex-direction:column}.foot{flex-direction:column;text-align:center;padding:16px}}
+
+.term-section{padding:52px 0;background:#1c2128;border-top:1px solid #21262d;border-bottom:1px solid #21262d}
+.term-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.term-info-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#58a6ff;margin-bottom:12px}
+.term-info-ttl{font-size:clamp(20px,3vw,30px);font-weight:900;line-height:1.2;margin-bottom:14px;letter-spacing:-.5px;color:#e6edf3}
+.term-info-dsc{font-size:14px;color:#8b949e;line-height:1.7;margin-bottom:20px}
+.term-badges{display:flex;gap:8px;flex-wrap:wrap}
+.term-badge{font-size:10px;font-weight:700;padding:4px 10px;border:1px solid #58a6ff;border-radius:2px;color:#58a6ff;letter-spacing:.5px}
+.term-win{background:#0d1117;border:1px solid #30363d;border-radius:8px;overflow:hidden;font-family:'Courier New',Courier,monospace}
+.term-winbar{background:#161b22;padding:10px 14px;display:flex;align-items:center;gap:6px;border-bottom:1px solid #30363d}
+.term-winbar-dot{width:12px;height:12px;border-radius:50%}
+.term-winbar-name{font-size:11px;color:#8b949e;margin-left:6px}
+.term-code{padding:20px;font-size:12px;line-height:1.85;color:#c9d1d9;overflow-x:auto}
+.t-kw{color:#ff7b72}.t-fn{color:#d2a8ff}.t-str{color:#a5d6ff}.t-nu{color:#79c0ff}.t-cm{color:#8b949e}
+@media(max-width:900px){.term-inner{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <div class="brk">
   <span class="brk-label">Live</span>
-  <div class="brk-ticker"><span>TRADING TECHNOLOGY · Tools, Code & Platforms for Algo Traders · Latest EV news &amp; engineering analysis · Alex Rivera · Electric vehicles, battery technology, charging infrastructure · TradingTech Review</span></div>
+  <div class="brk-ticker"><span>TRADING TECHNOLOGY · Tools, Code & Platforms for Algo Traders · Platform reviews &amp; API benchmarks · Alex Rivera · Algo trading tools, backtesting frameworks, order routing · TradingTech Review</span></div>
 </div>
 
 <nav class="nav">
@@ -118,7 +133,7 @@ a{color:inherit;text-decoration:none}
 
 <div class="topics">
   <span class="topics-lbl">Topics</span>
-  <span class="ptag">Electric Vehicles</span><span class="ptag">Battery Tech</span><span class="ptag">Fast Charging</span><span class="ptag">EV Reviews</span><span class="ptag">Industry News</span><span class="ptag">Autonomous</span><span class="ptag">Hybrids</span><span class="ptag">Infrastructure</span><span class="ptag">Range Tech</span><span class="ptag">Policy</span>
+  <span class="ptag">Algo Trading</span><span class="ptag">Backtesting</span><span class="ptag">API Brokers</span><span class="ptag">Python Libs</span><span class="ptag">Data Feeds</span><span class="ptag">Options Tools</span><span class="ptag">Risk Systems</span><span class="ptag">Order Routing</span><span class="ptag">Quant Strategy</span><span class="ptag">Platform Reviews</span>
 </div>
 
 <div class="wrap">
@@ -133,6 +148,46 @@ a{color:inherit;text-decoration:none}
     <div class="section-hd-line"></div>
   </div>
   <div class="card-grid reveal" id="more-grid"></div>
+</div>
+
+
+<div class="term-section reveal">
+  <div class="term-inner">
+    <div>
+      <div class="term-info-lbl">From the reviews</div>
+      <div class="term-info-ttl">Every platform review includes real backtesting code</div>
+      <div class="term-info-dsc">We benchmark every tool against live market data using the same Python strategy. No vendor demos, no synthetic results.</div>
+      <div class="term-badges">
+        <span class="term-badge">Python</span>
+        <span class="term-badge">Backtrader</span>
+        <span class="term-badge">CCXT</span>
+        <span class="term-badge">Alpaca API</span>
+        <span class="term-badge">IB Gateway</span>
+      </div>
+    </div>
+    <div class="term-win">
+      <div class="term-winbar">
+        <div class="term-winbar-dot" style="background:#ff5f56"></div>
+        <div class="term-winbar-dot" style="background:#ffbd2e"></div>
+        <div class="term-winbar-dot" style="background:#27c93f"></div>
+        <span class="term-winbar-name">strategy_benchmark.py</span>
+      </div>
+      <div class="term-code">
+<span class="t-kw">import</span> pandas <span class="t-kw">as</span> pd<br>
+<span class="t-kw">from</span> backtesting <span class="t-kw">import</span> <span class="t-fn">Strategy</span>, <span class="t-fn">Backtest</span><br><br>
+<span class="t-kw">class</span> <span class="t-fn">MACross</span>(<span class="t-fn">Strategy</span>):<br>
+&nbsp;&nbsp;n1, n2 = <span class="t-nu">10</span>, <span class="t-nu">30</span><br><br>
+&nbsp;&nbsp;<span class="t-kw">def</span> <span class="t-fn">init</span>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;c = self.data.Close<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.ma1 = self.I(c.rolling, self.n1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.ma2 = self.I(c.rolling, self.n2)<br><br>
+&nbsp;&nbsp;<span class="t-kw">def</span> <span class="t-fn">next</span>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-kw">if</span> self.ma1[-<span class="t-nu">1</span>] &gt; self.ma2[-<span class="t-nu">1</span>]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.position.close(); self.buy()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-cm"># Full code in every platform review</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="nl-wrap reveal">
@@ -194,10 +249,10 @@ loadPosts();
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('trading software computer screens code')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/865/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/865/1400/400','');});
+        else{showImg('https://picsum.photos/seed/621/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/621/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/865/1400/400','');
+    showImg('https://picsum.photos/seed/621/1400/400','');
   }
 })();
 </script>
