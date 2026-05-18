@@ -63,10 +63,10 @@ h2{font-size:18px;font-weight:800;margin:36px 0 12px;color:#58a6ff}
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('trading software computer screens code')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/63/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/63/1400/400','');});
+        else{showImg('https://picsum.photos/seed/110/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/110/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/63/1400/400','');
+    showImg('https://picsum.photos/seed/110/1400/400','');
   }
 })();</script>
 </body></html>
