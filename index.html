@@ -1,98 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>siavashsed.github.io/tradingtechreview — Trading Tools & Technology</title>
-<meta name="description" content="Expert insights on trading tools & technology">
-
-
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TradingTech Review — Tools, Code & Platforms for Algo Traders</title>
+<meta name="description" content="Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#0d0d0d;color:#e8e8e8;line-height:1.65;font-size:16px}
-a{color:#6c63ff;text-decoration:none}
-a:hover{color:#9d97ff}
-img{max-width:100%;display:block;height:auto}
-
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-.top-bar{background:#141414;border-bottom:1px solid #252525;padding:0}
-.logo{font-size:22px;font-weight:800;color:#6c63ff}
-.split{display:grid;grid-template-columns:2fr 1fr;gap:36px;margin:40px 0 48px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-@media(max-width:780px){.split{grid-template-columns:1fr}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#0d1117;color:#e6edf3;font-size:15px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+/* breaking bar */
+.brk{background:#58a6ff;color:#fff;font-size:12px;font-weight:700;letter-spacing:.5px;padding:7px 20px;display:flex;align-items:center;gap:14px;overflow:hidden}
+.brk-label{background:rgba(0,0,0,.25);padding:2px 8px;border-radius:2px;flex-shrink:0;font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
+.brk-ticker{overflow:hidden;flex:1;white-space:nowrap}
+.brk-ticker span{display:inline-block;animation:ticker 24s linear infinite}
+@keyframes ticker{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-bottom:3px solid #58a6ff;background:#161b22}
+.nav-logo{font-size:24px;font-weight:900;letter-spacing:-1px;color:#e6edf3}
+.nav-logo em{color:#58a6ff;font-style:normal}
+.nav-links{display:flex;gap:24px}.nav-links a{font-size:13px;font-weight:600;color:#8b949e;transition:color .2s}.nav-links a:hover{color:#58a6ff}
+.nav-date{font-size:11px;color:#8b949e;font-weight:500}
+/* hero section */
+.hero{display:grid;grid-template-columns:1fr 340px;gap:0;border-bottom:1px solid #21262d}
+.hero-main{position:relative;overflow:hidden;min-height:480px;background:#161b22}
+.hero-main img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .8s;position:absolute;inset:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d1117f0 0%,#0d111760 50%,transparent 100%);z-index:1}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:28px;z-index:2}
+.hero-kicker{display:inline-block;background:#58a6ff;color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;margin-bottom:12px}
+.hero-title{font-size:clamp(22px,3vw,36px);font-weight:900;line-height:1.15;letter-spacing:-0.5px;margin-bottom:10px;color:#e6edf3}
+.hero-desc{font-size:14px;color:#8b949e;line-height:1.65;margin-bottom:14px}
+.hero-meta{font-size:12px;color:#8b949e;display:flex;gap:14px}
+.hero-meta span::before{content:'';}
+/* sidebar feed */
+.hero-side{border-left:1px solid #21262d;background:#161b22;overflow:hidden}
+.side-hd{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#58a6ff;padding:16px 18px;border-bottom:1px solid #21262d}
+.side-item{display:flex;gap:12px;padding:14px 18px;border-bottom:1px solid #21262d;cursor:pointer;transition:background .15s}
+.side-item:hover{background:#0d1117}
+.side-num{font-size:28px;font-weight:900;color:#21262d;line-height:1;flex-shrink:0;width:28px}
+.side-text{flex:1}
+.side-item-title{font-size:13px;font-weight:700;line-height:1.35;color:#e6edf3;margin-bottom:4px}
+.side-item-meta{font-size:11px;color:#8b949e}
+/* main grid */
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.section-hd{display:flex;align-items:center;gap:12px;margin:36px 0 20px}
+.section-hd h2{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#e6edf3}
+.section-hd::after{content:'';flex:1;height:1px;background:#21262d}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+.card{background:#161b22;border:1px solid #21262d;overflow:hidden;cursor:pointer;transition:border-color .2s}
+.card:hover{border-color:#58a6ff}
+.card-img{width:100%;height:180px;object-fit:cover;display:block}
+.card-img-ph{width:100%;height:180px;background:#0d1117;display:block}
+.card-body{padding:16px}
+.card-cat{font-size:10px;font-weight:800;color:#58a6ff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.card-title{font-size:15px;font-weight:800;line-height:1.3;color:#e6edf3;margin-bottom:6px}
+.card-desc{font-size:13px;color:#8b949e;line-height:1.6}
+.card-date{font-size:11px;color:#8b949e;margin-top:8px}
+/* newsletter */
+.nl-wrap{background:#161b22;border-top:4px solid #58a6ff;border-bottom:1px solid #21262d;padding:48px 20px;text-align:center;margin:0 0 0}
+.nl-wrap h2{font-size:clamp(20px,3vw,30px);font-weight:900;letter-spacing:-0.5px;margin-bottom:10px}
+.nl-wrap p{color:#8b949e;font-size:15px;margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+.nl-row{display:flex;gap:10px;justify-content:center;max-width:480px;margin:0 auto}
+.nl-input{flex:1;border:1px solid #21262d;background:#0d1117;color:#e6edf3;border-radius:2px;padding:11px 14px;font-size:14px;outline:none}
+.nl-input:focus{border-color:#58a6ff}
+.nl-btn{background:#58a6ff;color:#fff;border:none;border-radius:2px;padding:11px 22px;font-size:14px;font-weight:800;cursor:pointer;white-space:nowrap}
+/* footer */
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:20px 28px;border-top:1px solid #21262d;font-size:12px;color:#8b949e}
+.foot-links{display:flex;gap:20px}.foot-links a{color:#8b949e}.foot-links a:hover{color:#58a6ff}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-side{display:none}.card-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.card-grid{grid-template-columns:1fr}.nav{flex-direction:column;gap:10px;padding:14px 16px}.nav-date{display:none}.nl-row{flex-direction:column}.foot{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
-<div class="top-bar">
-  <div class="wrap" style="padding:16px 24px;display:flex;justify-content:space-between;align-items:center">
-    <a href="/" class="logo">siavashsed.github.io/tradingtechreview</a>
-    <span style="font-size:11px;color:#555;text-transform:uppercase;letter-spacing:2px">Trading Tools & Technology</span>
+
+<div class="brk">
+  <span class="brk-label">Live</span>
+  <div class="brk-ticker"><span>TRADING TECHNOLOGY · Tools, Code & Platforms for Algo Traders · TradingTech Review · Latest articles updated regularly · Covering Trading Technology in depth · Tools, Code & Platforms for Algo Traders · Alex Rivera, Software Engineer & Algorithmic Trader</span></div>
+</div>
+
+<nav class="nav">
+  <div class="nav-logo">TradingTech <em>Review</em></div>
+  <div class="nav-links">
+    <a href="./">Home</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+  <div class="nav-date" id="nav-date"></div>
+</nav>
+
+<!-- hero -->
+<div class="hero">
+  <div class="hero-main">
+    <img id="pxl-img" alt="TradingTech Review">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-kicker">Trading Technology</span>
+      <h1 class="hero-title" id="hero-title">Tools, Code & Platforms for Algo Traders</h1>
+      <p class="hero-desc" id="hero-desc">Honest reviews of trading platforms, APIs, and code libraries from someone who builds with them.</p>
+      <div class="hero-meta" id="hero-meta"><span>Alex Rivera</span></div>
+    </div>
+  </div>
+  <div class="hero-side">
+    <div class="side-hd">Top Stories</div>
+    <div id="side-feed"></div>
   </div>
 </div>
+
+<!-- main grid -->
 <div class="wrap">
-  <div class="split">
-    <div>
-        <img src="https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)" loading="lazy" style="width:100%;height:300px;object-fit:cover;border-radius:8px;margin-bottom:16px">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c63ff;margin-bottom:8px">Trading Tools & Technology</div>
-        <a href="/open-source-trading-bots-worth-using/" style="font-size:clamp(20px,3vw,28px);font-weight:700;line-height:1.25;color:#e8e8e8;display:block;margin-bottom:12px">Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)</a>
-        <p style="font-size:15px;color:#aaa;line-height:1.6;margin-bottom:16px">Alex Rivera reviews the open-source trading bots that hold up in production — with honest takes on Freqtrade, Hummingbot, Jesse, and more.</p>
-        <a href="/open-source-trading-bots-worth-using/" style="font-size:13px;font-weight:700;color:#6c63ff">Read full article →</a>
-        <div style="font-size:11px;color:#555;margin-top:8px">May 17, 2026</div></div>
-    <div>
-      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c63ff;padding-bottom:10px;border-bottom:2px solid #6c63ff;margin-bottom:0">Latest</div>
-      
-    <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #252525">
-      <img src="https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test)" loading="lazy" style="width:72px;height:58px;object-fit:cover;border-radius:4px;flex-shrink:0">
-      <div>
-        <div style="font-size:11px;color:#555;margin-bottom:3px">May 16, 2026</div>
-        <a href="/trading-desks-evaluate-new-tools/" style="font-size:14px;font-weight:600;color:#e8e8e8;line-height:1.35">How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test)</a>
-      </div>
-    </div>
-    <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #252525">
-      <img src="https://images.pexels.com/photos/16902140/pexels-photo-16902140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Backtest vs Live Trading: Why Your Results Will Always Differ (And What To Do About It)" loading="lazy" style="width:72px;height:58px;object-fit:cover;border-radius:4px;flex-shrink:0">
-      <div>
-        <div style="font-size:11px;color:#555;margin-bottom:3px">May 15, 2026</div>
-        <a href="/backtest-vs-live-trading-results-differ/" style="font-size:14px;font-weight:600;color:#e8e8e8;line-height:1.35">Backtest vs Live Trading: Why Your Results Will Always Differ (And What To Do About It)</a>
-      </div>
-    </div>
-    <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #252525">
-      <img src="https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap" loading="lazy" style="width:72px;height:58px;object-fit:cover;border-radius:4px;flex-shrink:0">
-      <div>
-        <div style="font-size:11px;color:#555;margin-bottom:3px">May 15, 2026</div>
-        <a href="/real-time-crypto-screener-websockets/" style="font-size:14px;font-weight:600;color:#e8e8e8;line-height:1.35">Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap</a>
-      </div>
-    </div>
-    <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #252525">
-      <img src="https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Pine Script vs Python: Which Should Traders Learn First (And Why the Answer Isn't Obvious)" loading="lazy" style="width:72px;height:58px;object-fit:cover;border-radius:4px;flex-shrink:0">
-      <div>
-        <div style="font-size:11px;color:#555;margin-bottom:3px">May 15, 2026</div>
-        <a href="/pine-script-vs-python-traders/" style="font-size:14px;font-weight:600;color:#e8e8e8;line-height:1.35">Pine Script vs Python: Which Should Traders Learn First (And Why the Answer Isn't Obvious)</a>
-      </div>
-    </div>
-    </div>
-  </div>
-  <h2 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#aaa;margin-bottom:20px">More Articles</h2>
-  <div class="grid"><div style="background:#141414;border:1px solid #252525;border-radius:10px;overflow:hidden">
-  <img src="https://images.pexels.com/photos/4960438/pexels-photo-4960438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="How to Connect to Binance API Without Getting Rate-Limited: A Practitioner's Guide" loading="lazy" style="width:100%;height:150px;object-fit:cover">
-  <div style="padding:18px">
-    <div style="font-size:11px;color:#555;margin-bottom:6px">May 15, 2026</div>
-    <a href="/binance-api-rate-limit-guide/" style="font-size:16px;font-weight:700;color:#e8e8e8;line-height:1.3;display:block;margin-bottom:8px">How to Connect to Binance API Without Getting Rate-Limited: A Practitioner's Guide</a>
-    <p style="font-size:13px;color:#aaa;line-height:1.55;margin-bottom:12px">Connect to Binance API without hitting rate limits. Practical strategies from an algorithmic trader ...</p>
-    <a href="/binance-api-rate-limit-guide/" style="font-size:13px;font-weight:600;color:#6c63ff">Read →</a>
-  </div>
-</div><div style="background:#141414;border:1px solid #252525;border-radius:10px;overflow:hidden">
-  <img src="https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)" loading="lazy" style="width:100%;height:150px;object-fit:cover">
-  <div style="padding:18px">
-    <div style="font-size:11px;color:#555;margin-bottom:6px">May 15, 2026</div>
-    <a href="/python-backtesting-libraries-trading-strategies/" style="font-size:16px;font-weight:700;color:#e8e8e8;line-height:1.3;display:block;margin-bottom:8px">The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)</a>
-    <p style="font-size:13px;color:#aaa;line-height:1.55;margin-bottom:12px">Alex Rivera reviews the top Python backtesting libraries for algorithmic traders — what actually wor...</p>
-    <a href="/python-backtesting-libraries-trading-strategies/" style="font-size:13px;font-weight:600;color:#6c63ff">Read →</a>
-  </div>
-</div></div>
+  <div class="section-hd"><h2>Latest Analysis</h2></div>
+  <div class="card-grid" id="card-grid"></div>
+
+  <div class="section-hd"><h2>More from TradingTech Review</h2></div>
+  <div class="card-grid" id="more-grid"></div>
 </div>
-<footer style="background:#141414;border-top:1px solid #252525;padding:40px 24px;text-align:center;font-size:13px;color:#555;margin-top:60px">
-<p>&copy; 2026 siavashsed.github.io/tradingtechreview &nbsp;&middot;&nbsp; Trading Tools & Technology</p>
-<p style="margin-top:6px;font-size:11px">For informational purposes only. Not financial or investment advice.</p>
-<p style="margin-top:6px;font-size:11px"><a href="/about/" style="color:#555">About</a> &nbsp;&middot;&nbsp; <a href="/contact/" style="color:#555">Contact</a> &nbsp;&middot;&nbsp; <a href="/privacy/" style="color:#555">Privacy Policy</a></p>
-</footer></body></html>
+
+<!-- newsletter -->
+<div class="nl-wrap">
+  <h2>The Dev Trader Newsletter</h2>
+  <p>Tool reviews, code snippets, and platform updates worth knowing about.</p>
+  <form id="nl-f" onsubmit="nlSub(event)">
+    <div class="nl-row">
+      <input class="nl-input" type="email" placeholder="your@email.com" required>
+      <button class="nl-btn" type="submit">Subscribe</button>
+    </div>
+  </form>
+</div>
+
+<footer class="foot">
+  <span>© TradingTech Review · Honest tool reviews for developers who trade algorithmically.</span>
+  <div class="foot-links">
+    <a href="./">Home</a><a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
+
+async function loadPosts(){
+  try{
+    var r=await fetch('./articles.json');if(!r.ok)throw 0;
+    var posts=await r.json();if(!posts||!posts.length)throw 0;
+    var h=posts[0];
+    /* hero */
+    if(h.image){var hi=document.getElementById('pxl-img');if(hi){hi.onload=function(){hi.style.opacity='1';};hi.src=h.image;}}
+    var ht=document.getElementById('hero-title'),hd=document.getElementById('hero-desc'),hm=document.getElementById('hero-meta');
+    if(ht)ht.innerHTML='<a href="./'+h.slug+'/" style="color:inherit">'+h.title+'</a>';
+    if(hd)hd.textContent=h.meta_description||'';
+    if(hm)hm.innerHTML='<span>'+( h.author||'Alex Rivera')+'</span><span>'+(h.date_iso||'')+'</span>';
+    /* side feed */
+    var sf=document.getElementById('side-feed');
+    if(sf)sf.innerHTML=posts.slice(1,6).map(function(p,i){return '<a href="./'+p.slug+'/" style="display:block"><div class="side-item"><div class="side-num">0'+(i+2)+'</div><div class="side-text"><div class="side-item-title">'+p.title+'</div><div class="side-item-meta">'+(p.date_iso||'')+'</div></div></div></a>';}).join('');
+    /* card grid */
+    function card(p){return '<a href="./'+p.slug+'/" style="display:block"><div class="card">'+(p.image?'<img class="card-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">':'<div class="card-img-ph"></div>')+'<div class="card-body"><div class="card-cat">Trading Technology</div><div class="card-title">'+p.title+'</div><div class="card-desc">'+(p.meta_description||'').slice(0,110)+'…</div><div class="card-date">'+(p.date_iso||'')+'</div></div></div></a>';}
+    var cg=document.getElementById('card-grid');if(cg)cg.innerHTML=posts.slice(1,4).map(card).join('');
+    var mg=document.getElementById('more-grid');if(mg)mg.innerHTML=posts.slice(4,7).map(card).join('');
+  }catch(e){
+    var cg2=document.getElementById('card-grid');
+    if(cg2)cg2.innerHTML='<div class="card"><div class="card-img-ph"></div><div class="card-body"><div class="card-cat">Trading Technology</div><div class="card-title">First articles publishing soon</div><div class="card-desc">Deep trading technology coverage is on its way.</div></div></div>';
+  }
+}
+function nlSub(e){e.preventDefault();document.getElementById('nl-f').innerHTML='<p style="color:#58a6ff;font-weight:700;font-size:15px;padding:12px 0">✓ You're on the list.</p>';}
+loadPosts();
+/* banner loader: pexels → picsum fallback */
+(function(){
+  var el=document.getElementById('pxl-img');
+  var cr=document.getElementById('pxl-cred');
+  if(!el)return;
+  function showImg(src,cred){
+    el.onload=function(){el.style.opacity='1';if(cred&&cr){cr.textContent=cred;cr.style.opacity='1';}};
+    el.src=src;
+  }
+  var k=localStorage.getItem('pexelsKey');
+  if(k){
+    fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('trading software computer screens code')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
+      .then(function(r){return r.json();}).then(function(d){
+        if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
+        else{showImg('https://picsum.photos/seed/63/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/63/1400/400','');});
+  }else{
+    showImg('https://picsum.photos/seed/63/1400/400','');
+  }
+})();
+</script>
+</body></html>
