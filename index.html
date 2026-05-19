@@ -756,7 +756,7 @@ async function loadArticles(){
     const r=await fetch('./articles.json');
     if(!r.ok)throw new Error('fetch failed');
     const data=await r.json();
-    allArts=(Array.isArray(data)?data:[]).map(a=>({...a,_tag:getTag(a)}));
+    allArts=(Array.isArray(data)?data:[]).filter(a=>a&&a.slug&&a.title).map(a=>({...a,_tag:getTag(a)}));
     updateCounts();
     document.getElementById('loading-state').style.display='none';
     document.getElementById('feed-out').style.display='block';
