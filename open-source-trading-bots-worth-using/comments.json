@@ -1,0 +1,52 @@
+[
+  {
+    "id": "c1243",
+    "name": "Marcus T.",
+    "initials": "MT",
+    "color": "#ec4899",
+    "date_iso": "2026-05-19",
+    "date_display": "May 19, 2026",
+    "text": "Finally someone calling out the sketchy bots. I wasted three months on that one bot that promised 40% returns monthly - turned out it was just overleveraging on micro caps. Glad I found Freqtrade, actually open source and transparent.",
+    "likes": 8
+  },
+  {
+    "id": "c2640",
+    "name": "Sarah K.",
+    "initials": "SK",
+    "color": "#ef4444",
+    "date_iso": "2026-05-22",
+    "date_display": "May 22, 2026",
+    "text": "The ccxt integration section was super helpful. Question though: does anyone here actually trade with bots on live accounts or do you mostly backtest? Seems risky but curious what the community does.",
+    "likes": 5
+  },
+  {
+    "id": "c3170",
+    "name": "Devon P.",
+    "initials": "DP",
+    "color": "#3ecf8e",
+    "date_iso": "2026-05-25",
+    "date_display": "May 25, 2026",
+    "text": "Been running CPBB for 6 months now and honestly the performance beats my manual trading by a mile. The learning curve is steep but worth it if you actually understand your strategy parameters.",
+    "likes": 11
+  },
+  {
+    "id": "c4938",
+    "name": "Lisa R.",
+    "initials": "LR",
+    "color": "#14b8a6",
+    "date_iso": "2026-05-29",
+    "date_display": "May 29, 2026",
+    "text": "I disagree with skipping PyAlgoTrade. Sure it's older but it's rock solid for backtesting and the documentation is clearer than most modern alternatives.",
+    "likes": 3
+  },
+  {
+    "id": "c5742",
+    "name": "James H.",
+    "initials": "JH",
+    "color": "#6366f1",
+    "date_iso": "2026-06-02",
+    "date_display": "Jun 2, 2026",
+    "text": "The point about API rate limits was clutch. Lost money last week because my bot kept hitting exchange limits and missing trades. Definitely audit that before going live.",
+    "likes": 9
+  }
+]
