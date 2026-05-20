@@ -2,7 +2,7 @@
   {
     "title": "The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)",
     "slug": "python-backtesting-libraries-trading-strategies",
-    "meta_description": "Alex Rivera reviews the top Python backtesting libraries for algorithmic traders — what actually works, what breaks in prod, and which one to start with.",
+    "meta_description": "Alex Rivera reviews the top Python backtesting libraries for algorithmic traders \u2014 what actually works, what breaks in prod, and which one to start with.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
     "author": "Siavash Sadighi",
@@ -11,7 +11,8 @@
       "vectorbt.pro",
       "kernc.github.io/backtesting.py",
       "zipline-reloaded.readthedocs.io"
-    ]
+    ],
+    "category": "Backtesting"
   },
   {
     "title": "How to Connect to Binance API Without Getting Rate-Limited: A Practitioner's Guide",
@@ -24,12 +25,13 @@
     "outbound_links": [
       "binance-docs.github.io",
       "redis.io"
-    ]
+    ],
+    "category": "APIs & Data"
   },
   {
     "title": "Pine Script vs Python: Which Should Traders Learn First (And Why the Answer Isn't Obvious)",
     "slug": "pine-script-vs-python-traders",
-    "meta_description": "Alex Rivera breaks down Pine Script vs Python for traders — which to learn first, what each does well, and where most people waste months of effort.",
+    "meta_description": "Alex Rivera breaks down Pine Script vs Python for traders \u2014 which to learn first, what each does well, and where most people waste months of effort.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
     "author": "Siavash Sadighi",
@@ -37,7 +39,8 @@
     "outbound_links": [
       "stackoverflow.com",
       "tradingview.com"
-    ]
+    ],
+    "category": "Backtesting"
   },
   {
     "title": "Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap",
@@ -51,36 +54,39 @@
       "kaiko.com",
       "binance-docs.github.io",
       "websockets.readthedocs.io"
-    ]
+    ],
+    "category": "APIs & Data"
   },
   {
     "title": "Backtest vs Live Trading: Why Your Results Will Always Differ (And What To Do About It)",
     "slug": "backtest-vs-live-trading-results-differ",
-    "meta_description": "Alex Rivera explains the real technical reasons backtest and live trading results diverge — and how to close the gap without fooling yourself.",
+    "meta_description": "Alex Rivera explains the real technical reasons backtest and live trading results diverge \u2014 and how to close the gap without fooling yourself.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
     "author": "Siavash Sadighi",
     "image": "https://images.pexels.com/photos/16902140/pexels-photo-16902140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "aqr.com"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test)",
     "slug": "trading-desks-evaluate-new-tools",
-    "meta_description": "Alex Rivera breaks down how serious trading desks evaluate new tools — from latency benchmarks to integration reality checks. No vendor hype allowed.",
+    "meta_description": "Alex Rivera breaks down how serious trading desks evaluate new tools \u2014 from latency benchmarks to integration reality checks. No vendor hype allowed.",
     "date": "May 16, 2026",
     "date_iso": "2026-05-16",
     "author": "Siavash Sadighi",
     "image": "https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "cfainstitute.org"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)",
     "slug": "open-source-trading-bots-worth-using",
-    "meta_description": "Alex Rivera reviews the open-source trading bots that hold up in production — with honest takes on Freqtrade, Hummingbot, Jesse, and more.",
+    "meta_description": "Alex Rivera reviews the open-source trading bots that hold up in production \u2014 with honest takes on Freqtrade, Hummingbot, Jesse, and more.",
     "date": "May 17, 2026",
     "date_iso": "2026-05-17",
     "author": "Siavash Sadighi",
@@ -89,6 +95,7 @@
       "freqtrade.io",
       "hummingbot.io",
       "jesse.trade"
-    ]
+    ],
+    "category": "Execution"
   }
 ]
