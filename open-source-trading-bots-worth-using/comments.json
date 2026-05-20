@@ -1,52 +1,52 @@
 [
   {
-    "id": "c1243",
+    "id": "c1629",
     "name": "Marcus T.",
     "initials": "MT",
     "color": "#ec4899",
-    "date_iso": "2026-05-19",
-    "date_display": "May 19, 2026",
-    "text": "Finally someone calling out the sketchy bots. I wasted three months on that one bot that promised 40% returns monthly - turned out it was just overleveraging on micro caps. Glad I found Freqtrade, actually open source and transparent.",
-    "likes": 8
+    "date_iso": "2026-05-20",
+    "date_display": "May 20, 2026",
+    "text": "Been running Freqtrade for 6 months now and it's solid. The backtesting module alone saved me from blowing up my account twice. Way better than the expensive alternatives.",
+    "likes": 9
   },
   {
-    "id": "c2640",
+    "id": "c2114",
     "name": "Sarah K.",
     "initials": "SK",
     "color": "#ef4444",
-    "date_iso": "2026-05-22",
-    "date_display": "May 22, 2026",
-    "text": "The ccxt integration section was super helpful. Question though: does anyone here actually trade with bots on live accounts or do you mostly backtest? Seems risky but curious what the community does.",
-    "likes": 5
+    "date_iso": "2026-05-24",
+    "date_display": "May 24, 2026",
+    "text": "Great breakdown but I'm still confused about the differences between CCXT integration and direct API connections. Can someone ELI5 this? Thinking about switching from my current setup.",
+    "likes": 4
   },
   {
-    "id": "c3170",
-    "name": "Devon P.",
-    "initials": "DP",
+    "id": "c3126",
+    "name": "David R.",
+    "initials": "DR",
     "color": "#3ecf8e",
-    "date_iso": "2026-05-25",
-    "date_display": "May 25, 2026",
-    "text": "Been running CPBB for 6 months now and honestly the performance beats my manual trading by a mile. The learning curve is steep but worth it if you actually understand your strategy parameters.",
+    "date_iso": "2026-05-27",
+    "date_display": "May 27, 2026",
+    "text": "Tried that PyAlgoTrade bot you mentioned in the skip section. Can confirm it's outdated garbage. Documentation is from 2019 and the community is basically dead.",
     "likes": 11
   },
   {
-    "id": "c4938",
-    "name": "Lisa R.",
-    "initials": "LR",
-    "color": "#14b8a6",
-    "date_iso": "2026-05-29",
-    "date_display": "May 29, 2026",
-    "text": "I disagree with skipping PyAlgoTrade. Sure it's older but it's rock solid for backtesting and the documentation is clearer than most modern alternatives.",
-    "likes": 3
+    "id": "c4887",
+    "name": "Jennifer L.",
+    "initials": "JL",
+    "color": "#ec4899",
+    "date_iso": "2026-06-01",
+    "date_display": "Jun 1, 2026",
+    "text": "Anyone else worried about running bots 24/7 on their personal hardware? I switched to cloud hosting but the latency is killing my scalping strategy. Thoughts?",
+    "likes": 6
   },
   {
-    "id": "c5742",
-    "name": "James H.",
-    "initials": "JH",
+    "id": "c5759",
+    "name": "Thomas M.",
+    "initials": "TM",
     "color": "#6366f1",
-    "date_iso": "2026-06-02",
-    "date_display": "Jun 2, 2026",
-    "text": "The point about API rate limits was clutch. Lost money last week because my bot kept hitting exchange limits and missing trades. Definitely audit that before going live.",
-    "likes": 9
+    "date_iso": "2026-06-03",
+    "date_display": "Jun 3, 2026",
+    "text": "This article nailed it. I wasted 3 months on that Gekko fork before realizing it was unmaintained. Should've just gone with the recommendations here from the start.",
+    "likes": 8
   }
 ]
