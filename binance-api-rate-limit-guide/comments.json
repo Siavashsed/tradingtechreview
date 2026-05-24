@@ -7,7 +7,7 @@
     "date_iso": "2026-05-16",
     "date_display": "May 16, 2026",
     "text": "Finally someone addresses the rate limiting issue directly. I've been hitting walls with my bot for months and didn't realize I could use sub-accounts to distribute requests. This is a game changer.",
-    "likes": 8
+    "likes": 0
   },
   {
     "id": "c2724",
@@ -17,7 +17,7 @@
     "date_iso": "2026-05-19",
     "date_display": "May 19, 2026",
     "text": "Good article but I wish you covered websocket connections more. Are they less prone to rate limiting than REST calls? That's been my main question.",
-    "likes": 5
+    "likes": 0
   },
   {
     "id": "c3884",
@@ -27,26 +27,6 @@
     "date_iso": "2026-05-21",
     "date_display": "May 21, 2026",
     "text": "The exponential backoff strategy mentioned here saved my trading system. Was getting rate-limited every few hours until I implemented proper retry logic with the timing you suggested.",
-    "likes": 11
-  },
-  {
-    "id": "c4663",
-    "name": "Elena V.",
-    "initials": "EV",
-    "color": "#a78bfa",
-    "date_iso": "2026-05-25",
-    "date_display": "May 25, 2026",
-    "text": "Honest question: is there any risk to using multiple API keys on the same account like the guide suggests? Concerned about account security.",
-    "likes": 3
-  },
-  {
-    "id": "c5897",
-    "name": "James W.",
-    "initials": "JW",
-    "color": "#6366f1",
-    "date_iso": "2026-05-30",
-    "date_display": "May 30, 2026",
-    "text": "The weight system explanation cleared up a lot of confusion. Didn't realize some endpoints cost more weight than others. My request batching is way more efficient now.",
-    "likes": 9
+    "likes": 2
   }
 ]
