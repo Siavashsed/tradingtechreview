@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Building a Real-Time Crypto Screener with WebSockets: Ski...</title>
 <meta name="description" content="Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production.">
-<link rel="canonical" href="https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"><meta name="googlebot" content="index,follow"><meta name="keywords" content="APIs &amp; Data"><meta name="author" content="Alex Rivera"><meta property="article:author" content="Alex Rivera"><meta name="twitter:creator" content="Alex Rivera"><meta property="og:site_name" content="Trading Tech"><meta property="og:title" content="Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap"><meta property="og:description" content="Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production."><meta property="og:url" content="https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap"><meta name="twitter:description" content="Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production."><meta property="og:image" content="https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="og:image:alt" content="Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap"><meta name="twitter:image" content="https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="article:published_time" content="2026-05-15T09:00:00+00:00"><meta property="article:modified_time" content="2026-05-20T09:00:00+00:00"><meta property="article:section" content="APIs &amp; Data"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap", "description": "Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production.", "datePublished": "2026-05-15T09:00:00+00:00", "dateModified": "2026-05-20T09:00:00+00:00", "url": "https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/"}, "inLanguage": "en", "image": ["https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"], "author": {"@type": "Person", "name": "Alex Rivera", "url": "https://siavashsed.github.io/tradingtechreview/about.html", "jobTitle": "software engineer turned full-time algorithmic trader", "description": "TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so."}, "publisher": {"@type": "Organization", "name": "Trading Tech", "url": "https://siavashsed.github.io/tradingtechreview/", "logo": {"@type": "ImageObject", "url": "https://siavashsed.github.io/tradingtechreview/favicon.ico"}}, "articleSection": "APIs & Data", "wordCount": 1465, "keywords": "APIs & Data"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siavashsed.github.io/tradingtechreview/"}, {"@type": "ListItem", "position": 2, "name": "APIs & Data", "item": "https://siavashsed.github.io/tradingtechreview/"}, {"@type": "ListItem", "position": 3, "name": "Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap", "item": "https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/"}]}</script>
+<link rel="canonical" href="https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"><meta name="googlebot" content="index,follow"><meta name="keywords" content="APIs &amp; Data"><meta name="author" content="Alex Rivera"><meta property="article:author" content="Alex Rivera"><meta name="twitter:creator" content="Alex Rivera"><meta property="og:site_name" content="Tradingtechreview"><meta property="og:title" content="Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap"><meta property="og:description" content="Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production."><meta property="og:url" content="https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap"><meta name="twitter:description" content="Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production."><meta property="og:image" content="https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="og:image:alt" content="Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap"><meta name="twitter:image" content="https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="article:published_time" content="2026-05-15T09:00:00+00:00"><meta property="article:modified_time" content="2026-05-24T09:00:00+00:00"><meta property="article:section" content="APIs &amp; Data"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap", "description": "Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production.", "datePublished": "2026-05-15T09:00:00+00:00", "dateModified": "2026-05-24T09:00:00+00:00", "url": "https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/"}, "inLanguage": "en", "image": ["https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"], "author": {"@type": "Person", "name": "Alex Rivera", "url": "https://siavashsed.github.io/tradingtechreview/about.html", "jobTitle": "software engineer turned full-time algorithmic trader", "description": "TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so."}, "publisher": {"@type": "Organization", "name": "Tradingtechreview", "url": "https://siavashsed.github.io/tradingtechreview/", "logo": {"@type": "ImageObject", "url": "https://siavashsed.github.io/tradingtechreview/favicon.ico"}}, "articleSection": "APIs & Data", "wordCount": 1513, "keywords": "APIs & Data"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siavashsed.github.io/tradingtechreview/"}, {"@type": "ListItem", "position": 2, "name": "APIs & Data", "item": "https://siavashsed.github.io/tradingtechreview/"}, {"@type": "ListItem", "position": 3, "name": "Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap", "item": "https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets/"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -287,192 +287,59 @@ body[data-page-depth="1"] article .concl,
 body[data-page-depth="1"] article strong{color:#e6e6e6 !important}
 body[data-page-depth="1"] article a,
 body[data-page-depth="1"] article p a,
-body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decoration:underline;text-underline-offset:3px}
-/* /CONTRAST-AUDIT */
-/* page */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-/* page */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#080c12;
-  --bg2:#0d1320;
-  --card:#111928;
-  --card2:#162035;
-  --orange:#f97316;
-  --orange2:#ea580c;
-  --cyan:#22d3ee;
-  --cyan2:#0891b2;
-  --text:#e2e8f0;
-  --text2:#94a3b8;
-  --text3:#475569;
-  --green:#22c55e;
-  --red:#ef4444;
-  --amber:#fbbf24;
-  --violet:#818cf8;
-  --border:rgba(249,115,22,.1);
-  --border2:rgba(249,115,22,.22);
-  --font:'Inter',system-ui,sans-serif;
-  --mono:'JetBrains Mono',monospace;
-  --r:6px;
+body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decoration:underline;text-underline-offset:3px}@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+.ap,.ap-concl,.ap-pull,.ap-body,.ap-deck{box-sizing:border-box;overflow-wrap:break-word;word-wrap:break-word;word-break:normal;hyphens:auto;max-width:100%}
+.ap{max-width:720px;margin:0 auto;padding:56px 24px 80px;font-family:'Lora',Georgia,serif}
+.ap-kicker{display:flex;align-items:center;gap:12px;font-family:'Inter','system-ui',sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#f97316;margin:0 0 26px}
+.ap-kicker::before{content:'';width:28px;height:1px;background:#f97316}
+.ap-kicker .ap-sep{opacity:.4;font-weight:400;letter-spacing:1px;color:#8b8b8b}
+.ap h1{font-family:'Inter','system-ui',sans-serif;font-size:clamp(32px,5.4vw,54px);font-weight:800;line-height:1.05;letter-spacing:-.6px;color:#e6edf3;margin:0 0 22px;max-width:680px}
+.ap-deck{font-family:'Lora',Georgia,serif;font-size:20px;font-style:italic;line-height:1.5;color:#9ca3af;margin:0 0 36px;max-width:620px}
+.ap-byline{display:flex;align-items:center;gap:14px;padding:18px 0;border-top:1px solid #1f1f1f;border-bottom:1px solid #1f1f1f;margin:0 0 40px;font-family:'Inter','system-ui',sans-serif}
+.ap-byline-author{font-size:14px;font-weight:600;color:#e6edf3}
+.ap-byline-author strong{font-weight:700;color:#e6edf3}
+.ap-byline-meta{font-size:12.5px;color:#8b8b8b;display:flex;align-items:center;gap:8px;margin-top:3px;letter-spacing:.2px}
+.ap-byline-meta .dot{width:3px;height:3px;border-radius:50%;background:#8b8b8b;opacity:.6;display:inline-block}
+.ap-hero{margin:0 0 44px}
+.ap-hero img{width:100%;height:auto;max-height:560px;object-fit:cover;display:block;border-radius:2px}
+.ap-hero figcaption{font-family:'Lora',Georgia,serif;font-style:italic;font-size:13px;color:#8b8b8b;text-align:center;margin-top:12px}
+.ap-body{font-size:18px;line-height:1.78;color:#e6edf3}
+.ap-body p{margin:0 0 24px;color:#9ca3af}
+.ap-body p.ap-lede{font-size:21px;line-height:1.55;color:#e6edf3;margin-bottom:28px}
+.ap-body p.ap-lede::first-letter{float:left;font-family:'Inter','system-ui',sans-serif;font-size:76px;font-weight:800;line-height:.82;margin:8px 12px -2px 0;color:#f97316}
+.ap-body h2,.ap-body .art-h2{font-family:'Inter','system-ui',sans-serif;font-size:26px;font-weight:800;line-height:1.2;color:#e6edf3;margin:52px 0 16px;letter-spacing:-.3px}
+.ap-body h3,.ap-body .art-h3{font-family:'Inter','system-ui',sans-serif;font-size:19px;font-weight:700;color:#e6edf3;margin:34px 0 12px;letter-spacing:-.1px}
+.ap-body h4{font-family:'Inter','system-ui',sans-serif;font-size:14px;font-weight:700;color:#e6edf3;margin:24px 0 10px;text-transform:uppercase;letter-spacing:1.2px}
+.ap-body ul,.ap-body ol{margin:0 0 24px 24px;color:#9ca3af}
+.ap-body li{margin-bottom:9px;line-height:1.7}
+.ap-body a{color:#f97316;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.ap-body strong{color:#e6edf3;font-weight:700}
+.ap-body em{font-style:italic;color:#e6edf3}
+.ap-body img{width:100%;height:auto;margin:32px 0;border-radius:2px;display:block}
+.ap-body blockquote{border-left:3px solid #f97316;padding:6px 0 6px 22px;margin:28px 0;font-style:italic;color:#e6edf3;font-size:18px}
+.ap-body code{font-family:'SFMono-Regular',Menlo,Consolas,monospace;background:#0a0a0a;padding:2px 7px;border-radius:3px;font-size:14px;color:#e6edf3}
+.ap-body table{width:100%;border-collapse:collapse;margin:28px 0;font-family:'Inter','system-ui',sans-serif;font-size:14px}
+.ap-body th{text-align:left;padding:10px 12px;border-bottom:2px solid #e6edf3;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:11px;color:#e6edf3}
+.ap-body td{padding:10px 12px;border-bottom:1px solid #1f1f1f;color:#9ca3af}
+.ap-pull{font-family:'Inter','system-ui',sans-serif;font-size:28px;font-weight:600;font-style:italic;line-height:1.3;color:#e6edf3;margin:56px 0;padding:0 0 0 24px;border-left:0;position:relative}
+.ap-pull::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:3px;background:#f97316}
+.ap-pull::after{content:'';display:block;width:48px;height:2px;background:#f97316;margin-top:18px;opacity:.5}
+.ap-concl{font-family:'Lora',Georgia,serif;font-size:19px;line-height:1.7;color:#e6edf3;margin-top:56px;padding-top:32px;position:relative}
+.ap-concl::before{content:'In closing';display:block;font-family:'Inter','system-ui',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#f97316;margin-bottom:14px;font-weight:700;font-style:normal}
+.ap-concl::after{content:'';position:absolute;top:0;left:0;width:60px;height:2px;background:#e6edf3}
+.ap-concl p{color:#e6edf3;margin-bottom:18px}@media(max-width:760px){
+  .ap{padding:40px 22px 72px}
+  .ap h1{font-size:34px;letter-spacing:-.4px}
+  .ap-deck{font-size:18px}
+  .ap-body{font-size:17px}
+  .ap-body p.ap-lede{font-size:19px}
+  .ap-body p.ap-lede::first-letter{font-size:60px}
+  .ap-pull{font-size:22px;margin:42px 0}
+  .ap-hero img{max-height:380px}
 }
 
-/* ── NAV ── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:56px;transition:background .25s,border-color .25s;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(8,12,18,.95);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:var(--border)}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;gap:0}
-.nav-mark{display:flex;align-items:center;gap:10px;margin-right:32px;flex-shrink:0;cursor:pointer}
-.nm-box{font-family:var(--mono);font-size:11px;font-weight:800;color:var(--bg);background:var(--orange);padding:3px 8px;border-radius:3px;letter-spacing:.5px}
-.nm-name{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--text);letter-spacing:-.3px}
-.nav-links{display:flex;gap:0;height:56px}
-.nav-link{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.3px;color:var(--text3);padding:0 14px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .18s;margin-bottom:-1px}
-.nav-link:hover{color:var(--text2)}
-.nav-link.active{color:var(--orange);border-bottom-color:var(--orange)}
-.nav-r{margin-left:auto;display:flex;align-items:center;gap:12px}
-.nav-sub{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--bg);background:var(--orange);padding:6px 14px;border-radius:3px;letter-spacing:.8px;text-transform:uppercase;transition:background .18s;cursor:pointer}
-.nav-sub:hover{background:var(--orange2)}@media(max-width:900px){.nav-links{display:none}}@media(max-width:640px){.nav-cnt{display:none}}
-
-/* ── HERO ── */
-.hero{min-height:100vh;padding:56px 0 0;position:relative;display:flex;align-items:center;overflow:hidden}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.035) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
-.hero-glow{position:absolute;top:-15%;left:-5%;width:55%;height:65%;background:radial-gradient(ellipse,rgba(249,115,22,.055) 0%,transparent 65%);pointer-events:none}
-.hero-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:52px 24px 88px;width:100%;display:grid;grid-template-columns:1fr 500px;gap:60px;align-items:center}
-.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:22px}
-.hk-prompt{color:var(--text3);margin-right:2px}
-.hero-h1{font-family:var(--mono);font-size:clamp(28px,4vw,52px);font-weight:800;color:#fff;line-height:1.06;letter-spacing:-1.5px;margin-bottom:20px}
-.hero-sub{font-size:15px;color:var(--text2);line-height:1.78;max-width:480px;margin-bottom:32px}
-.hero-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
-.btn-primary{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.5px;color:var(--bg);background:var(--orange);padding:12px 24px;border-radius:var(--r);transition:background .18s;white-space:nowrap}
-.btn-primary:hover{background:var(--orange2)}
-.btn-ghost{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.5px;color:var(--text2);border:1px solid var(--border2);padding:12px 24px;border-radius:var(--r);transition:all .18s;cursor:pointer;white-space:nowrap}
-.btn-ghost:hover{color:var(--text);border-color:var(--orange)}
-.hero-stats{display:flex;gap:28px;padding-top:28px;border-top:1px solid var(--border);flex-wrap:wrap}
-.hs{display:flex;flex-direction:column;gap:4px}
-.hs-val{font-family:var(--mono);font-size:22px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1}
-.hs-val b{color:var(--orange)}
-.hs-lbl{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase}
-
-/* Terminal window */
-.terminal{background:#0d1117;border:1px solid rgba(249,115,22,.2);border-radius:10px;overflow:hidden;box-shadow:0 0 72px rgba(249,115,22,.07),0 28px 72px rgba(0,0,0,.7)}
-.t-bar{background:#161b22;padding:13px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(249,115,22,.1)}
-.t-dot{width:10px;height:10px;border-radius:50%}
-.t-title{font-family:var(--mono);font-size:11px;color:#4a5a6a;margin-left:6px;letter-spacing:.3px}
-.t-body{padding:22px 24px;font-family:var(--mono);font-size:12px;line-height:1.9;overflow-x:auto}
-.tc-prompt{color:#22d3ee}
-.tc-cmd{color:#e2e8f0}
-.tc-comment{color:#3a4a5a}
-.tc-orange{color:#f97316}
-.tc-green{color:#22c55e}
-.tc-red{color:#ef4444}
-.tc-white{color:#e2e8f0}
-.tc-gray{color:#4a5a6a}
-.tc-dim{color:#2a3a4a}
-.tc-key{color:#8b949e;display:inline-block;min-width:130px}@media(max-width:1100px){.hero-inner{grid-template-columns:1fr}.terminal{display:none}}@media(max-width:640px){.hero{min-height:auto}.hero-inner{padding:36px 20px 64px}}
-
-/* ── FILTER BAR ── */
-.filter-bar{background:rgba(13,19,32,.98);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:sticky;top:56px;z-index:100;backdrop-filter:blur(8px)}
-.filter-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
-.filter-inner::-webkit-scrollbar{display:none}
-.ftab{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.4px;color:var(--text3);padding:12px 16px;border-bottom:2px solid transparent;cursor:pointer;transition:all .18s;white-space:nowrap;background:none;border-left:none;border-right:none;border-top:none;margin-bottom:-1px}
-.ftab:hover{color:var(--text2)}
-.ftab.active{color:var(--orange);border-bottom-color:var(--orange)}
-.fc-badge{font-size:9px;font-weight:700;background:rgba(249,115,22,.12);color:var(--orange);padding:1px 5px;border-radius:10px;margin-left:5px}
-
-/* ── MAIN ── */
-.main{max-width:1280px;margin:0 auto;padding:40px 24px 80px}
-.sec-hd{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px}
-.sec-title{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.3px}
-.sec-title span{color:var(--orange)}
-.sec-sub{font-family:var(--mono);font-size:11px;color:var(--text3)}
-.art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:64px}
-
-/* Article card */
-.art-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .18s,transform .18s,box-shadow .18s;cursor:pointer}
-.art-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.55)}
-.ac-stripe{height:2px}
-.ac-body{padding:18px 18px 14px;flex:1;display:flex;flex-direction:column}
-.ac-meta{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
-.ac-tag{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 8px;border-radius:3px}
-.ac-depth{display:flex;align-items:center;gap:3px;margin-left:auto;flex-shrink:0;title:attr(title)}
-.dep-bar{width:4px;height:13px;border-radius:1px;background:var(--border2)}
-.ac-title{font-size:14px;font-weight:700;color:var(--text);line-height:1.44;margin-bottom:9px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.ac-exc{font-size:12px;color:var(--text2);line-height:1.72;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
-.ac-foot{padding:11px 18px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.ac-cta{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--orange);display:flex;align-items:center;gap:3px}
-
-/* Skeleton */
-.skel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.skeleton{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px;animation:skp 1.4s ease infinite}@keyframes skp{0%,100%{opacity:.3}50%{opacity:.7}}
-.sk-b{height:2px;background:var(--card2);border-radius:2px;margin-bottom:18px}
-.sk-l{height:10px;background:var(--card2);border-radius:3px;margin-bottom:9px}
-
-.no-res{text-align:center;padding:72px 20px;color:var(--text3)}
-.no-res h3{font-family:var(--mono);font-size:15px;color:var(--text2);margin-bottom:8px}
-
-/* ── STACK SECTION ── */
-.stack-sec{border-top:1px solid var(--border);padding-top:56px;margin-bottom:60px}
-.stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px}
-.scard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px;display:flex;align-items:flex-start;gap:14px;transition:border-color .18s,transform .18s;cursor:pointer;position:relative;overflow:hidden}
-.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(249,115,22,.2),transparent);opacity:0;transition:opacity .2s}
-.scard:hover{border-color:var(--border2);transform:translateY(-1px)}
-.scard:hover::before{opacity:1}
-.si-box{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.sl{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px;letter-spacing:-.2px}
-.sd{font-size:11px;color:var(--text2);line-height:1.65}
-.st{font-family:var(--mono);font-size:9px;color:var(--orange);margin-top:6px;letter-spacing:.5px}@media(max-width:860px){.stack-grid{grid-template-columns:repeat(2,1fr)}}
-
-/* ── AUTHOR ── */
-.author-sec{border-top:1px solid var(--border);padding-top:52px;margin-bottom:52px}
-.author-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:32px;display:flex;gap:28px;max-width:720px;position:relative;overflow:hidden}
-.author-card::after{content:'';position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.06) 0%,transparent 70%)}
-.av{width:74px;height:74px;border-radius:50%;border:2px solid var(--border2);flex-shrink:0;background:linear-gradient(135deg,var(--orange),#ea580c);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:20px;font-weight:800;color:#fff}
-.an{font-family:var(--mono);font-size:16px;font-weight:800;color:#fff;margin-bottom:3px;letter-spacing:-.3px}
-.at{font-family:var(--mono);font-size:10px;color:var(--orange);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px}
-.ab{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:8px}@media(max-width:580px){.author-card{flex-direction:column}}
-
-/* ── NEWSLETTER ── */
-.nl-wrap{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:40px;margin-bottom:64px;position:relative;overflow:hidden}
-.nl-wrap::before{content:'';position:absolute;bottom:-30%;right:-5%;width:50%;height:140%;background:radial-gradient(ellipse,rgba(249,115,22,.05) 0%,transparent 65%);pointer-events:none}
-.nl-inner{position:relative;max-width:520px}
-.nl-kicker{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
-.nl-h{font-family:var(--mono);font-size:clamp(18px,2.5vw,26px);font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:10px;line-height:1.2}
-.nl-p{font-size:13px;color:var(--text2);margin-bottom:22px;line-height:1.75}
-.nl-form{display:flex;gap:8px;flex-wrap:wrap}
-.nl-input{flex:1;min-width:220px;background:var(--bg);border:1px solid var(--border2);border-radius:var(--r);padding:11px 14px;font-size:13px;color:var(--text);outline:none;font-family:var(--font);transition:border-color .2s}
-.nl-btn{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--bg);background:var(--orange);border:none;border-radius:var(--r);padding:11px 20px;cursor:pointer;transition:background .18s;white-space:nowrap}
-.nl-btn:hover{background:var(--orange2)}
-.nl-note{font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:10px;transition:color .3s}
-
-/* ── FOOTER ── */
-.footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24px 28px}
-.ft-inner{max-width:1280px;margin:0 auto}
-.ft-top{display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;margin-bottom:36px}
-.ft-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.ft-mark{font-family:var(--mono);font-size:11px;font-weight:800;color:var(--bg);background:var(--orange);padding:3px 8px;border-radius:3px;letter-spacing:.5px}
-.ft-name{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--text)}
-.ft-desc{font-size:12px;color:var(--text3);max-width:260px;line-height:1.7}
-.ft-links{display:flex;gap:40px;flex-wrap:wrap}
-.ft-col-h{font-family:var(--mono);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text3);margin-bottom:12px}
-.ft-col span{display:block;font-family:var(--mono);font-size:11px;color:var(--text3);padding:3px 0;cursor:pointer;transition:color .18s}
-.ft-col span:hover{color:var(--text)}
-.ft-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.ft-copy{font-family:var(--mono);font-size:10px;color:var(--text3)}
-.ft-sig{font-family:var(--mono);font-size:9px;color:var(--border2);letter-spacing:.5px}
-
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .45s,transform .45s}@media(max-width:1024px){.main{padding:28px 20px 60px}}@media(max-width:640px){.art-grid{grid-template-columns:1fr}.hero-stats{flex-wrap:wrap;gap:20px}}
-/* page */
-.hdr{background:#141414;border-bottom:1px solid #252525;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;max-width:none}
-.wrap{max-width:1060px;margin:48px auto;padding:0 24px;display:grid;grid-template-columns:1fr 260px;gap:48px;align-items:start}
-.sidebar{position:sticky;top:24px;background:#141414;border:1px solid #252525;border-radius:8px;padding:20px}
-.sidebar h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#f97316;margin-bottom:12px}
-.sidebar ul{list-style:none;border-left:2px solid #252525;padding-left:12px}
-h1{font-size:clamp(26px,4vw,38px);font-weight:800;line-height:1.2;margin-bottom:16px}
-p{margin-bottom:18px;color:#aaa;line-height:1.75}
-.intro{font-size:18px;line-height:1.7;color:#e8e8e8}
-.concl{background:#1e1e1e;border-left:4px solid #f97316;padding:20px 24px;border-radius:0 8px 8px 0;margin-top:40px}@media(max-width:800px){.wrap{grid-template-columns:1fr}.sidebar{display:none}}
 /* tight headlines */
-.art h1,.wrap h1,.art-grid h1,.art-min h1,.mag-hero h1,.imm-hero h1,article h1,h1{line-height:1.1!important}
-/* heading classes */
-.art-h2{font-family:system-ui,sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e6edf3}.art-h3{font-family:system-ui,sans-serif;font-size:18px;font-weight:700;margin:28px 0 12px;color:#e6edf3}</style>
+.art h1,.wrap h1,.art-grid h1,.art-min h1,.mag-hero h1,.imm-hero h1,article h1,h1{line-height:1.1!important}</style>
 </head>
 <body data-page-depth="1">
 <!-- NAV -->
@@ -495,28 +362,29 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
     </div>
   </div>
 </nav>
-<article itemscope itemtype="https://schema.org/Article"><div class="wrap">
-  <section>
-    <div style="font-size:13px;color:#555;margin-bottom:20px"><a href="../" style="color:#555">← Home</a> &nbsp;·&nbsp; <time datetime="2026-05-15">May 15, 2026</time></div>
-    <h1>Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap</h1>
-    <div style="font-size:13px;color:#555;margin-bottom:20px">By <strong style="color:#aaa">Alex Rivera</strong></div>
-    <img src="https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Developer at desk with multiple monitors showing live cryptocurrency price charts and terminal code" loading="lazy" style="width:100%;height:380px;object-fit:cover;border-radius:8px;margin:24px 0"><p style="font-size:11px;color:#555;margin-top:-12px">Photo: Jakub Zerdzicki / Pexels</p>
-    <p class="intro">Most crypto screener tutorials start with REST API polling and never explain why that's a terrible idea at scale. You set up a loop, fire requests every 500 milliseconds across 200 trading pairs, and within about three minutes you've either hit a rate limit or you're staring at data that's already 2 to 3 seconds stale. According to a 2022 analysis by Kaiko Research, latency windows as small as 200 milliseconds can meaningfully affect fill quality on liquid pairs like BTC/USDT during high-volatility periods. That number stuck with me because I'd already learned it the hard way before I ever read it.</p>
-    <p>My argument here is straightforward: if you're building a screener meant to surface momentum signals, breakout conditions, or volume anomalies in real time, WebSockets aren't just the better option, they're the only serious option. REST polling is fine for account management, historical data pulls, or anything that tolerates latency. But a screener lives and dies by the freshness of its data. This article walks through how I'd build one today, the architectural decisions that actually matter, and the places where even a well-designed system can let you down.</p>
-    <h2 id="s0" class="art-h2">Choosing the Right Exchange Feed Before Writing a Single Line</h2><div><p>Before you think about code, you need to pick your data source carefully. Binance's WebSocket API is the most commonly used in retail algo trading, and for good reason: it streams individual trade events, order book depth updates, and kline (candlestick) data across nearly every listed pair. The combined stream endpoint lets you subscribe to multiple channels in a single connection, which matters a lot when you're watching 150 or 200 pairs simultaneously. Coinbase Advanced Trade and Bybit both offer comparable feeds, though their message schemas differ enough that abstracting across all three is a real engineering project, not an afternoon task.</p><p>The common misconception I see is that all WebSocket feeds are equivalent because they're all 'real-time.' They're not. There's a meaningful difference between a feed pushing individual trade ticks and one pushing 100-millisecond aggregated snapshots. For a screener focused on volume spikes or rapid price movement, tick-level data gives you earlier signal detection. If you're screening for slower momentum or VWAP conditions, aggregated streams are cleaner and cheaper on your processing pipeline. Choosing wrong here means either drowning in noise or missing the signals you actually care about.</p><p>And the schema documentation varies wildly in quality. When I first connected to Bybit's V5 WebSocket endpoint in late 2023, the documented field names didn't match what was actually coming through the socket for some instrument types. Always write a raw message logger before you build any parsing logic. It takes 20 minutes and saves hours of confusion.</p></div><h2 id="s1" class="art-h2">Connection Management Is Where Most Implementations Fall Apart</h2><div><p>A WebSocket connection to a crypto exchange isn't a persistent pipe you open once and forget. Exchanges enforce connection limits, send periodic ping frames you must respond to, and will silently drop connections that go idle or exceed subscription limits. Binance, for example, limits a single connection to 1024 streams and will close connections idle for more than 60 seconds without a pong response. These aren't edge cases. They're regular operating conditions that your connection manager needs to handle gracefully from day one.</p><p>The right pattern is a reconnection loop with exponential backoff, a heartbeat handler that responds to pings automatically, and a subscription registry so you can re-subscribe to all your channels after a reconnect without duplicating state. In Python, I've built this around asyncio with aiohttp or websockets libraries. In production, I've seen systems fail silently because the WebSocket dropped and the screener kept returning the last cached values with no staleness indicator. That's worse than an obvious crash because you don't know the data is wrong.</p><p>So track connection state explicitly. Emit a 'feed_healthy' boolean into whatever data structure your screener reads from, and make sure your signal logic checks it. A screener flagging a breakout on 90-second-old price data during a fast market is actively harmful, not just useless.</p></div><h2 id="s2" class="art-h2">Structuring the Screener Logic to Handle High-Frequency Updates</h2><div><p>Once you have a clean, stable feed, the screener logic itself is where most of the interesting engineering lives. The core challenge is that you're receiving updates for potentially hundreds of pairs in rapid succession, and your screening conditions need to evaluate against each update without creating a processing backlog. In my work with multi-pair momentum strategies, I found that naive per-message evaluation works fine up to about 50 pairs but starts introducing its own latency above 100 to 150 pairs, depending on condition complexity.</p><p>The solution I settled on is a two-tier architecture. The first tier is a message handler that does nothing except parse incoming data and write it into an in-memory store, a simple dictionary keyed by symbol. The second tier is a screener loop running on its own async task or thread, reading from that store at a fixed interval, something like every 100 to 250 milliseconds. This decouples data ingestion from evaluation, which means a slow condition check on one symbol doesn't back up the message queue for every other pair.</p><p>For the screening conditions themselves, keep them stateless where possible. Conditions that require rolling windows, like a 20-period moving average or a volume ratio against a 5-minute baseline, need their own ring buffers per symbol. Redis works well here if you're running a more distributed setup, but for a single-machine screener watching under 300 pairs, an in-process deque per symbol is faster and simpler. Don't reach for distributed infrastructure until you actually need it.</p></div><h2 id="s3" class="art-h2">Alerting, Output, and the One Thing That Doesn't Scale the Way You'd Expect</h2><div><p>Getting signals out of your screener quickly is arguably as important as generating them. If you're feeding signals into an order execution layer, you want sub-100-millisecond latency between detection and delivery. A simple asyncio queue between the screener loop and the execution handler usually gets you there. For monitoring and alerting that humans will look at, a lightweight websocket server pushing to a browser dashboard is genuinely useful, and far more responsive than anything polling a REST endpoint.</p><p>When I tested a Telegram bot notification approach early in my own screener development, the roundtrip latency from signal generation to message receipt was somewhere between 300 and 800 milliseconds depending on Telegram's API load. That's fine for informational alerts but nowhere near acceptable if you're trying to act on the signal programmatically. Keep human-facing alerts and machine-facing signal delivery on entirely separate paths. They have different latency budgets and different failure modes.</p><p>The one area where complexity genuinely compounds is cross-pair correlation filtering. You'd think that once you have a clean screener, adding a filter to suppress correlated signals would be straightforward. In practice, computing pairwise correlations across 200 symbols in real time introduces enough overhead that it starts affecting your detection latency. Most implementations either run correlation checks on a slower timer, maybe every 30 seconds, or precompute correlation clusters during off-hours and use those as static filters. Neither is perfect. But trying to do it in real time with a naive approach will cost you more than the false-signal reduction is worth.</p></div>
-    <div class="concl"><p>If you're starting today, pick one exchange feed, build the connection manager before anything else, and validate your message parsing against raw logged output before trusting a single value. The screener logic is the fun part, but everything depends on data integrity upstream. Get that right first, and the signal layer almost builds itself.</p></div>
-  </section>
-  <aside class="sidebar">
-    <h3>Contents</h3>
-    <ul><li><a href="#s0" style="color:#aaa;font-size:13px;line-height:1.8">Choosing the Right Exchange Feed Before Writing a Single Line</a></li><li><a href="#s1" style="color:#aaa;font-size:13px;line-height:1.8">Connection Management Is Where Most Implementations Fall Apart</a></li><li><a href="#s2" style="color:#aaa;font-size:13px;line-height:1.8">Structuring the Screener Logic to Handle High-Frequency Updates</a></li><li><a href="#s3" style="color:#aaa;font-size:13px;line-height:1.8">Alerting, Output, and the One Thing That Doesn't Scale the Way You'd Expect</a></li></ul>
-  </aside>
-</div>
-
-<section id="comments" itemscope itemtype="https://schema.org/WebPage" data-total="0" style="max-width:760px;margin:64px auto 0;padding:0 24px 48px">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    <h2 id="comments-heading" style="font-size:21px;font-weight:800;color:#e6edf3;margin:0;letter-spacing:-.4px">Comments (0)</h2>
+<article itemscope itemtype="https://schema.org/Article"><div class="ap">
+  <div class="ap-kicker"><span>APIs & Data</span><span class="ap-sep">&middot;</span><span><time datetime="2026-05-15">May 15, 2026</time></span></div>
+  <h1>Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap</h1>
+  <p class="ap-deck">Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production.</p>
+  <div class="ap-byline">
+    <div>
+      <div class="ap-byline-author">By <strong>Alex Rivera</strong></div>
+      <div class="ap-byline-meta">software engineer turned full-time algorithmic trader<span class="dot"></span>6 min read</div>
+    </div>
   </div>
+  <figure class="ap-hero">  <img src="https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Developer at desk with multiple monitors showing live cryptocurrency price charts and terminal code" loading="eager">  <figcaption>Photograph &middot; Jakub Zerdzicki / Pexels</figcaption></figure>
+  <div class="ap-body">
+    <p class="ap-lede">Most crypto screener tutorials start with REST API polling and never explain why that's a terrible idea at scale. You set up a loop, fire requests every 500 milliseconds across 200 trading pairs, and within about three minutes you've either hit a rate limit or you're staring at data that's already 2 to 3 seconds stale. According to a 2022 analysis by Kaiko Research, latency windows as small as 200 milliseconds can meaningfully affect fill quality on liquid pairs like BTC/USDT during high-volatility periods. That number stuck with me because I'd already learned it the hard way before I ever read it.</p>
+    <p>My argument here is straightforward: if you're building a screener meant to surface momentum signals, breakout conditions, or volume anomalies in real time, WebSockets aren't just the better option, they're the only serious option. REST polling is fine for account management, historical data pulls, or anything that tolerates latency. But a screener lives and dies by the freshness of its data. This article walks through how I'd build one today, the architectural decisions that actually matter, and the places where even a well-designed system can let you down.</p>
+    <h2 class="art-h2">Choosing the Right Exchange Feed Before Writing a Single Line</h2>
+<div><p>Before you think about code, you need to pick your data source carefully. Binance's WebSocket API is the most commonly used in retail algo trading, and for good reason: it streams individual trade events, order book depth updates, and kline (candlestick) data across nearly every listed pair. The combined stream endpoint lets you subscribe to multiple channels in a single connection, which matters a lot when you're watching 150 or 200 pairs simultaneously. Coinbase Advanced Trade and Bybit both offer comparable feeds, though their message schemas differ enough that abstracting across all three is a real engineering project, not an afternoon task.</p><p>The common misconception I see is that all WebSocket feeds are equivalent because they're all 'real-time.' They're not. There's a meaningful difference between a feed pushing individual trade ticks and one pushing 100-millisecond aggregated snapshots. For a screener focused on volume spikes or rapid price movement, tick-level data gives you earlier signal detection. If you're screening for slower momentum or VWAP conditions, aggregated streams are cleaner and cheaper on your processing pipeline. Choosing wrong here means either drowning in noise or missing the signals you actually care about.</p><p>And the schema documentation varies wildly in quality. When I first connected to Bybit's V5 WebSocket endpoint in late 2023, the documented field names didn't match what was actually coming through the socket for some instrument types. Always write a raw message logger before you build any parsing logic. It takes 20 minutes and saves hours of confusion.</p></div>
+<h2 class="art-h2">Connection Management Is Where Most Implementations Fall Apart</h2>
+<div><p>A WebSocket connection to a crypto exchange isn't a persistent pipe you open once and forget. Exchanges enforce connection limits, send periodic ping frames you must respond to, and will silently drop connections that go idle or exceed subscription limits. Binance, for example, limits a single connection to 1024 streams and will close connections idle for more than 60 seconds without a pong response. These aren't edge cases. They're regular operating conditions that your connection manager needs to handle gracefully from day one.</p><p>The right pattern is a reconnection loop with exponential backoff, a heartbeat handler that responds to pings automatically, and a subscription registry so you can re-subscribe to all your channels after a reconnect without duplicating state. In Python, I've built this around asyncio with aiohttp or websockets libraries. In production, I've seen systems fail silently because the WebSocket dropped and the screener kept returning the last cached values with no staleness indicator. That's worse than an obvious crash because you don't know the data is wrong.</p><p>So track connection state explicitly. Emit a 'feed_healthy' boolean into whatever data structure your screener reads from, and make sure your signal logic checks it. A screener flagging a breakout on 90-second-old price data during a fast market is actively harmful, not just useless.</p></div><blockquote class="ap-pull">Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production.</blockquote><h2 class="art-h2">Structuring the Screener Logic to Handle High-Frequency Updates</h2>
+<div><p>Once you have a clean, stable feed, the screener logic itself is where most of the interesting engineering lives. The core challenge is that you're receiving updates for potentially hundreds of pairs in rapid succession, and your screening conditions need to evaluate against each update without creating a processing backlog. In my work with multi-pair momentum strategies, I found that naive per-message evaluation works fine up to about 50 pairs but starts introducing its own latency above 100 to 150 pairs, depending on condition complexity.</p><p>The solution I settled on is a two-tier architecture. The first tier is a message handler that does nothing except parse incoming data and write it into an in-memory store, a simple dictionary keyed by symbol. The second tier is a screener loop running on its own async task or thread, reading from that store at a fixed interval, something like every 100 to 250 milliseconds. This decouples data ingestion from evaluation, which means a slow condition check on one symbol doesn't back up the message queue for every other pair.</p><p>For the screening conditions themselves, keep them stateless where possible. Conditions that require rolling windows, like a 20-period moving average or a volume ratio against a 5-minute baseline, need their own ring buffers per symbol. Redis works well here if you're running a more distributed setup, but for a single-machine screener watching under 300 pairs, an in-process deque per symbol is faster and simpler. Don't reach for distributed infrastructure until you actually need it.</p></div>
+<h2 class="art-h2">Alerting, Output, and the One Thing That Doesn't Scale the Way You'd Expect</h2>
+<div><p>Getting signals out of your screener quickly is arguably as important as generating them. If you're feeding signals into an order execution layer, you want sub-100-millisecond latency between detection and delivery. A simple asyncio queue between the screener loop and the execution handler usually gets you there. For monitoring and alerting that humans will look at, a lightweight websocket server pushing to a browser dashboard is genuinely useful, and far more responsive than anything polling a REST endpoint.</p><p>When I tested a Telegram bot notification approach early in my own screener development, the roundtrip latency from signal generation to message receipt was somewhere between 300 and 800 milliseconds depending on Telegram's API load. That's fine for informational alerts but nowhere near acceptable if you're trying to act on the signal programmatically. Keep human-facing alerts and machine-facing signal delivery on entirely separate paths. They have different latency budgets and different failure modes.</p><p>The one area where complexity genuinely compounds is cross-pair correlation filtering. You'd think that once you have a clean screener, adding a filter to suppress correlated signals would be straightforward. In practice, computing pairwise correlations across 200 symbols in real time introduces enough overhead that it starts affecting your detection latency. Most implementations either run correlation checks on a slower timer, maybe every 30 seconds, or precompute correlation clusters during off-hours and use those as static filters. Neither is perfect. But trying to do it in real time with a naive approach will cost you more than the false-signal reduction is worth.</p></div>
+<h2 class="art-h2">Comments (0)</h2>
+<div></div>
   <div id="comment-form" style="display:flex;gap:14px;margin-bottom:32px;scroll-margin-top:90px">
     <div style="width:44px;height:44px;border-radius:50%;background:#f97316;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex-shrink:0;line-height:1">+</div>
     <div style="flex:1;min-width:0;background:#161b22;border:1px solid #21262d;border-radius:16px;padding:16px 16px 12px;transition:border-color .2s" id="c-box">
@@ -610,7 +478,21 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
     var empty=document.getElementById('c-empty');if(empty)empty.style.display='none';
   };
 })();
-</script></article></article></article></article></article></article></article></article></article></article></article></article></article></article></article></article>
+</script></div>
+    <div class="ap-concl"><p>If you're starting today, pick one exchange feed, build the connection manager before anything else, and validate your message parsing against raw logged output before trusting a single value. The screener logic is the fun part, but everything depends on data integrity upstream. Get that right first, and the signal layer almost builds itself.</p></div>
+    
+  </div>
+</div><div style="max-width:760px;margin:48px auto 0;padding:0 24px">
+  <div style="border:1px solid #1f1f1f;border-radius:12px;padding:22px 24px;display:flex;gap:18px;align-items:flex-start;background:#0a0a0a">
+    <div style="width:54px;height:54px;border-radius:50%;background:#f97316;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#fff;flex-shrink:0;letter-spacing:-1px">AR</div>
+    <div style="flex:1">
+      <div style="font-size:14px;font-weight:700;color:#e6edf3;margin-bottom:2px">Alex Rivera</div>
+      <div style="font-size:12px;color:#f97316;margin-bottom:8px;font-weight:600">software engineer turned full-time algorithmic trader</div>
+      <p style="font-size:13px;color:#9ca3af;line-height:1.65;margin:0">TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p>
+    </div>
+  </div>
+</div>
+</article>
 <footer class="footer">
   <div class="wrap">
     <div class="ft-top">
