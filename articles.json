@@ -97,5 +97,62 @@
       "jesse.trade"
     ],
     "category": "Execution"
+  },
+  {
+    "title": "PFOF Under Fire: How the 2021 Payment for Order Flow Debate Changed Algo Trading Forever",
+    "slug": "pfof-2021-algo-trading-execution-debate",
+    "meta_description": "The 2021 PFOF controversy reshaped how retail algo traders think about execution quality. Here's what actually happened and why it still matters.",
+    "date": "February 25, 2021",
+    "date_iso": "2021-02-25",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/10925757/pexels-photo-10925757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "esma.europa.eu",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-05-28",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Interactive Brokers Launches IBKR Desktop in 2023: What It Actually Means for Algo Traders",
+    "slug": "ibkr-desktop-2023-algo-traders",
+    "meta_description": "IBKR Desktop launched in 2023 and changed how algo traders interact with one of the best execution brokers. Here's an honest technical breakdown.",
+    "date": "October 09, 2023",
+    "date_iso": "2023-10-09",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/8100067/pexels-photo-8100067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "interactivebrokers.com",
+      "businesswire.com",
+      "ibkrguides.com"
+    ],
+    "posted_iso": "2026-05-28",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "How the SEC's New Marketing Rule Broke Algorithmic Traders' Compliance Workflows in 2022",
+    "slug": "sec-marketing-rule-2022-algo-traders",
+    "meta_description": "The SEC's 2022 Marketing Rule overhaul hit algo traders hard. Here's what changed, what broke, and what it meant for trading tech teams.",
+    "date": "March 23, 2022",
+    "date_iso": "2022-03-23",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/5831268/pexels-photo-5831268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "investmentadviser.org",
+      "gartner.com"
+    ],
+    "posted_iso": "2026-05-28",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
