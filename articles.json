@@ -114,7 +114,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "Interactive Brokers Launches IBKR Desktop in 2023: What It Actually Means for Algo Traders",
@@ -132,7 +133,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "APIs & Data"
   },
   {
     "title": "How the SEC's New Marketing Rule Broke Algorithmic Traders' Compliance Workflows in 2022",
@@ -150,7 +152,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Python"
   },
   {
     "title": "Machine Learning Models for Market Regime Detection: What Actually Works",
@@ -167,7 +170,8 @@
     "posted_iso": "2026-05-29",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "APIs & Data"
   },
   {
     "title": "TD Ameritrade's thinkorswim API Opening in 2019 Changed What Retail Algo Trading Looks Like",
@@ -188,6 +192,7 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   }
 ]
