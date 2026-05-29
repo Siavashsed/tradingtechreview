@@ -290,9 +290,6 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
 </style>
 </head>
 <body>
-<!--SHELL:ACCENT:#f97316-->
-<!--SHELL:HEADER-->
-
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
@@ -305,7 +302,7 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
       <a class="nav-link" href="./#stack">The Stack</a>
       <a class="nav-link" href="./#method">Method</a>
       <a class="nav-link" href="./#faq">FAQ</a>
-      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="about">About</a>
     </div>
     <div class="nav-r">
       <span class="nav-cnt">reviews: <b id="nav-cnt">--</b></span>
@@ -313,8 +310,6 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
     </div>
   </div>
 </nav>
-<!--/SHELL:HEADER-->
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
@@ -566,7 +561,7 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
         <div class="rev-role">Software Engineer &amp; Algorithmic Trader</div>
         <p class="rev-bio">I started as a software engineer building data pipelines, then spent three years writing and running my own algo strategies with real capital. I have <b>used, broken, and benchmarked</b> most of the tools in this space - and lost money to a few of them.</p>
         <p class="rev-bio">TradingTech Review exists because the coverage I needed did not exist. It was either vendor marketing or a surface-level tutorial. So every tool here gets the same treatment my own trading capital depends on: <b>if it does not hold up under real conditions, I say so plainly.</b></p>
-        <a class="btn-ghost" href="about.html" style="margin-top:8px">Read the full story</a>
+        <a class="btn-ghost" href="about" style="margin-top:8px">Read the full story</a>
       </div>
     </div>
   </div>
@@ -612,8 +607,7 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
 
 
 <!-- VIEW_ALL_ARTICLES_LINK -->
-<div class="view-all" style="text-align:center;padding:28px 24px 40px;font-family:inherit"><a href="./articles.html" style="display:inline-block;color:currentColor;border:1px solid currentColor;padding:10px 22px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;opacity:.85;transition:opacity .15s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">View all articles -&gt;</a></div>
-<!--SHELL:FOOTER-->
+<div style="text-align:center;padding:32px 24px 48px"><a href="./articles" style="display:inline-block;color:currentColor;border:1px solid currentColor;padding:11px 26px;border-radius:999px;text-decoration:none;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.85" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85">All Articles</a></div>
 <footer class="footer">
   <div class="wrap">
     <div class="ft-top">
@@ -633,14 +627,14 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
         <a href="./#stack">The Stack</a>
         <a href="./#method">Our Method</a>
         <a href="./#faq">FAQ</a>
-        <a href="about.html">About</a>
+        <a href="about">About</a>
       </div>
       <div class="ft-col">
         <div class="ft-col-h">Legal</div>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-        <a href="sms.html">SMS Policy</a>
-        <a href="meta-policy.html">Meta Policy</a>
+        <a href="privacy">Privacy Policy</a>
+        <a href="terms">Terms</a>
+        <a href="sms">SMS Policy</a>
+        <a href="meta-policy">Meta Policy</a>
       </div>
     </div>
     <div class="ft-bottom">
@@ -728,7 +722,7 @@ let allArts=[], activeFilter='all';
 function renderFeed(){
   let arts=[...allArts];
   if(activeFilter!=='all')arts=arts.filter(a=>a._tag===activeFilter);
-  arts.sort((a,b)=>(b.date||b.published_date||'').localeCompare(a.date||a.published_date||''));
+  arts.sort((a,b)=>(b.date_iso||b.posted_iso||b.date||b.published_date||'').localeCompare(a.date_iso||a.posted_iso||a.date||a.published_date||''));
   const grid=document.getElementById('art-grid'), noRes=document.getElementById('no-res');
   const lbl=TAG_LABELS[activeFilter]||'All';
   document.getElementById('feed-title').innerHTML=activeFilter==='all'?'Latest <span class="hl">reviews.</span>':'<span class="hl">'+lbl+'</span> reviews.';
@@ -798,6 +792,5 @@ function nlSubscribe(){
 loadArticles();
 initObservers();
 </script>
-<!--/SHELL:FOOTER-->
 </body>
 </html>
