@@ -151,5 +151,43 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Machine Learning Models for Market Regime Detection: What Actually Works",
+    "slug": "ml-market-regime-detection-guide",
+    "meta_description": "Alex Turner breaks down ML models for market regime detection-what works, what doesn't, and how to build a system that survives real market conditions.",
+    "date": "May 29, 2026",
+    "date_iso": "2026-05-29",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/32219704/pexels-photo-32219704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "nber.org",
+      "jfds.pm-research.com"
+    ],
+    "posted_iso": "2026-05-29",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "TD Ameritrade's thinkorswim API Opening in 2019 Changed What Retail Algo Trading Looks Like",
+    "slug": "td-ameritrade-thinkorswim-api-2019",
+    "meta_description": "TD Ameritrade opened its thinkorswim API to retail traders in 2019. Here's what it meant, what actually worked, and where it fell short.",
+    "date": "October 09, 2019",
+    "date_iso": "2019-10-09",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/4910951/pexels-photo-4910951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "developer.tdameritrade.com",
+      "reuters.com",
+      "sec.gov",
+      "cmegroup.com",
+      "reddit.com"
+    ],
+    "posted_iso": "2026-05-29",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
