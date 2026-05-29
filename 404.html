@@ -443,7 +443,7 @@ let allArts=[], activeFilter='all';
 function renderFeed(){
   let arts=[...allArts];
   if(activeFilter!=='all')arts=arts.filter(a=>a._tag===activeFilter);
-  arts.sort((a,b)=>(b.date||b.published_date||'').localeCompare(a.date||a.published_date||''));
+  arts.sort((a,b)=>(b.date_iso||b.posted_iso||b.date||b.published_date||'').localeCompare(a.date_iso||a.posted_iso||a.date||a.published_date||''));
   const grid=document.getElementById('art-grid'), noRes=document.getElementById('no-res');
   const lbl=TAG_LABELS[activeFilter]||'All';
   document.getElementById('feed-title').innerHTML=activeFilter==='all'?'Latest <span class="hl">reviews.</span>':'<span class="hl">'+lbl+'</span> reviews.';
