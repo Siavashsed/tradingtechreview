@@ -292,11 +292,28 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
    pages but the contrast block defaulted to black-on-black. Light text +
    brand-orange links. */
 body[data-page-depth="1"]{background:#000}
-body[data-page-depth="1"] .ap{max-width:880px;color:#d4d4d4}
-body[data-page-depth="1"] .ap-body{color:#d4d4d4 !important}
-body[data-page-depth="1"] .ap-deck{color:#a3a3a3 !important}
-body[data-page-depth="1"] .ap-pull{color:#f5f5f5 !important;border-left-color:#f97316 !important}
-body[data-page-depth="1"] .ap-concl{color:#d4d4d4 !important}@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+body[data-page-depth="1"] .ap{max-width:min(1280px,95vw);padding:48px 32px 16px;display:grid;grid-template-columns:1fr 280px;gap:56px;color:#d4d4d4;font-family:'Inter',system-ui,sans-serif}
+body[data-page-depth="1"] .ap > *{grid-column:1}
+body[data-page-depth="1"] .ap .article-sidebar{grid-column:2;grid-row:1 / span 99;position:sticky;top:24px;align-self:start;padding:22px;background:rgba(249,115,22,.05);border:1px solid rgba(249,115,22,.22);border-radius:12px;max-height:calc(100vh - 48px);overflow-y:auto}
+body[data-page-depth="1"] .ap .article-sidebar .sb-label{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#f97316;font-weight:600;margin-bottom:14px}
+body[data-page-depth="1"] .ap .article-sidebar .sb-name{font-family:'Inter Tight','Inter',sans-serif;font-size:16px;font-weight:700;color:#f5f5f5;margin-bottom:4px;letter-spacing:-.012em}
+body[data-page-depth="1"] .ap .article-sidebar .sb-role{font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#f97316;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+body[data-page-depth="1"] .ap .article-sidebar .sb-bio{font-size:13px;line-height:1.7;color:#bdbdbd;font-family:'Inter',sans-serif}
+body[data-page-depth="1"] .ap h1{font-family:'Inter Tight','Inter',sans-serif !important;font-size:clamp(28px,3.8vw,46px);font-weight:700;letter-spacing:-.02em;color:#f5f5f5 !important;line-height:1.06}
+body[data-page-depth="1"] .ap-deck{font-size:18px !important;line-height:1.6 !important;color:#a3a3a3 !important;font-style:normal !important;font-family:'Inter',sans-serif !important;max-width:none !important}
+body[data-page-depth="1"] .ap-body{font-size:16.5px !important;line-height:1.78 !important;color:#d4d4d4 !important;font-family:'Inter',sans-serif !important}
+body[data-page-depth="1"] .ap-body p{color:#c5c5c5 !important;margin-bottom:22px}
+body[data-page-depth="1"] .ap-body h2,body[data-page-depth="1"] .ap-body .art-h2{font-size:24px !important;font-family:'Inter Tight','Inter',sans-serif !important;font-weight:700;color:#f5f5f5 !important;letter-spacing:-.012em;margin:44px 0 14px}
+body[data-page-depth="1"] .ap-body h3,body[data-page-depth="1"] .ap-body .art-h3{font-size:18px !important;font-family:'Inter Tight','Inter',sans-serif !important;font-weight:600;color:#f5f5f5 !important}
+body[data-page-depth="1"] .ap-pull{font-size:21px !important;color:#f5f5f5 !important;font-style:normal !important;font-family:'Inter Tight','Inter',sans-serif !important;font-weight:500;border-left:3px solid #f97316 !important;padding:18px 20px !important;background:rgba(249,115,22,.05);border-radius:0 8px 8px 0}
+body[data-page-depth="1"] .ap-concl{font-size:16.5px !important;color:#d4d4d4 !important;font-family:'Inter',sans-serif !important;border-top:1px solid #262626;padding-top:26px}
+/* Hide the bottom author card - now in sidebar on desktop */
+body[data-page-depth="1"] .ap ~ div[style*="max-width:760px"],
+body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{display:none}@media (max-width:1080px){
+  body[data-page-depth="1"] .ap{grid-template-columns:1fr;gap:32px;max-width:min(800px,95vw)}
+  body[data-page-depth="1"] .ap .article-sidebar{grid-column:1;position:static;max-height:none;margin-top:28px;display:block}
+  body[data-page-depth="1"] .ap ~ div[style*="max-width:760px"]{display:block}
+}@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 /* Defensive width constraint - earlier cascades on some sites were letting
    the conclusion + sources block escape the 720px column on wide screens.
    Pin every descendant of .ap to max-width:100% and the wrapper to a hard
