@@ -292,13 +292,18 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
    pages but the contrast block defaulted to black-on-black. Light text +
    brand-orange links. */
 body[data-page-depth="1"]{background:#000}
-body[data-page-depth="1"] .ap{max-width:min(1280px,95vw);padding:48px 32px 16px;display:grid;grid-template-columns:1fr 280px;gap:56px;color:#d4d4d4;font-family:'Inter',system-ui,sans-serif}
+body[data-page-depth="1"] .ap{max-width:min(1180px,92vw);padding:72px 36px 24px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;color:#d4d4d4;font-family:'Inter',system-ui,sans-serif;margin:0 auto;justify-content:center}
 body[data-page-depth="1"] .ap > *{grid-column:1}
 body[data-page-depth="1"] .ap .article-sidebar{grid-column:2;grid-row:1 / span 99;position:sticky;top:24px;align-self:start;padding:22px;background:rgba(249,115,22,.05);border:1px solid rgba(249,115,22,.22);border-radius:12px;max-height:calc(100vh - 48px);overflow-y:auto}
 body[data-page-depth="1"] .ap .article-sidebar .sb-label{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#f97316;font-weight:600;margin-bottom:14px}
 body[data-page-depth="1"] .ap .article-sidebar .sb-name{font-family:'Inter Tight','Inter',sans-serif;font-size:16px;font-weight:700;color:#f5f5f5;margin-bottom:4px;letter-spacing:-.012em}
 body[data-page-depth="1"] .ap .article-sidebar .sb-role{font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#f97316;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
 body[data-page-depth="1"] .ap .article-sidebar .sb-bio{font-size:13px;line-height:1.7;color:#bdbdbd;font-family:'Inter',sans-serif}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related{margin-top:22px;padding-top:18px;border-top:1px solid rgba(249,115,22,.18)}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related .sb-r-label{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#f97316;font-weight:600;margin-bottom:12px}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related a{display:block;font-family:'Inter Tight','Inter',sans-serif;font-size:13px;font-weight:500;color:#e5e5e5;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.4;transition:color .2s}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related a:hover{color:#f97316}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related a:last-child{border-bottom:none}
 body[data-page-depth="1"] .ap h1{font-family:'Inter Tight','Inter',sans-serif !important;font-size:clamp(28px,3.8vw,46px);font-weight:700;letter-spacing:-.02em;color:#f5f5f5 !important;line-height:1.06}
 body[data-page-depth="1"] .ap-deck{font-size:18px !important;line-height:1.6 !important;color:#a3a3a3 !important;font-style:normal !important;font-family:'Inter',sans-serif !important;max-width:none !important}
 body[data-page-depth="1"] .ap-body{font-size:16.5px !important;line-height:1.78 !important;color:#d4d4d4 !important;font-family:'Inter',sans-serif !important}
