@@ -288,8 +288,13 @@ body[data-page-depth="1"] article strong{color:#e6e6e6 !important}
 body[data-page-depth="1"] article a,
 body[data-page-depth="1"] article p a,
 body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decoration:underline;text-underline-offset:3px}@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
-.ap,.ap-concl,.ap-pull,.ap-body,.ap-deck{box-sizing:border-box;overflow-wrap:break-word;word-wrap:break-word;word-break:normal;hyphens:auto;max-width:100%}
-.ap{max-width:720px;margin:0 auto;padding:56px 24px 24px;font-family:'Lora',Georgia,serif}
+/* Defensive width constraint - earlier cascades on some sites were letting
+   the conclusion + sources block escape the 720px column on wide screens.
+   Pin every descendant of .ap to max-width:100% and the wrapper to a hard
+   720px so nothing can break out regardless of homepage CSS quirks. */
+.ap,.ap *,.ap-concl,.ap-concl *,.ap-pull,.ap-body,.ap-body *,.ap-deck{box-sizing:border-box;overflow-wrap:break-word;word-wrap:break-word;word-break:normal;hyphens:auto;max-width:100%}
+.ap{max-width:720px;margin:0 auto;padding:56px 24px 24px;font-family:'Lora',Georgia,serif;position:relative;overflow:visible}
+.ap-body,.ap-concl,.ap-deck,.ap-pull{max-width:none;width:auto}
 .ap-kicker{display:flex;align-items:center;gap:12px;font-family:'Inter','system-ui',sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#f97316;margin:0 0 26px}
 .ap-kicker::before{content:'';width:28px;height:1px;background:#f97316}
 .ap-kicker .ap-sep{opacity:.4;font-weight:400;letter-spacing:1px;color:#8b8b8b}
@@ -298,10 +303,10 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
 .ap-hero{margin:0 0 44px}
 .ap-hero img{width:100%;height:auto;max-height:560px;object-fit:cover;display:block;border-radius:2px}
 .ap-hero figcaption{font-family:'Lora',Georgia,serif;font-style:italic;font-size:13px;color:#8b8b8b;text-align:center;margin-top:12px}
-.ap-body{font-size:18px;line-height:1.78;color:#e6edf3}
-.ap-body p{margin:0 0 24px;color:#9ca3af}
-.ap-body p.ap-lede{font-size:21px;line-height:1.55;color:#e6edf3;margin-bottom:28px}
-.ap-body p.ap-lede::first-letter{float:left;font-family:'Inter','system-ui',sans-serif;font-size:76px;font-weight:800;line-height:.82;margin:8px 12px -2px 0;color:#f97316}
+.ap-body{font-size:17.5px;line-height:1.72;color:#e6edf3;letter-spacing:.005em;font-feature-settings:"kern","liga","onum"}
+.ap-body p{margin:0 0 22px;color:#9ca3af}
+.ap-body p.ap-lede{font-size:19.5px;line-height:1.55;color:#e6edf3;margin-bottom:26px;font-weight:400}
+/* Drop-cap removed - it was reading as theatrical for tactical articles. */
 .ap-body h2,.ap-body .art-h2{font-family:'Inter','system-ui',sans-serif;font-size:26px;font-weight:800;line-height:1.2;color:#e6edf3;margin:52px 0 16px;letter-spacing:-.3px}
 .ap-body h3,.ap-body .art-h3{font-family:'Inter','system-ui',sans-serif;font-size:19px;font-weight:700;color:#e6edf3;margin:34px 0 12px;letter-spacing:-.1px}
 .ap-body h4{font-family:'Inter','system-ui',sans-serif;font-size:14px;font-weight:700;color:#e6edf3;margin:24px 0 10px;text-transform:uppercase;letter-spacing:1.2px}
@@ -328,7 +333,6 @@ body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decorat
   .ap-deck{font-size:18px}
   .ap-body{font-size:17px}
   .ap-body p.ap-lede{font-size:19px}
-  .ap-body p.ap-lede::first-letter{font-size:60px}
   .ap-pull{font-size:22px;margin:42px 0}
   .ap-hero img{max-height:380px}
 }
