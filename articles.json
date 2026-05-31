@@ -194,5 +194,43 @@
       "en"
     ],
     "category": "Execution"
+  },
+  {
+    "title": "How to Build a Risk Management System That Actually Prevents Catastrophic Losses",
+    "slug": "risk-management-system-prevent-catastrophic-losses",
+    "meta_description": "Alex Turner breaks down how to build a risk management system that stops catastrophic trading losses before they happen. Practical, technical, and battle-tested.",
+    "date": "May 31, 2026",
+    "date_iso": "2026-05-31",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/7876376/pexels-photo-7876376.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "bis.org",
+      "sec.gov",
+      "cftc.gov"
+    ],
+    "posted_iso": "2026-05-31",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Robinhood's Payment for Order Flow Scandal in 2020: What Traders Actually Lost",
+    "slug": "robinhood-pfof-sec-settlement-2020",
+    "meta_description": "Robinhood's $65M SEC settlement in 2020 exposed how PFOF quietly costs retail traders. Here's what it meant for algo traders and the tools we use.",
+    "date": "November 24, 2020",
+    "date_iso": "2020-11-24",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/18706593/pexels-photo-18706593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "bloomberg.com",
+      "finra.org",
+      "ssrn.com"
+    ],
+    "posted_iso": "2026-05-31",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
