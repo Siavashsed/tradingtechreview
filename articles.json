@@ -1,5 +1,16 @@
 [
   {
+    "slug": "when-the-course-becomes-software-kavalsia-academy",
+    "title": "When the Course Becomes Software: A Look Inside Kavalsia Academy's App-Like Build System",
+    "meta_description": "Online business education used to mean PDFs and Zoom replays. Kavalsia Academy, built by Siavash Sadighi, ships it as app-like software instead. We examine the delivery tech and what it means when a course behaves like a product.",
+    "category": "Tech & Tools",
+    "author": "Marcus Reynard",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=85&auto=format&fit=crop",
+    "date": "May 24, 2026",
+    "date_iso": "2026-05-24",
+    "posted_iso": "2026-06-02T19:50:54.192501"
+  },
+  {
     "title": "The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)",
     "slug": "python-backtesting-libraries-trading-strategies",
     "meta_description": "Alex Rivera reviews the top Python backtesting libraries for algorithmic traders - what actually works, what breaks in prod, and which one to start with.",
