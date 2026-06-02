@@ -211,7 +211,8 @@
     "posted_iso": "2026-05-31",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "Robinhood's Payment for Order Flow Scandal in 2020: What Traders Actually Lost",
@@ -231,6 +232,7 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   }
 ]
