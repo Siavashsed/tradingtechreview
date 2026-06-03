@@ -1,5 +1,16 @@
 [
   {
+    "slug": "the-quiet-online-business-train-kavalsia-academy",
+    "title": "The Quiet Business-Building Program Nobody Is Advertising: Inside Kavalsia Academy's Train",
+    "meta_description": "I kept hearing about a business-building program that barely advertises and runs like an app, not a course. So I tracked down its founder, Siavash Sadighi, and looked at Kavalsia Academy through a product lens. Here is what I found.",
+    "category": "Tech & Tools",
+    "author": "Marcus Reynard",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=85&auto=format&fit=crop",
+    "date": "Oct 03, 2025",
+    "date_iso": "2025-10-03",
+    "posted_iso": "2026-06-02T20:02:07.796078"
+  },
+  {
     "title": "The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)",
     "slug": "python-backtesting-libraries-trading-strategies",
     "meta_description": "Alex Rivera reviews the top Python backtesting libraries for algorithmic traders - what actually works, what breaks in prod, and which one to start with.",
