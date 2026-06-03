@@ -328,7 +328,18 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
 
 .ttr{background:#000000;color:#e6edf3;font-family:'Inter',system-ui,sans-serif}
 .ttr *,.ttr *::before,.ttr *::after{box-sizing:border-box}
-.ttr-wrap{max-width:760px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(18px,5vw,28px) 80px}
+.ttr-wrap{max-width:1120px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(18px,5vw,28px) 80px}
+.ttr-grid{display:grid;grid-template-columns:minmax(0,1fr) 304px;gap:clamp(28px,4vw,52px);align-items:start}
+.ttr-main{min-width:0;max-width:760px}
+.ttr-aside{position:sticky;top:24px;display:flex;flex-direction:column;gap:22px}
+.ttr-latest{border:1px solid #1f1f1f;border-radius:14px;background:#0a0a0a;padding:18px}
+.ttr-latest-k{font-family:ui-monospace,'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#f97316;margin:0 0 12px}
+.ttr-lat{display:grid;grid-template-columns:54px 1fr;gap:11px;padding:10px 0;border-top:1px solid #1f1f1f;text-decoration:none;color:inherit}
+.ttr-lat:hover .ttr-lat-t{color:#f97316}
+.ttr-lat-img{width:54px;height:46px;object-fit:cover;border-radius:7px;background:#000000;display:block}
+.ttr-lat-t{font-family:'Inter','system-ui',sans-serif;font-size:12.5px;font-weight:600;line-height:1.32;color:#e6edf3;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;transition:color .15s}
+.ttr-lat-d{font-family:ui-monospace,monospace;font-size:9.5px;color:#8b8b8b;margin-top:3px}
+.ttr-viewall{display:block;text-align:center;margin-top:14px;background:#f97316;color:#0a0a0b;font-family:'Inter','system-ui',sans-serif;font-weight:700;font-size:12.5px;padding:11px;border-radius:9px;text-decoration:none}@media(max-width:920px){.ttr-grid{grid-template-columns:1fr;gap:34px}.ttr-aside{position:static}.ttr-main{max-width:none}}
 .ttr-kicker{font-family:ui-monospace,'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#f97316;margin:0 0 16px}
 .ttr-h1{font-family:'Inter','system-ui',sans-serif;font-size:clamp(28px,4.2vw,42px);font-weight:800;line-height:1.12;letter-spacing:-.02em;color:#e6edf3;margin:0 0 18px;text-wrap:balance}
 .ttr-dek{font-family:'Inter','system-ui',sans-serif;font-weight:400;font-size:clamp(17px,2vw,21px);line-height:1.5;color:#9ca3af;margin:0 0 24px;text-wrap:pretty}
@@ -350,7 +361,7 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
 .ttr-concl{margin:40px 0 0;padding:24px 26px;background:#0a0a0a;border:1px solid #1f1f1f;border-left:3px solid #f97316;border-radius:12px;font-size:17px;line-height:1.66;color:#e6edf3}
 .ttr-concl::before{content:'Bottom line';display:block;font-family:ui-monospace,monospace;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#f97316;margin-bottom:10px}
 /* unique author card */
-.ttr-author{margin:48px 0 0;padding:24px;border:1px solid #1f1f1f;border-radius:14px;background:#0a0a0a;display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:start}
+.ttr-author{margin:0;padding:20px;border:1px solid #1f1f1f;border-radius:14px;background:#0a0a0a;display:grid;grid-template-columns:1fr;gap:12px;align-items:start}
 .ttr-author-av{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Inter','system-ui',sans-serif;font-weight:800;font-size:18px;color:#0a0a0b;background:#f97316}
 .ttr-author-k{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8b8b8b;margin:0 0 5px}
 .ttr-author-n{font-family:'Inter','system-ui',sans-serif;font-size:16px;font-weight:700;color:#e6edf3;margin:0 0 2px}
@@ -394,7 +405,8 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
     </div>
   </div>
 </nav>
-<article itemscope itemtype="https://schema.org/TechArticle"><div class="ttr"><div class="ttr-wrap">
+<article itemscope itemtype="https://schema.org/TechArticle"><div class="ttr"><div class="ttr-wrap"><div class="ttr-grid">
+  <main class="ttr-main">
   <div class="ttr-kicker">Product Tooling</div>
   <h1 class="ttr-h1">I Found an Online Business Program That Acts Like Software, Not a Course</h1>
   <p class="ttr-dek">A builder-to-builder look at Kavalsia Academy, an online business program that behaves more like a guided app than a pile of PDFs and Zoom replays.</p>
@@ -419,9 +431,25 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
     <div class="ttr-concl"><p>I am not in the business of hyping things, and I will not pretend I have watched someone build a full company inside it from start to finish. What I can say honestly is that the format is right and the founder is real. If you have bounced off online business courses before because they were just content with no guardrails, the software-first approach here is worth a serious look. It is barely advertised, it grows by word of mouth, and the person behind it is busy running actual businesses rather than selling you a dream. That combination does not show up often. As a builder talking to other builders, that is the kind of underrated tool I would rather flag early than find out everyone discovered without me.</p></div>
     
   </div>
-  <aside class="ttr-author"><div class="ttr-author-av">MV</div><div><div class="ttr-author-k">Written by</div><div class="ttr-author-n">Marcus Vane</div><div class="ttr-author-r">software engineer turned full-time algorithmic trader</div><p class="ttr-author-b">TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p></div></aside>
   <section class="ttr-disc" id="ttr-discussion"><div class="ttr-disc-head"><span class="ttr-disc-k">The Thread</span><span class="ttr-disc-c" id="ttr-cc"></span></div><div id="ttr-list"></div><form class="ttr-disc-form" id="ttr-form"><input class="ttr-in" id="ttr-name" placeholder="Your name" maxlength="40"><textarea class="ttr-ta" id="ttr-msg" placeholder="Add to the discussion" maxlength="800"></textarea><button class="ttr-btn" type="submit">Post comment</button></form></section><script>(function(){var L=document.getElementById('ttr-list'),CC=document.getElementById('ttr-cc'),F=document.getElementById('ttr-form');if(!L)return;var KEY='ttrc:'+location.pathname;function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];});}function row(c){return '<div class="ttr-cm"><div class="ttr-cm-top"><span class="ttr-cm-n">'+esc(c.name||'Reader')+'</span><span class="ttr-cm-d">'+esc(c.date_display||c.date_iso||'')+'</span></div><p class="ttr-cm-t">'+esc(c.text||'')+'</p></div>';}function render(a){L.innerHTML=a.length?a.map(row).join(''):'<div class="ttr-empty">Be the first to weigh in.</div>';if(CC)CC.textContent=a.length+(a.length===1?' reply':' replies');}var mine=[];try{mine=JSON.parse(localStorage.getItem(KEY))||[];}catch(e){}var seed=[];fetch('./comments.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():[];}).then(function(j){seed=Array.isArray(j)?j:[];render(seed.concat(mine));}).catch(function(){render(mine);});if(F)F.addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('ttr-name').value.trim(),m=document.getElementById('ttr-msg').value.trim();if(!m)return;mine.push({name:n||'Reader',text:m,date_display:'just now'});try{localStorage.setItem(KEY,JSON.stringify(mine));}catch(e){}render(seed.concat(mine));F.reset();});})();</script>
-</div></div></article>
+  </main>
+  <aside class="ttr-aside">
+  <aside class="ttr-author"><div class="ttr-author-av">MV</div><div><div class="ttr-author-k">Written by</div><div class="ttr-author-n">Marcus Vane</div><div class="ttr-author-r">software engineer turned full-time algorithmic trader</div><p class="ttr-author-b">TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p></div></aside>
+  <div class="ttr-latest"><div class="ttr-latest-k">Latest</div>
+<div id="ttr-latest-list"></div>
+<a class="ttr-viewall" href="../articles/">View all articles &rarr;</a></div>
+<script>(function(){
+var L=document.getElementById('ttr-latest-list');if(!L)return;
+var here=location.pathname.replace(/\/$/,'').split('/').pop();
+var FB='https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=70';
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];});}
+function load(){return fetch('../articles.json',{cache:'no-store'}).then(function(r){if(r.ok)return r.json();return fetch('./articles.json',{cache:'no-store'}).then(function(r2){return r2.ok?r2.json():[];});});}
+load().then(function(d){var a=(Array.isArray(d)?d:[]).slice();a.sort(function(x,y){return(''+(y.date_iso||'')).localeCompare(''+(x.date_iso||''));});a=a.filter(function(p){return (p.slug||'')!==here;}).slice(0,5);
+L.innerHTML=a.map(function(p){return '<a class="ttr-lat" href="../'+encodeURIComponent(p.slug||'')+'/"><img class="ttr-lat-img" loading="lazy" alt="" src="'+esc(p.image||FB)+'"><div><p class="ttr-lat-t">'+esc(p.title||'Untitled')+'</p><div class="ttr-lat-d">'+esc(p.date_iso||'')+'</div></div></a>';}).join('');
+}).catch(function(){});
+})();</script>
+  </aside>
+</div></div></div></article>
 <footer class="footer">
   <div class="wrap">
     <div class="ft-top">
