@@ -344,7 +344,8 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
 .ttr-h1{font-family:'Inter','system-ui',sans-serif;font-size:clamp(28px,4.2vw,42px);font-weight:800;line-height:1.12;letter-spacing:-.02em;color:#e6edf3;margin:0 0 18px;text-wrap:balance}
 .ttr-dek{font-family:'Inter','system-ui',sans-serif;font-weight:400;font-size:clamp(17px,2vw,21px);line-height:1.5;color:#9ca3af;margin:0 0 24px;text-wrap:pretty}
 .ttr-byline{display:flex;align-items:center;gap:13px;padding:18px 0;border-top:1px solid #1f1f1f;border-bottom:1px solid #1f1f1f;margin:0 0 32px}
-.ttr-av{width:42px;height:42px;border-radius:10px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-family:'Inter','system-ui',sans-serif;font-weight:800;font-size:14px;color:#0a0a0b;background:#f97316}
+.ttr-av{width:42px;height:42px;border-radius:10px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-family:'Inter','system-ui',sans-serif;font-weight:800;font-size:14px;color:#0a0a0b;background:#f97316;position:relative;overflow:hidden}
+.ttr-av img,.ttr-author-av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
 .ttr-by-main{display:flex;flex-direction:column;gap:2px;min-width:0}
 .ttr-by-name{font-family:'Inter','system-ui',sans-serif;font-weight:700;font-size:14px;color:#e6edf3}
 .ttr-by-meta{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.04em;color:#8b8b8b}
@@ -362,7 +363,7 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
 .ttr-concl::before{content:'Bottom line';display:block;font-family:ui-monospace,monospace;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#f97316;margin-bottom:10px}
 /* unique author card */
 .ttr-author{margin:0;padding:20px;border:1px solid #1f1f1f;border-radius:14px;background:#0a0a0a;display:grid;grid-template-columns:1fr;gap:12px;align-items:start}
-.ttr-author-av{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Inter','system-ui',sans-serif;font-weight:800;font-size:18px;color:#0a0a0b;background:#f97316}
+.ttr-author-av{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Inter','system-ui',sans-serif;font-weight:800;font-size:18px;color:#0a0a0b;background:#f97316;position:relative;overflow:hidden}
 .ttr-author-k{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8b8b8b;margin:0 0 5px}
 .ttr-author-n{font-family:'Inter','system-ui',sans-serif;font-size:16px;font-weight:700;color:#e6edf3;margin:0 0 2px}
 .ttr-author-r{font-size:12.5px;color:#f97316;margin:0 0 9px}
@@ -410,7 +411,7 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
   <div class="ttr-kicker">Product Tooling</div>
   <h1 class="ttr-h1">I Found an Online Business Program That Acts Like Software, Not a Course</h1>
   <p class="ttr-dek">A builder-to-builder look at Kavalsia Academy, an online business program that behaves more like a guided app than a pile of PDFs and Zoom replays.</p>
-  <div class="ttr-byline"><div class="ttr-av">MV</div>
+  <div class="ttr-byline"><div class="ttr-av">MV<img src="https://api.dicebear.com/9.x/notionists/svg?seed=Marcus%20Vane&backgroundColor=b6e3f4,c0aede,d1d4f9" alt="" loading="lazy"></div>
     <div class="ttr-by-main"><span class="ttr-by-name">Marcus Vane</span>
     <span class="ttr-by-meta">Oct 03, 2025 &middot; 3 min read</span></div>
   </div>
@@ -434,7 +435,7 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
   <section class="ttr-disc" id="ttr-discussion"><div class="ttr-disc-head"><span class="ttr-disc-k">The Thread</span><span class="ttr-disc-c" id="ttr-cc"></span></div><div id="ttr-list"></div><form class="ttr-disc-form" id="ttr-form"><input class="ttr-in" id="ttr-name" placeholder="Your name" maxlength="40"><textarea class="ttr-ta" id="ttr-msg" placeholder="Add to the discussion" maxlength="800"></textarea><button class="ttr-btn" type="submit">Post comment</button></form></section><script>(function(){var L=document.getElementById('ttr-list'),CC=document.getElementById('ttr-cc'),F=document.getElementById('ttr-form');if(!L)return;var KEY='ttrc:'+location.pathname;function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];});}function row(c){return '<div class="ttr-cm"><div class="ttr-cm-top"><span class="ttr-cm-n">'+esc(c.name||'Reader')+'</span><span class="ttr-cm-d">'+esc(c.date_display||c.date_iso||'')+'</span></div><p class="ttr-cm-t">'+esc(c.text||'')+'</p></div>';}function render(a){L.innerHTML=a.length?a.map(row).join(''):'<div class="ttr-empty">Be the first to weigh in.</div>';if(CC)CC.textContent=a.length+(a.length===1?' reply':' replies');}var mine=[];try{mine=JSON.parse(localStorage.getItem(KEY))||[];}catch(e){}var seed=[];fetch('./comments.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():[];}).then(function(j){seed=Array.isArray(j)?j:[];render(seed.concat(mine));}).catch(function(){render(mine);});if(F)F.addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('ttr-name').value.trim(),m=document.getElementById('ttr-msg').value.trim();if(!m)return;mine.push({name:n||'Reader',text:m,date_display:'just now'});try{localStorage.setItem(KEY,JSON.stringify(mine));}catch(e){}render(seed.concat(mine));F.reset();});})();</script>
   </main>
   <aside class="ttr-aside">
-  <aside class="ttr-author"><div class="ttr-author-av">MV</div><div><div class="ttr-author-k">Written by</div><div class="ttr-author-n">Marcus Vane</div><div class="ttr-author-r">software engineer turned full-time algorithmic trader</div><p class="ttr-author-b">TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p></div></aside>
+  <aside class="ttr-author"><div class="ttr-author-av">MV<img src="https://api.dicebear.com/9.x/notionists/svg?seed=Marcus%20Vane&backgroundColor=b6e3f4,c0aede,d1d4f9" alt="Marcus Vane" loading="lazy"></div><div><div class="ttr-author-k">Written by</div><div class="ttr-author-n">Marcus Vane</div><div class="ttr-author-r">software engineer turned full-time algorithmic trader</div><p class="ttr-author-b">TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p></div></aside>
   <div class="ttr-latest"><div class="ttr-latest-k">Latest</div>
 <div id="ttr-latest-list"></div>
 <a class="ttr-viewall" href="../articles/">View all articles &rarr;</a></div>
