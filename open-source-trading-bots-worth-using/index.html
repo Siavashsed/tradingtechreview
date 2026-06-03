@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open-Source Trading Bots Worth Actually Using (And the On...</title>
+<meta name="description" content="Alex Rivera reviews the open-source trading bots that hold up in production - with honest takes on Freqtrade, Hummingbot, Jesse, and more.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="alternate icon" href="../favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="canonical" href="https://siavashsed.github.io/tradingtechreview/open-source-trading-bots-worth-using/"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"><meta name="googlebot" content="index,follow"><meta name="keywords" content="Execution"><meta name="author" content="Alex Rivera"><meta property="article:author" content="Alex Rivera"><meta name="twitter:creator" content="Alex Rivera"><meta property="og:site_name" content="Tradingtechreview"><meta property="og:title" content="Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)"><meta property="og:description" content="Alex Rivera reviews the open-source trading bots that hold up in production - with honest takes on Freqtrade, Hummingbot, Jesse, and more."><meta property="og:url" content="https://siavashsed.github.io/tradingtechreview/open-source-trading-bots-worth-using/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)"><meta name="twitter:description" content="Alex Rivera reviews the open-source trading bots that hold up in production - with honest takes on Freqtrade, Hummingbot, Jesse, and more."><meta property="og:image" content="https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="og:image:alt" content="Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)"><meta name="twitter:image" content="https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="article:published_time" content="2026-05-17T09:00:00+00:00"><meta property="article:modified_time" content="2026-06-01T09:00:00+00:00"><meta property="article:section" content="Execution"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)", "description": "Alex Rivera reviews the open-source trading bots that hold up in production - with honest takes on Freqtrade, Hummingbot, Jesse, and more.", "datePublished": "2026-05-17T09:00:00+00:00", "dateModified": "2026-06-01T09:00:00+00:00", "url": "https://siavashsed.github.io/tradingtechreview/open-source-trading-bots-worth-using/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://siavashsed.github.io/tradingtechreview/open-source-trading-bots-worth-using/"}, "inLanguage": "en", "image": ["https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"], "author": {"@type": "Person", "name": "Alex Rivera", "url": "https://siavashsed.github.io/tradingtechreview/about.html", "jobTitle": "software engineer turned full-time algorithmic trader", "description": "TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so."}, "publisher": {"@type": "Organization", "name": "Tradingtechreview", "url": "https://siavashsed.github.io/tradingtechreview/", "logo": {"@type": "ImageObject", "url": "https://siavashsed.github.io/tradingtechreview/favicon.ico"}}, "articleSection": "Execution", "wordCount": 1622, "keywords": "Execution"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siavashsed.github.io/tradingtechreview/"}, {"@type": "ListItem", "position": 2, "name": "Execution", "item": "https://siavashsed.github.io/tradingtechreview/"}, {"@type": "ListItem", "position": 3, "name": "Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)", "item": "https://siavashsed.github.io/tradingtechreview/open-source-trading-bots-worth-using/"}]}</script>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#000000;
+  --bg2:#08080b;
+  --card:#0d0d12;
+  --card2:#131319;
+  --line:rgba(255,255,255,.07);
+  --line2:rgba(255,255,255,.13);
+  --orange:#f97316;
+  --orange2:#ea580c;
+  --cyan:#22d3ee;
+  --green:#22c55e;
+  --red:#ef4444;
+  --amber:#fbbf24;
+  --violet:#818cf8;
+  --text:#f4f4f5;
+  --text2:#a1a1aa;
+  --text3:#5b5b66;
+  --font:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --r:8px;
+  --rl:16px;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:var(--font);cursor:pointer;border:none;background:none}
+::selection{background:rgba(249,115,22,.3);color:#fff}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ── reusable ── */
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--orange)}
+.kicker::before{content:'';width:22px;height:1px;background:var(--orange)}
+.h2{font-size:clamp(26px,3.6vw,42px);font-weight:800;letter-spacing:-1.3px;line-height:1.12;color:#fff}
+.h2 .hl{color:var(--orange)}
+.lead{font-size:16px;color:var(--text2);line-height:1.75;max-width:560px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.3px;color:#000;background:var(--orange);padding:14px 26px;border-radius:var(--r);transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap}
+.btn-primary:hover{background:#fb8c3c;transform:translateY(-2px);box-shadow:0 14px 34px rgba(249,115,22,.32)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.3px;color:var(--text);border:1px solid var(--line2);padding:14px 26px;border-radius:var(--r);transition:all .15s;white-space:nowrap}
+.btn-ghost:hover{border-color:var(--orange);color:#fff;background:rgba(249,115,22,.06)}
+.sec{padding:92px 0;position:relative}
+.sec-tight{padding:64px 0}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:300;height:64px;transition:background .25s,border-color .25s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(0,0,0,.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:var(--line)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;gap:0}
+.nav-mark{display:flex;align-items:center;gap:10px;margin-right:38px;flex-shrink:0}
+.nm-box{font-family:var(--mono);font-size:12px;font-weight:800;color:#000;background:var(--orange);padding:4px 9px;border-radius:4px;letter-spacing:.5px}
+.nm-name{font-family:var(--mono);font-size:14px;font-weight:700;color:#fff;letter-spacing:-.3px}
+.nm-dot{color:var(--orange)}
+.nav-links{display:flex;gap:4px}
+.nav-link{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.3px;color:var(--text2);padding:8px 13px;border-radius:6px;transition:all .15s}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,.05)}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:14px}
+.nav-cnt{font-family:var(--mono);font-size:11px;color:var(--text3)}
+.nav-cnt b{color:var(--green)}
+.nav-sub{font-family:var(--mono);font-size:11px;font-weight:700;color:#000;background:var(--orange);padding:9px 17px;border-radius:6px;letter-spacing:.4px;transition:background .15s}
+.nav-sub:hover{background:#fb8c3c}@media(max-width:860px){.nav-links{display:none}}@media(max-width:520px){.nav-cnt{display:none}}
+
+/* ── HERO ── */
+.hero{padding:138px 0 70px;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000,transparent);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000,transparent);pointer-events:none}
+.hero-glow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:760px;height:520px;background:radial-gradient(ellipse,rgba(249,115,22,.13) 0%,transparent 68%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 480px;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.5px;color:var(--text2);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:6px 13px;border-radius:100px;margin-bottom:26px}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}@keyframes pulse{50%{opacity:.35}}
+.hero-h1{font-size:clamp(36px,5.4vw,67px);font-weight:900;color:#fff;line-height:1.03;letter-spacing:-2.4px;margin-bottom:22px}
+.hero-h1 .hl{color:var(--orange)}
+.hero-h1 .strike{position:relative;color:var(--text3);white-space:nowrap}
+.hero-h1 .strike::after{content:'';position:absolute;left:-2%;right:-2%;top:54%;height:5px;background:var(--red);transform:rotate(-3deg);border-radius:2px}
+.hero-sub{font-size:17px;color:var(--text2);line-height:1.72;max-width:512px;margin-bottom:30px}
+.hero-sub b{color:var(--text);font-weight:600}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.hero-trust{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;color:var(--text3)}
+.hero-trust .stars{color:var(--amber);letter-spacing:2px;font-size:13px}
+.hero-stats{display:flex;gap:34px;padding-top:34px;margin-top:34px;border-top:1px solid var(--line);flex-wrap:wrap}
+.hs-val{font-size:30px;font-weight:800;color:#fff;letter-spacing:-1.2px;line-height:1}
+.hs-val b{color:var(--orange);font-weight:800}
+.hs-lbl{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:1.4px;text-transform:uppercase;margin-top:7px}
+
+/* terminal */
+.terminal{background:#0a0a0d;border:1px solid var(--line2);border-radius:var(--rl);overflow:hidden;box-shadow:0 0 90px rgba(249,115,22,.1),0 30px 80px rgba(0,0,0,.85)}
+.t-bar{background:#111114;padding:13px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line)}
+.t-dot{width:11px;height:11px;border-radius:50%}
+.t-title{font-family:var(--mono);font-size:11px;color:var(--text3);margin-left:6px}
+.t-body{padding:22px 22px 24px;font-family:var(--mono);font-size:12px;line-height:1.95;overflow-x:auto}
+.t-line{display:block;white-space:pre}
+.tc-prompt{color:var(--cyan)}.tc-comment{color:#3a3a44}.tc-orange{color:var(--orange)}
+.tc-green{color:var(--green)}.tc-red{color:var(--red)}.tc-white{color:#e2e2e6}
+.tc-key{color:#8b8b96;display:inline-block;min-width:140px}
+.t-cursor{display:inline-block;width:8px;height:14px;background:var(--orange);margin-left:1px;animation:tcur .85s steps(1) infinite;vertical-align:text-bottom}@keyframes tcur{50%{opacity:0}}@media(max-width:980px){.hero-inner{grid-template-columns:1fr}.terminal{max-width:520px}}@media(max-width:560px){.hero{padding:118px 0 50px}.hero-stats{gap:24px}}
+
+/* ── MARQUEE ── */
+.marquee-sec{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;background:var(--bg2)}
+.marquee-lbl{text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);margin-bottom:18px}
+.marquee{display:flex;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-row{display:flex;gap:48px;padding-right:48px;flex-shrink:0;animation:scroll 38s linear infinite}
+.marquee:hover .marquee-row{animation-play-state:paused}@keyframes scroll{to{transform:translateX(-100%)}}
+.mq-item{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--text3);white-space:nowrap;transition:color .2s}
+.mq-item:hover{color:var(--orange)}
+
+/* ── PROBLEM ── */
+.problem{background:var(--bg2)}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story-p{font-size:16px;color:var(--text2);line-height:1.8;margin-top:18px}
+.story-p b{color:#fff;font-weight:600}
+.story-p .mark{color:var(--orange);font-weight:600}
+.vs-card{background:var(--card);border:1px solid var(--line);border-radius:var(--rl);overflow:hidden}
+.vs-row{display:flex;align-items:flex-start;gap:14px;padding:20px 22px;border-bottom:1px solid var(--line)}
+.vs-row:last-child{border-bottom:none}
+.vs-ico{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--mono);font-weight:800;font-size:14px}
+.vs-bad .vs-ico{background:rgba(239,68,68,.12);color:var(--red)}
+.vs-good .vs-ico{background:rgba(34,197,94,.12);color:var(--green)}
+.vs-good{background:linear-gradient(90deg,rgba(34,197,94,.05),transparent)}
+.vs-h{font-size:14px;font-weight:700;color:#fff;margin-bottom:3px}
+.vs-d{font-size:13px;color:var(--text2);line-height:1.6}@media(max-width:820px){.problem-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ── VALUE CARDS ── */
+.sec-head{text-align:center;max-width:680px;margin:0 auto 52px}
+.sec-head .lead{margin:16px auto 0}
+.val-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.val-card{background:var(--card);border:1px solid var(--line);border-radius:var(--rl);padding:28px 24px;transition:border-color .2s,transform .2s;position:relative;overflow:hidden}
+.val-card:hover{border-color:var(--line2);transform:translateY(-4px)}
+.val-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--orange),transparent);opacity:0;transition:opacity .25s}
+.val-card:hover::before{opacity:1}
+.val-ico{width:46px;height:46px;border-radius:11px;background:rgba(249,115,22,.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.val-n{font-family:var(--mono);font-size:11px;color:var(--text3);margin-bottom:8px}
+.val-h{font-size:16px;font-weight:700;color:#fff;margin-bottom:9px;letter-spacing:-.3px}
+.val-d{font-size:13.5px;color:var(--text2);line-height:1.7}@media(max-width:900px){.val-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.val-grid{grid-template-columns:1fr}}
+
+/* ── STATS BAND ── */
+.stats-band{background:linear-gradient(180deg,var(--bg2),var(--bg));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-big{font-size:clamp(38px,5vw,60px);font-weight:900;letter-spacing:-2px;line-height:1;background:linear-gradient(180deg,#fff,#fff,var(--orange));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-lbl{font-family:var(--mono);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--text3);margin-top:10px}
+.stat-sub{font-size:12px;color:var(--text2);margin-top:6px}@media(max-width:760px){.stats-grid{grid-template-columns:1fr 1fr;gap:40px 24px}}
+
+/* ── METHOD ── */
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--rl);padding:26px 22px;position:relative}
+.step-n{font-family:var(--mono);font-size:13px;font-weight:800;color:var(--orange);margin-bottom:14px}
+.step-n::before{counter-increment:step;content:'0' counter(step) ' / ';color:var(--text3)}
+.step-h{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+.step-d{font-size:13px;color:var(--text2);line-height:1.7}
+.step-line{position:absolute;top:34px;right:-9px;color:var(--text3);font-size:14px}@media(max-width:900px){.method-grid{grid-template-columns:1fr 1fr}.step-line{display:none}}@media(max-width:520px){.method-grid{grid-template-columns:1fr}}
+
+/* ── TESTIMONIALS ── */
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--rl);padding:26px 24px;display:flex;flex-direction:column}
+.tcard .stars{color:var(--amber);letter-spacing:2px;font-size:13px;margin-bottom:14px}
+.tquote{font-size:14.5px;color:var(--text);line-height:1.72;flex:1;margin-bottom:18px}
+.tquote::before{content:'"';color:var(--orange)}
+.tquote::after{content:'"';color:var(--orange)}
+.tmeta{display:flex;align-items:center;gap:11px}
+.tav{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange2));display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;font-weight:800;color:#000;flex-shrink:0}
+.tname{font-size:13px;font-weight:700;color:#fff}
+.trole{font-family:var(--mono);font-size:10.5px;color:var(--text3)}@media(max-width:860px){.test-grid{grid-template-columns:1fr}}
+
+/* ── STACK ── */
+.stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.scard{background:var(--card);border:1px solid var(--line);border-radius:var(--rl);padding:24px;display:flex;align-items:flex-start;gap:15px;transition:border-color .18s,transform .18s,background .18s;cursor:pointer}
+.scard:hover{border-color:var(--line2);transform:translateY(-3px);background:var(--card2)}
+.si-box{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sl{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px;letter-spacing:-.2px}
+.sd{font-size:12.5px;color:var(--text2);line-height:1.65}
+.st{font-family:var(--mono);font-size:10px;color:var(--orange);margin-top:9px;letter-spacing:.4px}@media(max-width:860px){.stack-grid{grid-template-columns:1fr 1fr}}@media(max-width:540px){.stack-grid{grid-template-columns:1fr}}
+
+/* ── FILTER + FEED ── */
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.ftab{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.3px;color:var(--text2);padding:9px 15px;border-radius:100px;border:1px solid var(--line);background:var(--card);cursor:pointer;transition:all .15s}
+.ftab:hover{border-color:var(--line2);color:#fff}
+.ftab.active{color:#000;background:var(--orange);border-color:var(--orange)}
+.fc-badge{opacity:.7;margin-left:4px}
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.art-card{background:var(--card);border:1px solid var(--line);border-radius:var(--rl);overflow:hidden;display:flex;flex-direction:column;transition:border-color .18s,transform .18s,box-shadow .18s}
+.art-card:hover{border-color:var(--line2);transform:translateY(-4px);box-shadow:0 16px 44px rgba(0,0,0,.6)}
+.ac-stripe{height:3px}
+.ac-thumb{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--card2)}
+.ac-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.art-card:hover .ac-thumb img{transform:scale(1.05)}
+.ac-body{padding:20px 20px 14px;flex:1;display:flex;flex-direction:column}
+.ac-meta{display:flex;align-items:center;gap:8px;margin-bottom:13px}
+.ac-tag{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.ac-depth{display:flex;gap:3px;margin-left:auto}
+.dep-bar{width:4px;height:13px;border-radius:1px;background:var(--line2)}
+.dep-bar.on{background:var(--orange)}
+.ac-title{font-size:15px;font-weight:700;color:#fff;line-height:1.4;margin-bottom:9px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ac-exc{font-size:13px;color:var(--text2);line-height:1.7;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
+.ac-foot{padding:12px 20px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.ac-date{font-family:var(--mono);font-size:10px;color:var(--text3)}
+.ac-cta{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--orange);display:flex;align-items:center;gap:4px}
+.art-card:hover .ac-cta svg{transform:translateX(3px)}
+.ac-cta svg{transition:transform .18s}
+.skel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skeleton{background:var(--card);border:1px solid var(--line);border-radius:var(--rl);padding:22px;animation:skp 1.4s ease infinite}@keyframes skp{0%,100%{opacity:.3}50%{opacity:.65}}
+.sk-b{height:3px;background:var(--card2);border-radius:2px;margin-bottom:18px}
+.sk-l{height:11px;background:var(--card2);border-radius:3px;margin-bottom:10px}
+.no-res{text-align:center;padding:64px 20px;color:var(--text3);font-family:var(--mono);font-size:13px}@media(max-width:900px){.art-grid,.skel-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.art-grid,.skel-grid{grid-template-columns:1fr}}
+
+/* ── REVIEWER ── */
+.rev-card{background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--rl);padding:40px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:start;position:relative;overflow:hidden}
+.rev-card::after{content:'';position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.09),transparent 70%)}
+.rev-av{width:96px;height:96px;border-radius:50%;border:2px solid var(--line2);background:linear-gradient(135deg,var(--orange),var(--orange2));display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:26px;font-weight:800;color:#000}
+.rev-name{font-size:21px;font-weight:800;color:#fff;letter-spacing:-.4px}
+.rev-role{font-family:var(--mono);font-size:11px;color:var(--orange);text-transform:uppercase;letter-spacing:1.5px;margin:5px 0 16px}
+.rev-bio{font-size:14px;color:var(--text2);line-height:1.78;margin-bottom:12px}
+.rev-bio b{color:#fff;font-weight:600}@media(max-width:620px){.rev-card{grid-template-columns:1fr;padding:30px 24px;text-align:center}.rev-av{margin:0 auto}}
+
+/* ── FAQ ── */
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;background:var(--card);overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:var(--line2)}
+.faq-q{width:100%;text-align:left;padding:19px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:15px;font-weight:600;color:#fff}
+.faq-ico{font-family:var(--mono);font-size:18px;color:var(--orange);flex-shrink:0;transition:transform .25s}
+.faq-item.open .faq-ico{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a-in{padding:0 22px 20px;font-size:14px;color:var(--text2);line-height:1.78}
+
+/* ── FINAL CTA ── */
+.cta-sec{position:relative;overflow:hidden}
+.cta-box{position:relative;background:linear-gradient(135deg,#161009,#0c0c10);border:1px solid var(--border2,rgba(249,115,22,.25));border-radius:22px;padding:60px 48px;text-align:center;overflow:hidden}
+.cta-box::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(249,115,22,.18),transparent 65%);pointer-events:none}
+.cta-box .h2{position:relative;margin-bottom:14px}
+.cta-p{position:relative;font-size:16px;color:var(--text2);max-width:480px;margin:0 auto 28px;line-height:1.7}
+.nl-form{position:relative;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:480px;margin:0 auto}
+.nl-input{flex:1;min-width:230px;background:#000;border:1px solid var(--line2);border-radius:var(--r);padding:14px 16px;font-size:14px;color:var(--text);outline:none;font-family:var(--font);transition:border-color .2s}
+.nl-input:focus{border-color:var(--orange)}
+.nl-input::placeholder{color:var(--text3)}
+.nl-btn{font-family:var(--mono);font-size:13px;font-weight:700;color:#000;background:var(--orange);border-radius:var(--r);padding:14px 24px;transition:background .15s;white-space:nowrap}
+.nl-btn:hover{background:#fb8c3c}
+.nl-note{position:relative;font-family:var(--mono);font-size:11px;color:var(--text3);margin-top:14px;transition:color .3s}
+.cta-trust{position:relative;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:24px;font-family:var(--mono);font-size:11px;color:var(--text3)}
+.cta-trust span{display:flex;align-items:center;gap:6px}
+.cta-trust b{color:var(--green)}
+
+/* ── FOOTER ── */
+.footer{background:var(--bg2);border-top:1px solid var(--line);padding:60px 0 30px}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.ft-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ft-mark{font-family:var(--mono);font-size:12px;font-weight:800;color:#000;background:var(--orange);padding:4px 9px;border-radius:4px}
+.ft-name{font-family:var(--mono);font-size:15px;font-weight:700;color:#fff}
+.ft-desc{font-size:13px;color:var(--text3);max-width:280px;line-height:1.75}
+.ft-col-h{font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text3);margin-bottom:15px}
+.ft-col a{display:block;font-size:13px;color:var(--text2);padding:5px 0;transition:color .15s}
+.ft-col a:hover{color:var(--orange)}
+.ft-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ft-copy{font-family:var(--mono);font-size:11px;color:var(--text3)}
+.ft-sig{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.5px}
+.ft-sig b{color:var(--green)}@media(max-width:760px){.ft-top{grid-template-columns:1fr 1fr;gap:32px}}@media(max-width:440px){.ft-top{grid-template-columns:1fr}}
+
+/* CONTRAST-AUDIT v2 - auto-derived from site theme so it adapts to each
+   palette instead of forcing one fixed color (which broke white-on-white
+   on every light-bg site). */
+body[data-page-depth="1"] h1,
+body[data-page-depth="1"] h2,
+body[data-page-depth="1"] h3,
+body[data-page-depth="1"] .art-title,
+body[data-page-depth="1"] .article-title,
+body[data-page-depth="1"] .mag-hero h1,
+body[data-page-depth="1"] .imm-hero h1,
+body[data-page-depth="1"] article h1,
+body[data-page-depth="1"] article h2,
+body[data-page-depth="1"] article h3{color:#f5f5f5 !important}
+body[data-page-depth="1"] article p,
+body[data-page-depth="1"] article li,
+body[data-page-depth="1"] .art-body p,
+body[data-page-depth="1"] .mag-body p,
+body[data-page-depth="1"] .imm-body p,
+body[data-page-depth="1"] article .intro,
+body[data-page-depth="1"] article .concl,
+body[data-page-depth="1"] article strong{color:#d4d4d4 !important}
+body[data-page-depth="1"] article a,
+body[data-page-depth="1"] article p a,
+body[data-page-depth="1"] article .intro a{color:#f97316 !important;text-decoration:underline;text-underline-offset:3px}
+/* trading-tech is actually dark themed - shell forces #000 bg on article
+   pages but the contrast block defaulted to black-on-black. Light text +
+   brand-orange links. */
+body[data-page-depth="1"]{background:#000}
+body[data-page-depth="1"] .ap{max-width:min(1180px,92vw);padding:72px 36px 24px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;color:#d4d4d4;font-family:'Inter',system-ui,sans-serif;margin:0 auto;justify-content:center}
+body[data-page-depth="1"] .ap > *{grid-column:1}
+body[data-page-depth="1"] .ap .article-sidebar{grid-column:2;grid-row:1 / span 99;position:sticky;top:24px;align-self:start;padding:22px;background:rgba(249,115,22,.05);border:1px solid rgba(249,115,22,.22);border-radius:12px;max-height:calc(100vh - 48px);overflow-y:auto}
+body[data-page-depth="1"] .ap .article-sidebar .sb-label{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#f97316;font-weight:600;margin-bottom:14px}
+body[data-page-depth="1"] .ap .article-sidebar .sb-name{font-family:'Inter Tight','Inter',sans-serif;font-size:16px;font-weight:700;color:#f5f5f5;margin-bottom:4px;letter-spacing:-.012em}
+body[data-page-depth="1"] .ap .article-sidebar .sb-role{font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#f97316;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+body[data-page-depth="1"] .ap .article-sidebar .sb-bio{font-size:13px;line-height:1.7;color:#bdbdbd;font-family:'Inter',sans-serif}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related{margin-top:22px;padding-top:18px;border-top:1px solid rgba(249,115,22,.18)}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related .sb-r-label{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#f97316;font-weight:600;margin-bottom:12px}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related a{display:block;font-family:'Inter Tight','Inter',sans-serif;font-size:13px;font-weight:500;color:#e5e5e5;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.4;transition:color .2s}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related a:hover{color:#f97316}
+body[data-page-depth="1"] .ap .article-sidebar .sb-related a:last-child{border-bottom:none}
+body[data-page-depth="1"] .ap h1{font-family:'Inter Tight','Inter',sans-serif !important;font-size:clamp(28px,3.8vw,46px);font-weight:700;letter-spacing:-.02em;color:#f5f5f5 !important;line-height:1.06}
+body[data-page-depth="1"] .ap-deck{font-size:18px !important;line-height:1.6 !important;color:#a3a3a3 !important;font-style:normal !important;font-family:'Inter',sans-serif !important;max-width:none !important}
+body[data-page-depth="1"] .ap-body{font-size:16.5px !important;line-height:1.78 !important;color:#d4d4d4 !important;font-family:'Inter',sans-serif !important}
+body[data-page-depth="1"] .ap-body p{color:#c5c5c5 !important;margin-bottom:22px}
+body[data-page-depth="1"] .ap-body h2,body[data-page-depth="1"] .ap-body .art-h2{font-size:24px !important;font-family:'Inter Tight','Inter',sans-serif !important;font-weight:700;color:#f5f5f5 !important;letter-spacing:-.012em;margin:44px 0 14px}
+body[data-page-depth="1"] .ap-body h3,body[data-page-depth="1"] .ap-body .art-h3{font-size:18px !important;font-family:'Inter Tight','Inter',sans-serif !important;font-weight:600;color:#f5f5f5 !important}
+body[data-page-depth="1"] .ap-pull{font-size:21px !important;color:#f5f5f5 !important;font-style:normal !important;font-family:'Inter Tight','Inter',sans-serif !important;font-weight:500;border-left:3px solid #f97316 !important;padding:18px 20px !important;background:rgba(249,115,22,.05);border-radius:0 8px 8px 0}
+body[data-page-depth="1"] .ap-concl{font-size:16.5px !important;color:#d4d4d4 !important;font-family:'Inter',sans-serif !important;border-top:1px solid #262626;padding-top:26px}
+/* Hide the bottom author card - now in sidebar on desktop */
+body[data-page-depth="1"] .ap ~ div[style*="max-width:760px"],
+body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{display:none}@media (max-width:1080px){
+  body[data-page-depth="1"] .ap{grid-template-columns:1fr;gap:32px;max-width:min(800px,95vw)}
+  body[data-page-depth="1"] .ap .article-sidebar{grid-column:1;position:static;max-height:none;margin-top:28px;display:block}
+  body[data-page-depth="1"] .ap ~ div[style*="max-width:760px"]{display:block}
+}
+/* /CONTRAST-AUDIT */
+/* page */
+
+.sw{background:#000000;color:#e6edf3;font-family:'Inter',system-ui,sans-serif;position:relative}
+.sw-grid{max-width:1180px;margin:0 auto;padding:40px 28px 64px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:54px;align-items:start}
+.sw-side-inner{position:sticky;top:24px;display:flex;flex-direction:column;gap:22px}
+.sw-kicker{font-family:'Inter','system-ui',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#f97316}
+.sw-metarow{display:flex;flex-direction:column;gap:7px;font-size:12.5px;color:#8b8b8b;border-top:1px solid #1f1f1f;border-bottom:1px solid #1f1f1f;padding:14px 0}
+.sw-metarow b{color:#e6edf3;font-weight:600}
+.sw-toc-h{font-family:'Inter','system-ui',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8b8b8b;margin-bottom:4px}
+.sw-toc{display:flex;flex-direction:column;gap:2px}
+.sw-toc-a{font-size:13px;line-height:1.4;color:#9ca3af;text-decoration:none;padding:6px 0 6px 12px;border-left:2px solid #1f1f1f;transition:color .15s,border-color .15s}
+.sw-toc-a:hover{color:#f97316;border-left-color:#f97316}
+.sw-byline{display:flex;align-items:center;gap:11px;padding-top:18px;border-top:1px solid #1f1f1f}
+.sw-av{width:38px;height:38px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-family:'Inter','system-ui',sans-serif;font-weight:700;font-size:13px;color:#0a0a0b;background:#f97316}
+.sw-by-name{font-size:13px;font-weight:700;color:#e6edf3;font-family:'Inter','system-ui',sans-serif}
+.sw-by-role{font-size:11px;color:#8b8b8b}
+.sw-main{min-width:0}
+.sw h1{font-family:'Inter','system-ui',sans-serif;font-size:clamp(30px,3.6vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.02em;color:#e6edf3;margin:0 0 16px;text-wrap:balance}
+.sw-dek{font-size:clamp(16px,1.4vw,20px);line-height:1.55;color:#9ca3af;margin:0 0 26px;max-width:64ch}
+.sw-hero{margin:0 0 32px}
+.sw-hero img{width:100%;border-radius:14px;border:1px solid #1f1f1f;display:block}
+.sw-hero figcaption{font-size:11px;color:#8b8b8b;letter-spacing:.06em;text-transform:uppercase;margin-top:9px;text-align:right}
+.sw-body{font-size:17.5px;line-height:1.78;color:#e6edf3}
+.sw-body p{margin:0 0 22px;color:#e6edf3}
+.sw-body .intro{font-size:20px;line-height:1.6;font-weight:500;color:#e6edf3;border-left:3px solid #f97316;padding-left:20px;margin:0 0 28px}
+.sw-body a{color:#f97316;text-decoration:underline;text-underline-offset:3px}
+.sw-body strong{color:#e6edf3;font-weight:700}
+.sw-body ul,.sw-body ol{margin:0 0 22px 20px}.sw-body li{margin-bottom:9px}
+.sw-body img{width:100%;border-radius:12px;border:1px solid #1f1f1f;margin:28px 0}
+.sw-body blockquote{margin:30px 0;padding:6px 0 6px 22px;border-left:3px solid #f97316;font-family:'Inter','system-ui',sans-serif;font-size:21px;line-height:1.45;font-weight:500;color:#e6edf3}
+.sw-body h2.sw-h2{font-family:'Inter','system-ui',sans-serif;font-size:clamp(22px,2.6vw,30px);font-weight:700;line-height:1.18;letter-spacing:-.01em;color:#e6edf3;margin:46px 0 14px;padding-top:22px;border-top:1px solid #1f1f1f;scroll-margin-top:20px}
+.sw-body h3{font-family:'Inter','system-ui',sans-serif;font-size:19px;font-weight:600;color:#e6edf3;margin:28px 0 10px}
+.sw-concl{margin:44px 0 0;padding:26px 26px;background:#0a0a0a;border:1px solid #1f1f1f;border-radius:14px;position:relative;font-size:17px;line-height:1.65;color:#e6edf3}
+.sw-concl::before{content:'The Verdict';position:absolute;top:-10px;left:20px;background:#f97316;color:#0a0a0b;font-family:'Inter','system-ui',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:3px 10px;border-radius:4px}@media(max-width:900px){
+  .sw-grid{grid-template-columns:1fr;gap:28px;padding:28px 20px 52px}
+  .sw-side-inner{position:static;gap:16px}
+  .sw-toc{display:none}
+  .sw-byline{display:none}
+}
+.art-h2{font-family:'Inter','system-ui',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e6edf3}.art-h3{font-family:'Inter','system-ui',sans-serif;font-size:18px;font-weight:700;margin:28px 0 12px;color:#e6edf3}
+/* Defend against host-shell contrast-audit !important rules so this layout's
+   own theme colours always win, light or dark. */
+body[data-page-depth="1"] .sw h1,
+body[data-page-depth="1"] .sw .sw-h2,
+body[data-page-depth="1"] .sw h2.sw-h2,
+body[data-page-depth="1"] .sw h3,
+body[data-page-depth="1"] .sw-body,
+body[data-page-depth="1"] .sw-body p,
+body[data-page-depth="1"] .sw-body li,
+body[data-page-depth="1"] .sw-concl{color:#e6edf3 !important}
+body[data-page-depth="1"] .sw-dek{color:#9ca3af !important}
+body[data-page-depth="1"] .sw-body a,
+body[data-page-depth="1"] .sw-body strong{color:#f97316 !important}
+
+/* tight headlines */
+.art h1,.wrap h1,.art-grid h1,.art-min h1,.mag-hero h1,.imm-hero h1,article h1,h1{line-height:1.1!important}</style>
+</head>
+<body data-page-depth="1">
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="../">
+      <span class="nm-box">TTR</span>
+      <span class="nm-name">TradingTech<span class="nm-dot">.</span>Review</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="../#feed">Reviews</a>
+      <a class="nav-link" href="../#stack">The Stack</a>
+      <a class="nav-link" href="../#method">Method</a>
+      <a class="nav-link" href="../#faq">FAQ</a>
+      <a class="nav-link" href="../about">About</a>
+    </div>
+    <div class="nav-r">
+      <span class="nav-cnt">reviews: <b id="nav-cnt">--</b></span>
+      <a class="nav-sub" href="../#subscribe">Subscribe</a>
+    </div>
+  </div>
+</nav>
+<article itemscope itemtype="https://schema.org/TechArticle"><div class="sw">
+  <div class="sw-grid">
+    <aside class="sw-side">
+      <div class="sw-side-inner">
+        <div class="sw-kicker">EXECUTION</div>
+        <div class="sw-metarow"><span><b>May 17, 2026</b></span><span>5 min read</span></div>
+        <div><div class="sw-toc-h">In this article</div><nav class="sw-toc"><a class="sw-toc-a" href="#sec-freqtrade-is-the-closest-thing-to-a-prod-0">Freqtrade Is the Closest Thing to a Production Standard</a><a class="sw-toc-a" href="#sec-hummingbot-solves-a-different-problem-th-1">Hummingbot Solves a Different Problem Than You Think</a><a class="sw-toc-a" href="#sec-jesse-is-built-for-quants-who-know-pytho-2">Jesse Is Built for Quants Who Know Python and Want Control</a><a class="sw-toc-a" href="#sec-what-to-skip-and-one-misconception-that--3">What to Skip, and One Misconception That Costs People Money</a></nav></div>
+        <div class="sw-byline"><div class="sw-av">AR</div><div><div class="sw-by-name">Alex Rivera</div><div class="sw-by-role">software engineer turned full-time algorithmic trader</div></div></div>
+      </div>
+    </aside>
+    <div class="sw-main">
+      <h1>Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)</h1>
+      <p class="sw-dek">Alex Rivera reviews the open-source trading bots that hold up in production - with honest takes on Freqtrade, Hummingbot, Jesse, and more.</p>
+      <figure class="sw-hero"><img src="https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Multiple monitor screens displaying algorithmic trading code and live market charts in a developer workspace" loading="eager"><figcaption>Photo: Staff / Pexels</figcaption></figure>
+      <div class="sw-body">
+        <p class="intro">Most lists of open-source trading bots read like a GitHub star count sorted descending. They mention the same five projects, copy-paste the README description, and call it a review. The reality is messier. A bot that demos well in a Jupyter notebook can fall apart the moment you point it at a live exchange with real latency, partial fills, and an API that rate-limits you at the worst possible moment. I've deployed four different open-source frameworks over the past three years, and the gap between 'looks good on paper' and 'actually runs without babysitting' is wider than most people expect.</p>
+        <p>Alex Rivera reviews the open-source trading bots that hold up in production - with honest takes on Freqtrade, Hummingbot, Jesse, and more.</p>
+        <h2 id="sec-freqtrade-is-the-closest-thing-to-a-prod-0" class="sw-h2">Freqtrade Is the Closest Thing to a Production Standard</h2>
+<p>If you're only going to seriously evaluate one open-source trading bot, make it Freqtrade. It's written in Python, it's been actively maintained since 2017, and its architecture is genuinely well thought out. The strategy interface is clean, the backtesting engine is solid, and the dry-run mode actually mirrors live trading logic rather than just simulating fills optimistically. That last point matters more than people realize. A lot of frameworks let you backtest against OHLCV data and then handle live orders completely differently, which is part of why <a href='/backtest-vs-live-trading-results-differ/'>backtest results so frequently diverge from live performance</a> in ways that feel inexplicable until you trace the code path.</p><p>When I tested Freqtrade against Binance and Kraken simultaneously over a six-week period in 2023, the biggest operational headache wasn't the strategy logic, it was exchange-specific quirks in order status responses. Freqtrade handled most of them gracefully, but I had to write a custom order handling patch for a specific Kraken edge case involving partially filled stop orders. That's not a knock on the project. That's just the reality of trading infrastructure. The fact that the codebase was readable enough to patch quickly is actually a point in its favor.</p><p>The Telegram integration is genuinely useful in production, not just a toy feature. Being able to query bot status, force exits, and pause trading from a phone without SSH-ing into a server has saved me more than once during volatile sessions. The configuration system is YAML-based and occasionally verbose, but it's explicit, which I'll take over magic any day. If you're coming from a software engineering background, you'll feel at home in about an hour.</p>
+<h2 id="sec-hummingbot-solves-a-different-problem-th-1" class="sw-h2">Hummingbot Solves a Different Problem Than You Think</h2>
+<p>Hummingbot gets lumped in with directional trading bots, but it's fundamentally a market-making and arbitrage framework. If you're trying to run momentum strategies or trend-following signals, it's the wrong tool. But for liquidity provision on DEXes, cross-exchange arbitrage, or anything involving bid-ask spread capture, it's probably the most battle-tested open-source option available. The project disclosed in their 2022 annual report that bots built on their framework had facilitated over $26 billion in trading volume across connected exchanges. That number aged, but the architecture decisions that enabled it haven't changed much.</p><p>The learning curve is steeper than Freqtrade. Hummingbot's connector architecture is impressive in scope, supporting dozens of CEXes and DEXes, but that breadth comes with complexity. When I first worked with the Uniswap V3 connector, I spent two days understanding how it handled concentrated liquidity range rebalancing before I trusted it with real capital. The documentation has improved, but there are still gaps where you'll end up reading source code. If you're comfortable doing that, it's not a dealbreaker.</p><p>And the community is an underrated asset. The Discord is active, the core team responds to GitHub issues at a pace that most open-source projects don't match, and there's a real ecosystem of strategy scripts shared publicly. Just be aware that Hummingbot's governance has shifted toward their token-based model in recent years, which creates some misalignment between community contributors and the direction of the roadmap. It's an ongoing tension worth watching.</p></div></div></div></div></div></div></div></div>
+<h2 id="sec-jesse-is-built-for-quants-who-know-pytho-2" class="sw-h2">Jesse Is Built for Quants Who Know Python and Want Control</h2>
+<p>Jesse is the framework I'd recommend to anyone who wants to write strategies the way you'd actually write a Python program, rather than fighting against a configuration-heavy abstraction layer. It's younger than Freqtrade, the exchange support is thinner, and you'll hit rough edges in the documentation. But the strategy API is the cleanest I've used. You write Python classes, you get autocomplete, you can unit test your strategy logic in isolation. That last capability is something the more 'batteries-included' frameworks make frustratingly difficult.</p><p>The backtesting performance is also meaningfully faster than alternatives when you're running parameter optimization across large datasets. Jesse uses a compiled Cython layer for its core simulation loop, which matters when you're testing against tick-level data across multiple years. If you want to understand what Python backtesting libraries actually do under the hood at a performance level, the <a href='/python-backtesting-libraries-trading-strategies/'>honest breakdown of Python backtesting tools</a> I wrote earlier covers the tradeoffs in detail.</p><p>The honest limitation is live trading support. At the time of writing, Jesse's live trading mode is functional but narrower in exchange coverage than Freqtrade, and the error handling in edge cases needs work. I've seen this pattern before with developer-focused frameworks: the research and backtesting experience is excellent, and the production hardening lags behind. Jesse is somewhere in that middle stage right now. Use it for research and paper trading. Be cautious about running unattended with significant capital until you've stress-tested the specific exchange connector you need.</p></div></div>
+<h2 id="sec-what-to-skip-and-one-misconception-that--3" class="sw-h2">What to Skip, and One Misconception That Costs People Money</h2>
+<p>The common misconception I see constantly is that a high GitHub star count signals production quality. It doesn't. Some of the most-starred trading bot repositories are tutorial projects or abandoned experiments that accumulated stars during a crypto bull run and haven't had a meaningful commit since. Gekko, for example, was genuinely influential and is still cited in articles written today, but it's been deprecated since 2020. Running it against a modern exchange API is an exercise in frustration. So is anything that hasn't had active maintenance in the past 12 months, regardless of how good the README looks.</p><p>I'd also be blunt about OctoBot: the concept is appealing, the visual strategy builder sounds accessible, but in practice the abstraction layer between the visual interface and execution logic creates debugging nightmares. When something goes wrong in production, and something will always go wrong, you need to be able to trace exactly what happened and why. Visual builders make that harder, not easier. I spent an afternoon once trying to figure out why a grid strategy wasn't canceling open orders correctly, and the answer was buried three abstraction layers deep in a component I hadn't touched.</p><p>And there's a broader point here about the whole category: open-source trading bots are infrastructure, not strategy. The bot doesn't make you money. Your edge does. The bot's job is to execute that edge faithfully, handle errors without blowing up your account, and stay running when you're not watching. Judging these tools on anything other than those criteria is where traders go wrong. Pick the framework whose failure modes you understand, not the one with the most features you'll never use.</p>
+        <div class="sw-concl"><p>Start with Freqtrade. Get one strategy running in dry-run mode this week, not next month. Read the source code for the order execution path before you go live. If your use case is market-making or arbitrage, evaluate Hummingbot specifically for its connector coverage on the venues you care about. If you're doing heavy quantitative research and care more about clean Python than exchange breadth, Jesse is worth the setup time. But in all three cases: understand the failure modes before you deploy real capital, because the bot's README won't warn you about the edge cases that actually hurt.</p></div>
+        
+      </div>
+    </div>
+  </div>
+</div><div style="max-width:760px;margin:24px auto 60px;padding:0 24px 8px">
+  <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#8b8b8b;margin-bottom:14px">About the author</div>
+  <div style="border:1px solid #1f1f1f;border-radius:12px;padding:22px 24px;display:flex;gap:18px;align-items:flex-start;background:#0a0a0a">
+    <div style="width:54px;height:54px;border-radius:50%;background:#f97316;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#fff;flex-shrink:0;letter-spacing:-1px">AR</div>
+    <div style="flex:1">
+      <div style="font-size:14px;font-weight:700;color:#e6edf3;margin-bottom:2px">Alex Rivera</div>
+      <div style="font-size:12px;color:#f97316;margin-bottom:8px;font-weight:600">software engineer turned full-time algorithmic trader</div>
+      <p style="font-size:13px;color:#9ca3af;line-height:1.65;margin:0">TradingTech Review is where I cut through vendor marketing. If a tool doesn't hold up under real trading conditions, I'll say so.</p>
+    </div>
+  </div>
+</div>
+
+<section id="comments" itemscope itemtype="https://schema.org/WebPage" data-total="2" style="max-width:760px;margin:72px auto 0;padding:0 24px 56px">
+  <div style="margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid #1f1f1f">
+    <h2 id="comments-heading" style="font-family:'Lora',Georgia,serif;font-size:24px;font-weight:600;color:#e6edf3;margin:0;letter-spacing:-.012em">Discussion <span style="font-weight:400;color:#8b8b8b;font-size:18px"> &middot; 2</span></h2>
+  </div>
+  <form id="comment-form" onsubmit="event.preventDefault();submitComment();" style="margin:0 0 36px;scroll-margin-top:90px">
+    <textarea id="c-text" placeholder="Share your thoughts..." rows="3" style="width:100%;padding:14px 16px;border:1px solid #1f1f1f;border-radius:8px;font-size:15px;background:#000000;color:#e6edf3;outline:none;font-family:'Lora',Georgia,serif;line-height:1.6;resize:vertical;min-height:90px;box-sizing:border-box;transition:border-color .15s" onfocus="this.style.borderColor='#f97316'" onblur="this.style.borderColor='#1f1f1f'"></textarea>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px">
+      <input id="c-name" placeholder="Your name" style="flex:1;min-width:140px;padding:10px 14px;border:1px solid #1f1f1f;border-radius:8px;font-size:13.5px;background:#000000;color:#e6edf3;outline:none;font-family:inherit;box-sizing:border-box;transition:border-color .15s" onfocus="this.style.borderColor='#f97316'" onblur="this.style.borderColor='#1f1f1f'">
+      <input id="c-email" placeholder="Email (private)" style="flex:1;min-width:140px;padding:10px 14px;border:1px solid #1f1f1f;border-radius:8px;font-size:13.5px;background:#000000;color:#e6edf3;outline:none;font-family:inherit;box-sizing:border-box;transition:border-color .15s" onfocus="this.style.borderColor='#f97316'" onblur="this.style.borderColor='#1f1f1f'">
+      <button type="submit" onclick="submitComment()" style="background:#f97316;color:#fff;border:none;border-radius:8px;padding:10px 22px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.02em;transition:opacity .15s" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">Post comment</button>
+    </div>
+    <div id="c-success" style="display:none;margin-top:12px;padding:10px 14px;background:#f9731614;border:1px solid #f9731644;border-radius:8px;font-size:13px;color:#f97316;font-weight:600">Posted. Thanks for joining the discussion.</div>
+  </form>
+  <div id="comments-list"><section itemprop="comment" itemscope itemtype="https://schema.org/Comment" data-key="c1629" data-likes="2" style="margin:0 0 14px;padding:22px 24px;background:transparent;border:1px solid #1f1f1f;border-radius:10px;"><header style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Marcus T."><span style="font-size:14px;font-weight:600;color:#e6edf3;letter-spacing:-.005em">Marcus T.</span></span><time itemprop="dateCreated" datetime="2026-05-20" style="font-size:12px;color:#8b8b8b;opacity:.85">May 20, 2026</time><span style="font-size:12px;color:#8b8b8b;opacity:.85"> &middot; 2 likes</span></header><p itemprop="text" style="font-family:'Lora',Georgia,serif;font-size:15.5px;line-height:1.7;margin:0;color:#9ca3af;max-width:56ch">Been running Freqtrade for 6 months now and it's solid. The backtesting module alone saved me from blowing up my account twice. Way better than the expensive alternatives.</p></section><section itemprop="comment" itemscope itemtype="https://schema.org/Comment" data-key="c2114" data-likes="0" style="margin:0 0 14px;padding:22px 24px;background:transparent;border:1px solid #1f1f1f;border-radius:10px;"><header style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Sarah K."><span style="font-size:14px;font-weight:600;color:#e6edf3;letter-spacing:-.005em">Sarah K.</span></span><time itemprop="dateCreated" datetime="2026-05-24" style="font-size:12px;color:#8b8b8b;opacity:.85">May 24, 2026</time></header><p itemprop="text" style="font-family:'Lora',Georgia,serif;font-size:15.5px;line-height:1.7;margin:0;color:#9ca3af;max-width:56ch">Great breakdown but I'm still confused about the differences between CCXT integration and direct API connections. Can someone ELI5 this? Thinking about switching from my current setup.</p></section></div>
+  <div id="user-comments-list"></div>
+</section>
+<script>
+(function(){
+  var ACCENT='#f97316';
+  var BRD='#1f1f1f';
+  var META='#8b8b8b';
+  var TXT='#e6edf3';
+  var TXT2='#9ca3af';
+  var BG2='#0a0a0a';
+  var slug=location.pathname.split('/').filter(Boolean).join('-')||'home';
+
+  function getLikes(){try{return JSON.parse(localStorage.getItem('lk_'+slug)||'{}');}catch(e){return{};}}
+  function saveLikes(l){try{localStorage.setItem('lk_'+slug,JSON.stringify(l));}catch(e){}}
+  function getLocal(){try{return JSON.parse(localStorage.getItem('uc_'+slug)||'[]');}catch(e){return[];}}
+  function saveLocal(cs){try{localStorage.setItem('uc_'+slug,JSON.stringify(cs));}catch(e){}}
+
+  // Apply persisted like state to server-rendered buttons.
+  var likes=getLikes();
+  document.querySelectorAll('#comments-list [data-key]').forEach(function(node){
+    var key=node.getAttribute('data-key');
+    var btn=node.querySelector('button[onclick^="toggleLike"]');
+    if(!btn)return;
+    var liked=!!likes[key];
+    if(liked){
+      btn.style.borderColor=ACCENT;btn.style.color=ACCENT;
+      var svg=btn.querySelector('svg');if(svg)svg.setAttribute('fill',ACCENT);
+      var lc=btn.querySelector('.lc');if(lc){lc.textContent=parseInt(lc.textContent||'0')+1;}
+    }
+  });
+
+  window.toggleLike=function(key,btn){
+    var l=getLikes();l[key]=!l[key];var liked=l[key];saveLikes(l);
+    btn.style.borderColor=liked?ACCENT:BRD;btn.style.color=liked?ACCENT:META;
+    var svg=btn.querySelector('svg');if(svg)svg.setAttribute('fill',liked?ACCENT:'none');
+    var lc=btn.querySelector('.lc');
+    if(lc){var n=parseInt(lc.textContent||'0');lc.textContent=liked?n+1:Math.max(0,n-1);}
+  };
+
+  function renderUserComment(c){
+    var name=(c.name||'You').replace(/</g,'&lt;');
+    var text=(c.text||'').replace(/</g,'&lt;');
+    return '<section style="margin:0 0 14px;padding:22px 24px;background:transparent;border:1px solid '+BRD+';border-radius:10px">'+
+      '<header style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px">'+
+        '<span style="font-size:14px;font-weight:600;color:'+TXT+';letter-spacing:-.005em">'+name+'</span>'+
+        '<span style="display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.04em;background:'+ACCENT+'1a;color:'+ACCENT+';border:1px solid '+ACCENT+'55;border-radius:100px;padding:2px 10px;margin-left:4px;line-height:1.4">You</span>'+
+        '<span style="font-size:12px;color:'+META+';opacity:.85">'+c.date_display+'</span>'+
+      '</header>'+
+      '<p style="font-family:\'Lora\',Georgia,serif;font-size:15.5px;line-height:1.7;margin:0;color:'+TXT2+';max-width:56ch">'+text+'</p>'+
+      '</section>';
+  }
+
+  function paintLocal(){
+    var el=document.getElementById('user-comments-list');
+    if(!el)return;
+    el.innerHTML=getLocal().map(renderUserComment).join('');
+  }
+  paintLocal();
+
+  window.submitComment=function(){
+    var name=(document.getElementById('c-name').value||'').trim();
+    var text=(document.getElementById('c-text').value||'').trim();
+    var nameEl=document.getElementById('c-name'),textEl=document.getElementById('c-text');
+    nameEl.style.borderColor=BRD;textEl.style.borderColor=BRD;
+    if(!name){nameEl.style.borderColor='#ef4444';nameEl.focus();return;}
+    if(!text){textEl.style.borderColor='#ef4444';textEl.focus();return;}
+    var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var now=new Date();
+    var ds=mo[now.getMonth()]+' '+now.getDate()+', '+now.getFullYear();
+    var c={name:name,text:text,date_display:ds,_id:'u_'+Date.now()};
+    var local=getLocal();local.push(c);saveLocal(local);
+    nameEl.value='';document.getElementById('c-email').value='';textEl.value='';
+    var succ=document.getElementById('c-success');
+    succ.style.display='block';setTimeout(function(){succ.style.display='none';},4000);
+    paintLocal();
+    var empty=document.getElementById('c-empty');if(empty)empty.style.display='none';
+  };
+})();
+</script></article>
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <div class="ft-brand"><span class="ft-mark">TTR</span><span class="ft-name">TradingTech.Review</span></div>
+        <p class="ft-desc">Honest, production-tested reviews of trading platforms, APIs and Python libraries - for developers who trade algorithmically.</p>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-h">Reviews</div>
+        <a href="../#feed">Backtesting</a>
+        <a href="../#feed">APIs &amp; Data</a>
+        <a href="../#feed">Python Libraries</a>
+        <a href="../#feed">Open Source Bots</a>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-h">Site</div>
+        <a href="../#stack">The Stack</a>
+        <a href="../#method">Our Method</a>
+        <a href="../#faq">FAQ</a>
+        <a href="../about">About</a>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-h">Legal</div>
+        <a href="../privacy">Privacy Policy</a>
+        <a href="../terms">Terms</a>
+        <a href="../sms">SMS Policy</a>
+        <a href="../meta-policy">Meta Policy</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span class="ft-copy">&#169; 2026 TradingTech Review. For informational purposes only. Not financial advice.</span>
+      <span class="ft-sig">status: <b>online</b> // independent &amp; unsponsored</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── TICKER MARQUEE ────────────────────────────
+(function(){
+  const tools=['vectorbt','Backtrader','Alpaca','Polygon.io','Binance API','CCXT','Freqtrade','QuantConnect','Interactive Brokers','TA-Lib','Hummingbot','Zipline','pandas','NumPy','Jesse','Backtesting.py'];
+  const row=tools.map(t=>'<span class="mq-item">'+t+'</span>').join('');
+  const m1=document.getElementById('mq1'),m2=document.getElementById('mq2');
+  if(m1&&m2){m1.innerHTML=row;m2.innerHTML=row;m2.setAttribute('aria-hidden','true');}
+})();
+
+// ── NAV SCROLL ────────────────────────────────
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);
+},{passive:true});
+
+// ── COUNT-UP ──────────────────────────────────
+function runCount(el){
+  const to=+el.dataset.to||0, fmt=el.dataset.fmt, suf=el.dataset.suffix||'';
+  const dur=1400, t0=performance.now();
+  function tick(now){
+    const p=Math.min((now-t0)/dur,1);
+    const e=1-Math.pow(1-p,3);
+    let v=Math.floor(to*e);
+    el.textContent=(fmt==='k'?(v>=1000?(v/1000000).toFixed(1).replace(/\.0$/,'')+'M':v):v.toLocaleString())+suf;
+    if(p<1)requestAnimationFrame(tick);
+    else el.textContent=(fmt==='k'?(to/1000000).toFixed(1).replace(/\.0$/,'')+'M':to.toLocaleString())+suf;
+  }
+  requestAnimationFrame(tick);
+}
+
+// ── REVEAL + COUNT OBSERVERS ──────────────────
+function initObservers(){
+  const ro=new IntersectionObserver((es,o)=>{es.forEach(n=>{if(n.isIntersecting){n.target.classList.add('visible');o.unobserve(n.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+  const co=new IntersectionObserver((es,o)=>{es.forEach(n=>{if(n.isIntersecting){runCount(n.target);o.unobserve(n.target);}});},{threshold:.6});
+  document.querySelectorAll('.count').forEach(el=>co.observe(el));
+}
+
+// ── FAQ ACCORDION ─────────────────────────────
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement, a=q.nextElementSibling, open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+// ── ARTICLE FEED ──────────────────────────────
+const TAG_KW={
+  backtesting:['backtest','backtesting','vectorbt','backtrader','zipline','quantconnect','historical','simulate','strategy test','paper trade'],
+  apis:['api','binance','alpaca','polygon','ccxt','data feed','websocket','rate limit','market data','ohlcv','real-time data'],
+  python:['python','pandas','numpy','ta-lib','scikit','library','libraries','pip','jupyter','matplotlib','scipy'],
+  execution:['execution','order','broker','slippage','live trading','latency','routing','fill','oms'],
+  risk:['risk','drawdown','position sizing','var','portfolio','kelly','stop loss','hedge','volatility'],
+  opensource:['open source','freqtrade','hummingbot','jesse','github','bot','free','repository'],
+};
+const TAG_LABELS={backtesting:'Backtesting',apis:'APIs & Data',python:'Python',execution:'Execution',risk:'Risk Mgmt',opensource:'Open Source',general:'General'};
+const TAG_COLORS={
+  backtesting:{bg:'rgba(249,115,22,.12)',col:'#f97316'},
+  apis:{bg:'rgba(34,211,238,.12)',col:'#22d3ee'},
+  python:{bg:'rgba(34,197,94,.12)',col:'#22c55e'},
+  execution:{bg:'rgba(251,191,36,.12)',col:'#fbbf24'},
+  risk:{bg:'rgba(239,68,68,.12)',col:'#ef4444'},
+  opensource:{bg:'rgba(129,140,248,.12)',col:'#818cf8'},
+  general:{bg:'rgba(161,161,170,.1)',col:'#a1a1aa'},
+};
+function getTag(a){
+  const txt=((a.title||'')+(a.meta_description||a.excerpt||'')+(a.category||'')).toLowerCase();
+  for(const[t,kws]of Object.entries(TAG_KW)){if(kws.some(k=>txt.includes(k)))return t;}
+  return 'general';
+}
+function depthScore(a){const s=(a.title||'').split('').reduce((x,c)=>x+c.charCodeAt(0),0);return(s%3)+3;}
+function fmtDate(d){if(!d)return'';try{return new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}catch(e){return d;}}
+
+let allArts=[], activeFilter='all';
+
+function renderFeed(){
+  let arts=[...allArts];
+  if(activeFilter!=='all')arts=arts.filter(a=>a._tag===activeFilter);
+  arts.sort((a,b)=>(b.date_iso||b.posted_iso||b.date||b.published_date||'').localeCompare(a.date_iso||a.posted_iso||a.date||a.published_date||''));
+  const grid=document.getElementById('art-grid'), noRes=document.getElementById('no-res');
+  const lbl=TAG_LABELS[activeFilter]||'All';
+  document.getElementById('feed-title').innerHTML=activeFilter==='all'?'Latest <span class="hl">reviews.</span>':'<span class="hl">'+lbl+'</span> reviews.';
+  document.getElementById('feed-count').textContent=arts.length+' review'+(arts.length!==1?'s':'')+' - tested with real capital.';
+  if(!arts.length){grid.innerHTML='';noRes.style.display='block';return;}
+  noRes.style.display='none';
+  grid.innerHTML=arts.map(a=>{
+    const tag=a._tag||'general', tc=TAG_COLORS[tag]||TAG_COLORS.general, depth=depthScore(a);
+    const exc=(a.meta_description||a.excerpt||'').slice(0,140);
+    const bars=[1,2,3,4,5].map(i=>'<div class="dep-bar'+(i<=depth?' on':'')+'"></div>').join('');
+    const thumbHtml=a.image?'<div class="ac-thumb"><img src="../'+a.image+'" alt="" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>':'';
+    return '<a class="art-card" href="../'+a.slug+'/">'
+      +'<div class="ac-stripe" style="background:'+tc.col+'"></div>'
+      +thumbHtml
+      +'<div class="ac-body"><div class="ac-meta">'
+      +'<span class="ac-tag" style="background:'+tc.bg+';color:'+tc.col+'">'+(TAG_LABELS[tag]||'General')+'</span>'
+      +'<div class="ac-depth" title="Review depth: '+depth+'/5">'+bars+'</div></div>'
+      +'<h3 class="ac-title">'+(a.title||'Untitled')+'</h3>'
+      +(exc?'<p class="ac-exc">'+exc+'</p>':'')+'</div>'
+      +'<div class="ac-foot"><span class="ac-date">'+fmtDate(a.date||a.published_date)+'</span>'
+      +'<span class="ac-cta">read review <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>';
+  }).join('');
+}
+function updateCounts(){
+  const counts={all:allArts.length};
+  Object.keys(TAG_KW).forEach(t=>counts[t]=allArts.filter(a=>a._tag===t).length);
+  Object.entries(counts).forEach(([k,v])=>{const el=document.getElementById('fc-'+k);if(el)el.textContent=v||'0';});
+  const nc=document.getElementById('nav-cnt');if(nc)nc.textContent=allArts.length;
+}
+function setFilter(f){
+  activeFilter=f;
+  document.querySelectorAll('.ftab').forEach(t=>t.classList.toggle('active',t.dataset.f===f));
+  renderFeed();
+}
+async function loadArticles(){
+  if(!document.getElementById('art-grid'))return;
+  try{
+    const r=await fetch('./articles.json');
+    if(!r.ok)throw new Error('fetch failed');
+    const data=await r.json();
+    allArts=(Array.isArray(data)?data:[]).filter(a=>a&&a.slug&&a.title).map(a=>({...a,_tag:getTag(a)}));
+    updateCounts();
+    document.getElementById('loading-state').style.display='none';
+    document.getElementById('feed-out').style.display='block';
+    const h=(location.hash||'').replace('#','');
+    if(TAG_LABELS[h])setFilter(h);else renderFeed();
+  }catch(e){
+    document.getElementById('loading-state').innerHTML='<div class="no-res">// no reviews loaded yet.<br><span style="opacity:.55">Check back soon.</span></div>';
+  }
+}
+
+// stack cards -> filter
+document.querySelectorAll('.scard[data-go]').forEach(c=>{
+  c.addEventListener('click',e=>{e.preventDefault();setFilter(c.dataset.go);document.getElementById('feed').scrollIntoView({behavior:'smooth'});});
+});
+
+// ── NEWSLETTER ────────────────────────────────
+function nlSubscribe(){
+  const inp=document.getElementById('nl-email'), msg=document.getElementById('nl-msg');
+  const email=(inp.value||'').trim();
+  if(!email||!email.includes('@')){msg.style.color='var(--red)';msg.textContent='// error: enter a valid email address';return;}
+  msg.style.color='var(--green)';msg.textContent='// subscribed. check your inbox to confirm.';
+  inp.value='';inp.disabled=true;
+  const b=document.querySelector('.nl-btn');b.disabled=true;b.style.opacity='.5';
+}
+
+loadArticles();
+initObservers();
+</script>
+</body>
+</html>
