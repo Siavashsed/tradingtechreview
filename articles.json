@@ -90,6 +90,24 @@
     "date": ""
   },
   {
+    "title": "Designing an Event-Driven Retail Trading Stack: Signal Normalization, Backpressure, and the Agent Layer",
+    "slug": "event-driven-retail-trading-stack-architecture",
+    "meta_description": "Most retail trading bots fail on architecture, not strategy. Alex Turner on building an event-driven stack: ingest, normalization, backpressure, and the agent decision layer with rollback.",
+    "date": "April 30, 2026",
+    "date_iso": "2026-04-30",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/7876376/pexels-photo-7876376.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "category": "Trading Tools & Technology",
+    "outbound_links": [
+      "kafka.apache.org",
+      "redis.io"
+    ],
+    "posted_iso": "2026-04-30",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
     "slug": "the-business-building-train-software-not-a-course",
     "title": "I Found an Online Business Program That Acts Like Software, Not a Course",
     "meta_description": "A builder-to-builder look at Kavalsia Academy, an online business program that behaves more like a guided app than a pile of PDFs and Zoom replays.",
