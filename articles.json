@@ -167,5 +167,41 @@
     "category": "Execution",
     "date_iso": "2019-10-09",
     "date": ""
+  },
+  {
+    "title": "Real-Time Market Microstructure Analysis with Kafka: Why Stream Processing Is Non-Negotiable",
+    "slug": "kafka-stream-processing-market-microstructure",
+    "meta_description": "Alex Turner breaks down how to build real-time market microstructure analysis using Kafka and stream processing. Practical, opinionated, developer-first.",
+    "date": "June 07, 2026",
+    "date_iso": "2026-06-07",
+    "author": "Idris Bello",
+    "image": "https://images.pexels.com/photos/5831251/pexels-photo-5831251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "nber.org",
+      "confluent.io"
+    ],
+    "posted_iso": "2026-06-07",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "DORA Goes Live: What the EU's Digital Operational Resilience Act Actually Means for Trading Technology in 2024",
+    "slug": "dora-2024-trading-technology-impact",
+    "meta_description": "DORA took effect January 2024. Here's what it means for algo traders, trading tech vendors, and financial firms running automated systems.",
+    "date": "November 14, 2024",
+    "date_iso": "2024-11-14",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/9043046/pexels-photo-9043046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "eba.europa.eu",
+      "esma.europa.eu",
+      "bis.org"
+    ],
+    "posted_iso": "2026-06-07",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
