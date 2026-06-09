@@ -203,5 +203,25 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Robinhood Crashed During the March 2020 Selloff and Traders Never Forgot",
+    "slug": "robinhood-march-2020-outage-retail-trading",
+    "meta_description": "Alex Turner breaks down the Robinhood outages of March 2020, what they revealed about retail trading infrastructure, and why it changed how traders evaluate platforms.",
+    "date": "March 26, 2020",
+    "date_iso": "2020-03-26",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/6770611/pexels-photo-6770611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "blog.robinhood.com",
+      "reuters.com",
+      "wsj.com",
+      "finra.org"
+    ],
+    "posted_iso": "2026-06-09",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
