@@ -418,7 +418,7 @@ body[data-page-depth="1"] .ap > div[style*="max-width:720px;margin:20px auto"]{d
     <div class="ttr-by-main"><span class="ttr-by-name">Alex Turner</span>
     <span class="ttr-by-meta"><time datetime="2026-04-30">April 30, 2026</time> &middot; 3 min read</span></div>
   </div>
-  <figure class="ttr-hero"><img src="https://images.pexels.com/photos/7876376/pexels-photo-7876376.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Screens showing a software trading architecture and live market data." loading="lazy"><figcaption>Illustration: Tima Miroshnichenko / Pexels</figcaption></figure>
+  <figure class="ttr-hero"><img src="https://images.pexels.com/photos/7876376/pexels-photo-7876376.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Screens showing a software trading architecture and live market data." loading="lazy"><figcaption>Illustration: Tima Miroshnichenko</figcaption></figure>
   <div class="ttr-body">
     <p class="ttr-intro">I have written a lot of trading bots that lost money, and almost none of them lost it because the strategy was wrong. They lost it because the architecture underneath the strategy was naive. A polling loop that missed a fill. A blocking call that froze the whole system during a volatility spike, exactly when it needed to be fastest. A reconnect that silently dropped ticks for ninety seconds. The strategy was fine. The plumbing killed it. After enough of those, I stopped thinking like a trader writing code and started thinking like an engineer who happens to trade.</p>
     <p>The shift that fixed it was moving from a request-response mindset to an event-driven one. If you are serious about running automated strategies, this is the architecture worth understanding before you tune a single parameter.</p>
