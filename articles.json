@@ -223,5 +223,42 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "I Built a Custom OMS From Scratch. Here's What Nobody Warns You About",
+    "slug": "custom-oms-build-from-scratch",
+    "meta_description": "Alex Turner built a custom OMS from scratch and shares the real architecture decisions, hard lessons, and hidden costs most guides skip.",
+    "date": "July 01, 2026",
+    "date_iso": "2026-07-01",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/6190327/pexels-photo-6190327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "martinfowler.com",
+      "sec.gov",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-07-01",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Cboe's 0DTE Options Explosion Finally Broke the Old Risk Models in 2024",
+    "slug": "0dte-options-trading-technology-2024",
+    "meta_description": "Alex Turner on how 0DTE options volume reshaped trading technology in 2024, what broke, and what the real infrastructure cost looks like.",
+    "date": "September 06, 2024",
+    "date_iso": "2024-09-06",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/5831256/pexels-photo-5831256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "cboe.com",
+      "federalreserve.gov",
+      "sec.gov"
+    ],
+    "posted_iso": "2026-07-01",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
