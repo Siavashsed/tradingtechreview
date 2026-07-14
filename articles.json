@@ -260,5 +260,40 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Why Your News Sentiment Signal Keeps Losing to a Bloomberg Terminal",
+    "slug": "sentiment-analysis-pipelines-trade-signals",
+    "meta_description": "A trader's honest look at building sentiment analysis pipelines that turn news and social feeds into trade signals, and where they quietly break.",
+    "date": "July 13, 2026",
+    "date_iso": "2026-07-13",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/5784807/pexels-photo-5784807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "arxiv.org",
+      "reuters.com"
+    ],
+    "posted_iso": "2026-07-13",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The Day Wall Street Cut Settlement to One Business Day",
+    "slug": "t-plus-one-settlement-2024-tech",
+    "meta_description": "Reporting on the May 2024 T+1 settlement switch: what broke, who scrambled, and what it meant for trading technology and back-office tooling.",
+    "date": "December 25, 2024",
+    "date_iso": "2024-12-25",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/37605910/pexels-photo-37605910.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "dtcc.com"
+    ],
+    "posted_iso": "2026-07-13",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
