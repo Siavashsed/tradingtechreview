@@ -312,5 +312,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Learn Pine Script First. Switch to Python When It Hurts.",
+    "slug": "pine-script-first-python-later",
+    "meta_description": "Pine Script or Python first? A developer's verdict on which to learn first for trading, what each does well, and the right moment to switch.",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/7887799/pexels-photo-7887799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "github.blog",
+      "survey.stackoverflow.co",
+      "tradingview.com"
+    ],
+    "posted_iso": "2026-07-17",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
