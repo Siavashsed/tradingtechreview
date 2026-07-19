@@ -330,5 +330,22 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Screener Saw That Breakout 14 Seconds Too Late",
+    "slug": "real-time-crypto-screener-websockets-build",
+    "meta_description": "Build a real-time crypto screener with WebSockets: one socket, every symbol, sub-second updates, plus the reconnect logic that keeps it honest.",
+    "date": "July 19, 2026",
+    "date_iso": "2026-07-19",
+    "author": "Sam Nakamura",
+    "image": "https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "developers.binance.com",
+      "coingecko.com"
+    ],
+    "posted_iso": "2026-07-19",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
