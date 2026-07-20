@@ -347,5 +347,41 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Backtest Is Lying and the Math Says So",
+    "slug": "backtest-lying-math-says-so",
+    "meta_description": "Backtest vs live trading results always differ. Here is exactly where the numbers leak, with real data on costs, overfitting and execution.",
+    "date": "July 20, 2026",
+    "date_iso": "2026-07-20",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/36755611/pexels-photo-36755611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ssrn.com",
+      "ams.org",
+      "esma.europa.eu"
+    ],
+    "posted_iso": "2026-07-20",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The SEC Just Halved Settlement Time and Nobody Told Your Batch Jobs",
+    "slug": "t1-settlement-rule-2023-developer-view",
+    "meta_description": "The SEC adopted T+1 settlement in February 2023. Here's what the rule actually breaks in trading infrastructure, and which teams are already behind.",
+    "date": "September 04, 2023",
+    "date_iso": "2023-09-04",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/19506332/pexels-photo-19506332.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "dtcc.com"
+    ],
+    "posted_iso": "2026-07-20",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
