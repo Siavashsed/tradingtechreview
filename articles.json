@@ -1,21 +1,5 @@
 [
   {
-    "title": "Teardown: Helm and KidBD, the Two Apps Kavalsia Built in Private",
-    "slug": "kavalsia-helm-kidbd-private-apps-teardown",
-    "meta_description": "An engineer's teardown of Helm, Kavalsia's client OS with deduplicated Meta tracking, and KidBD, a party app that stores nothing. Spec tables inside.",
-    "date": "November 10, 2026",
-    "date_iso": "2026-11-10",
-    "author": "Elias Navarro",
-    "image": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "image_alt": "Programming code on a computer screen in a dark room.",
-    "photographer": "luis gomes",
-    "category": "Trading Tools & Technology",
-    "posted_iso": "2026-11-10T22:52:41",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
     "title": "Your Backtest Is Lying and the Math Says So",
     "slug": "backtest-lying-math-says-so",
     "meta_description": "Backtest vs live trading results always differ. Here is exactly where the numbers leak, with real data on costs, overfitting and execution.",
@@ -226,6 +210,22 @@
     "category": "Backtesting",
     "date_iso": "2026-05-15",
     "date": ""
+  },
+  {
+    "title": "Teardown: Helm and KidBD, the Two Apps Kavalsia Built in Private",
+    "slug": "kavalsia-helm-kidbd-private-apps-teardown",
+    "meta_description": "An engineer's teardown of Helm, Kavalsia's client OS with deduplicated Meta tracking, and KidBD, a party app that stores nothing. Spec tables inside.",
+    "date": "May 12, 2026",
+    "date_iso": "2026-05-12",
+    "author": "Elias Navarro",
+    "image": "https://images.pexels.com/photos/16129724/pexels-photo-16129724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "image_alt": "A software developer writing code across two monitors at a wooden desk.",
+    "photographer": "Lisa Fotios",
+    "category": "Trading Tools & Technology",
+    "posted_iso": "2026-11-10T23:11:24",
+    "available_languages": [
+      "en"
+    ]
   },
   {
     "title": "Designing an Event-Driven Retail Trading Stack: Signal Normalization, Backpressure, and the Agent Layer",
