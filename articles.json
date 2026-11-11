@@ -1,5 +1,143 @@
 [
   {
+    "title": "Teardown: Helm and KidBD, the Two Apps Kavalsia Built in Private",
+    "slug": "kavalsia-helm-kidbd-private-apps-teardown",
+    "meta_description": "An engineer's teardown of Helm, Kavalsia's client OS with deduplicated Meta tracking, and KidBD, a party app that stores nothing. Spec tables inside.",
+    "date": "November 10, 2026",
+    "date_iso": "2026-11-10",
+    "author": "Elias Navarro",
+    "image": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "image_alt": "Programming code on a computer screen in a dark room.",
+    "photographer": "luis gomes",
+    "category": "Trading Tools & Technology",
+    "posted_iso": "2026-11-10T22:52:41",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Your Backtest Is Lying and the Math Says So",
+    "slug": "backtest-lying-math-says-so",
+    "meta_description": "Backtest vs live trading results always differ. Here is exactly where the numbers leak, with real data on costs, overfitting and execution.",
+    "date": "July 20, 2026",
+    "date_iso": "2026-07-20",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/36755611/pexels-photo-36755611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ssrn.com",
+      "ams.org",
+      "esma.europa.eu"
+    ],
+    "posted_iso": "2026-07-20",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Your Screener Saw That Breakout 14 Seconds Too Late",
+    "slug": "real-time-crypto-screener-websockets-build",
+    "meta_description": "Build a real-time crypto screener with WebSockets: one socket, every symbol, sub-second updates, plus the reconnect logic that keeps it honest.",
+    "date": "July 19, 2026",
+    "date_iso": "2026-07-19",
+    "author": "Sam Nakamura",
+    "image": "https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "developers.binance.com",
+      "coingecko.com"
+    ],
+    "posted_iso": "2026-07-19",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Learn Pine Script First. Switch to Python When It Hurts.",
+    "slug": "pine-script-first-python-later",
+    "meta_description": "Pine Script or Python first? A developer's verdict on which to learn first for trading, what each does well, and the right moment to switch.",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/7887799/pexels-photo-7887799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "github.blog",
+      "survey.stackoverflow.co",
+      "tradingview.com"
+    ],
+    "posted_iso": "2026-07-17",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Binance API Bans Are Almost Always Self-Inflicted. Here's the Fix",
+    "slug": "binance-api-without-rate-limits",
+    "meta_description": "Getting HTTP 429 or 418 from Binance? The real fix isn't slowing down randomly. Read the weight headers, use WebSockets, and stop the IP bans for good.",
+    "date": "July 15, 2026",
+    "date_iso": "2026-07-15",
+    "author": "Bryce Donlan",
+    "image": "https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "developers.binance.com",
+      "docs.ccxt.com"
+    ],
+    "posted_iso": "2026-07-15",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Why Your News Sentiment Signal Keeps Losing to a Bloomberg Terminal",
+    "slug": "sentiment-analysis-pipelines-trade-signals",
+    "meta_description": "A trader's honest look at building sentiment analysis pipelines that turn news and social feeds into trade signals, and where they quietly break.",
+    "date": "July 13, 2026",
+    "date_iso": "2026-07-13",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/5784807/pexels-photo-5784807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "arxiv.org",
+      "reuters.com"
+    ],
+    "posted_iso": "2026-07-13",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "I Built a Custom OMS From Scratch. Here's What Nobody Warns You About",
+    "slug": "custom-oms-build-from-scratch",
+    "meta_description": "Alex Turner built a custom OMS from scratch and shares the real architecture decisions, hard lessons, and hidden costs most guides skip.",
+    "date": "July 01, 2026",
+    "date_iso": "2026-07-01",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/6190327/pexels-photo-6190327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "martinfowler.com",
+      "sec.gov",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-07-01",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Real-Time Market Microstructure Analysis with Kafka: Why Stream Processing Is Non-Negotiable",
+    "slug": "kafka-stream-processing-market-microstructure",
+    "meta_description": "Alex Turner breaks down how to build real-time market microstructure analysis using Kafka and stream processing. Practical, opinionated, developer-first.",
+    "date": "June 07, 2026",
+    "date_iso": "2026-06-07",
+    "author": "Idris Bello",
+    "image": "https://images.pexels.com/photos/5831251/pexels-photo-5831251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "nber.org",
+      "confluent.io"
+    ],
+    "posted_iso": "2026-06-07",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
     "slug": "risk-management-system-prevent-catastrophic-losses",
     "title": "How to Build a Risk Management System That Actually Prevents Catastrophic Losses",
     "meta_description": "Alex Turner breaks down how to build a risk management system that stops catastrophic trading losses before they happen. Practical, technical, and battle-tested.",
@@ -119,6 +257,62 @@
     "posted_iso": "2026-06-03T02:53:12.624699"
   },
   {
+    "title": "The Day Wall Street Cut Settlement to One Business Day",
+    "slug": "t-plus-one-settlement-2024-tech",
+    "meta_description": "Reporting on the May 2024 T+1 settlement switch: what broke, who scrambled, and what it meant for trading technology and back-office tooling.",
+    "date": "December 25, 2024",
+    "date_iso": "2024-12-25",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/37605910/pexels-photo-37605910.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "dtcc.com"
+    ],
+    "posted_iso": "2026-07-13",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "DORA Goes Live: What the EU's Digital Operational Resilience Act Actually Means for Trading Technology in 2024",
+    "slug": "dora-2024-trading-technology-impact",
+    "meta_description": "DORA took effect January 2024. Here's what it means for algo traders, trading tech vendors, and financial firms running automated systems.",
+    "date": "November 14, 2024",
+    "date_iso": "2024-11-14",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/9043046/pexels-photo-9043046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "eba.europa.eu",
+      "esma.europa.eu",
+      "bis.org"
+    ],
+    "posted_iso": "2026-06-07",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Cboe's 0DTE Options Explosion Finally Broke the Old Risk Models in 2024",
+    "slug": "0dte-options-trading-technology-2024",
+    "meta_description": "Alex Turner on how 0DTE options volume reshaped trading technology in 2024, what broke, and what the real infrastructure cost looks like.",
+    "date": "September 06, 2024",
+    "date_iso": "2024-09-06",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/5831256/pexels-photo-5831256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "cboe.com",
+      "federalreserve.gov",
+      "sec.gov"
+    ],
+    "posted_iso": "2026-07-01",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
     "slug": "ibkr-desktop-2023-algo-traders",
     "title": "Interactive Brokers Launches IBKR Desktop in 2023: What It Actually Means for Algo Traders",
     "meta_description": "IBKR Desktop launched in 2023 and changed how algo traders interact with one of the best execution brokers. Here&#x27;s an honest technical breakdown.",
@@ -127,6 +321,24 @@
     "category": "APIs &amp; Data",
     "date_iso": "2023-10-09",
     "date": ""
+  },
+  {
+    "title": "The SEC Just Halved Settlement Time and Nobody Told Your Batch Jobs",
+    "slug": "t1-settlement-rule-2023-developer-view",
+    "meta_description": "The SEC adopted T+1 settlement in February 2023. Here's what the rule actually breaks in trading infrastructure, and which teams are already behind.",
+    "date": "September 04, 2023",
+    "date_iso": "2023-09-04",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/19506332/pexels-photo-19506332.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "dtcc.com"
+    ],
+    "posted_iso": "2026-07-20",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   },
   {
     "slug": "sec-marketing-rule-2022-algo-traders",
@@ -159,52 +371,6 @@
     "date": ""
   },
   {
-    "slug": "td-ameritrade-thinkorswim-api-2019",
-    "title": "TD Ameritrade&#x27;s thinkorswim API Opening in 2019 Changed What Retail Algo Trading Looks Like",
-    "meta_description": "TD Ameritrade opened its thinkorswim API to retail traders in 2019. Here&#x27;s what it meant, what actually worked, and where it fell short.",
-    "image": "https://images.pexels.com/photos/4910951/pexels-photo-4910951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "author": "Siavash Sadighi",
-    "category": "Execution",
-    "date_iso": "2019-10-09",
-    "date": ""
-  },
-  {
-    "title": "Real-Time Market Microstructure Analysis with Kafka: Why Stream Processing Is Non-Negotiable",
-    "slug": "kafka-stream-processing-market-microstructure",
-    "meta_description": "Alex Turner breaks down how to build real-time market microstructure analysis using Kafka and stream processing. Practical, opinionated, developer-first.",
-    "date": "June 07, 2026",
-    "date_iso": "2026-06-07",
-    "author": "Idris Bello",
-    "image": "https://images.pexels.com/photos/5831251/pexels-photo-5831251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "nber.org",
-      "confluent.io"
-    ],
-    "posted_iso": "2026-06-07",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "DORA Goes Live: What the EU's Digital Operational Resilience Act Actually Means for Trading Technology in 2024",
-    "slug": "dora-2024-trading-technology-impact",
-    "meta_description": "DORA took effect January 2024. Here's what it means for algo traders, trading tech vendors, and financial firms running automated systems.",
-    "date": "November 14, 2024",
-    "date_iso": "2024-11-14",
-    "author": "Alex Turner",
-    "image": "https://images.pexels.com/photos/9043046/pexels-photo-9043046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "eba.europa.eu",
-      "esma.europa.eu",
-      "bis.org"
-    ],
-    "posted_iso": "2026-06-07",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
     "title": "Robinhood Crashed During the March 2020 Selloff and Traders Never Forgot",
     "slug": "robinhood-march-2020-outage-retail-trading",
     "meta_description": "Alex Turner breaks down the Robinhood outages of March 2020, what they revealed about retail trading infrastructure, and why it changed how traders evaluate platforms.",
@@ -225,163 +391,13 @@
     ]
   },
   {
-    "title": "I Built a Custom OMS From Scratch. Here's What Nobody Warns You About",
-    "slug": "custom-oms-build-from-scratch",
-    "meta_description": "Alex Turner built a custom OMS from scratch and shares the real architecture decisions, hard lessons, and hidden costs most guides skip.",
-    "date": "July 01, 2026",
-    "date_iso": "2026-07-01",
-    "author": "Alex Turner",
-    "image": "https://images.pexels.com/photos/6190327/pexels-photo-6190327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "martinfowler.com",
-      "sec.gov",
-      "academic.oup.com"
-    ],
-    "posted_iso": "2026-07-01",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Cboe's 0DTE Options Explosion Finally Broke the Old Risk Models in 2024",
-    "slug": "0dte-options-trading-technology-2024",
-    "meta_description": "Alex Turner on how 0DTE options volume reshaped trading technology in 2024, what broke, and what the real infrastructure cost looks like.",
-    "date": "September 06, 2024",
-    "date_iso": "2024-09-06",
-    "author": "Alex Turner",
-    "image": "https://images.pexels.com/photos/5831256/pexels-photo-5831256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "cboe.com",
-      "federalreserve.gov",
-      "sec.gov"
-    ],
-    "posted_iso": "2026-07-01",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Why Your News Sentiment Signal Keeps Losing to a Bloomberg Terminal",
-    "slug": "sentiment-analysis-pipelines-trade-signals",
-    "meta_description": "A trader's honest look at building sentiment analysis pipelines that turn news and social feeds into trade signals, and where they quietly break.",
-    "date": "July 13, 2026",
-    "date_iso": "2026-07-13",
-    "author": "Alex Turner",
-    "image": "https://images.pexels.com/photos/5784807/pexels-photo-5784807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "arxiv.org",
-      "reuters.com"
-    ],
-    "posted_iso": "2026-07-13",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "The Day Wall Street Cut Settlement to One Business Day",
-    "slug": "t-plus-one-settlement-2024-tech",
-    "meta_description": "Reporting on the May 2024 T+1 settlement switch: what broke, who scrambled, and what it meant for trading technology and back-office tooling.",
-    "date": "December 25, 2024",
-    "date_iso": "2024-12-25",
-    "author": "Alex Turner",
-    "image": "https://images.pexels.com/photos/37605910/pexels-photo-37605910.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "sec.gov",
-      "dtcc.com"
-    ],
-    "posted_iso": "2026-07-13",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Binance API Bans Are Almost Always Self-Inflicted. Here's the Fix",
-    "slug": "binance-api-without-rate-limits",
-    "meta_description": "Getting HTTP 429 or 418 from Binance? The real fix isn't slowing down randomly. Read the weight headers, use WebSockets, and stop the IP bans for good.",
-    "date": "July 15, 2026",
-    "date_iso": "2026-07-15",
-    "author": "Bryce Donlan",
-    "image": "https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "developers.binance.com",
-      "docs.ccxt.com"
-    ],
-    "posted_iso": "2026-07-15",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Learn Pine Script First. Switch to Python When It Hurts.",
-    "slug": "pine-script-first-python-later",
-    "meta_description": "Pine Script or Python first? A developer's verdict on which to learn first for trading, what each does well, and the right moment to switch.",
-    "date": "July 17, 2026",
-    "date_iso": "2026-07-17",
-    "author": "Alex Turner",
-    "image": "https://images.pexels.com/photos/7887799/pexels-photo-7887799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "github.blog",
-      "survey.stackoverflow.co",
-      "tradingview.com"
-    ],
-    "posted_iso": "2026-07-17",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Your Screener Saw That Breakout 14 Seconds Too Late",
-    "slug": "real-time-crypto-screener-websockets-build",
-    "meta_description": "Build a real-time crypto screener with WebSockets: one socket, every symbol, sub-second updates, plus the reconnect logic that keeps it honest.",
-    "date": "July 19, 2026",
-    "date_iso": "2026-07-19",
-    "author": "Sam Nakamura",
-    "image": "https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "developers.binance.com",
-      "coingecko.com"
-    ],
-    "posted_iso": "2026-07-19",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Your Backtest Is Lying and the Math Says So",
-    "slug": "backtest-lying-math-says-so",
-    "meta_description": "Backtest vs live trading results always differ. Here is exactly where the numbers leak, with real data on costs, overfitting and execution.",
-    "date": "July 20, 2026",
-    "date_iso": "2026-07-20",
-    "author": "Alex Turner",
-    "image": "https://images.pexels.com/photos/36755611/pexels-photo-36755611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "ssrn.com",
-      "ams.org",
-      "esma.europa.eu"
-    ],
-    "posted_iso": "2026-07-20",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "The SEC Just Halved Settlement Time and Nobody Told Your Batch Jobs",
-    "slug": "t1-settlement-rule-2023-developer-view",
-    "meta_description": "The SEC adopted T+1 settlement in February 2023. Here's what the rule actually breaks in trading infrastructure, and which teams are already behind.",
-    "date": "September 04, 2023",
-    "date_iso": "2023-09-04",
-    "author": "Alex Turner",
-    "image": "https://images.pexels.com/photos/19506332/pexels-photo-19506332.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "sec.gov",
-      "dtcc.com"
-    ],
-    "posted_iso": "2026-07-20",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
+    "slug": "td-ameritrade-thinkorswim-api-2019",
+    "title": "TD Ameritrade&#x27;s thinkorswim API Opening in 2019 Changed What Retail Algo Trading Looks Like",
+    "meta_description": "TD Ameritrade opened its thinkorswim API to retail traders in 2019. Here&#x27;s what it meant, what actually worked, and where it fell short.",
+    "image": "https://images.pexels.com/photos/4910951/pexels-photo-4910951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "author": "Siavash Sadighi",
+    "category": "Execution",
+    "date_iso": "2019-10-09",
+    "date": ""
   }
 ]
