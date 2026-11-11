@@ -15,7 +15,8 @@
     "posted_iso": "2026-07-20",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "Your Screener Saw That Breakout 14 Seconds Too Late",
@@ -32,7 +33,8 @@
     "posted_iso": "2026-07-19",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "APIs & Data"
   },
   {
     "title": "Learn Pine Script First. Switch to Python When It Hurts.",
@@ -50,7 +52,8 @@
     "posted_iso": "2026-07-17",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "Binance API Bans Are Almost Always Self-Inflicted. Here's the Fix",
@@ -67,7 +70,8 @@
     "posted_iso": "2026-07-15",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "APIs & Data"
   },
   {
     "title": "Why Your News Sentiment Signal Keeps Losing to a Bloomberg Terminal",
@@ -84,7 +88,8 @@
     "posted_iso": "2026-07-13",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "I Built a Custom OMS From Scratch. Here's What Nobody Warns You About",
@@ -102,7 +107,8 @@
     "posted_iso": "2026-07-01",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "Real-Time Market Microstructure Analysis with Kafka: Why Stream Processing Is Non-Negotiable",
@@ -119,7 +125,8 @@
     "posted_iso": "2026-06-07",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "slug": "risk-management-system-prevent-catastrophic-losses",
@@ -272,7 +279,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "title": "DORA Goes Live: What the EU's Digital Operational Resilience Act Actually Means for Trading Technology in 2024",
@@ -291,7 +299,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "APIs & Data"
   },
   {
     "title": "Cboe's 0DTE Options Explosion Finally Broke the Old Risk Models in 2024",
@@ -310,7 +319,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "slug": "ibkr-desktop-2023-algo-traders",
@@ -338,7 +348,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Risk Management"
   },
   {
     "slug": "sec-marketing-rule-2022-algo-traders",
@@ -388,7 +399,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Execution"
   },
   {
     "slug": "td-ameritrade-thinkorswim-api-2019",
