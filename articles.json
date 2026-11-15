@@ -411,5 +411,40 @@
     "category": "Execution",
     "date_iso": "2019-10-09",
     "date": ""
+  },
+  {
+    "title": "Your Trading Bot Belongs in the Cloud, and Latency Isn't Why",
+    "slug": "cloud-vs-local-algo-execution",
+    "meta_description": "Cloud vs local execution for algorithmic strategies: why uptime and ops matter more than latency for retail traders, plus the hybrid setup I run.",
+    "date": "November 15, 2026",
+    "date_iso": "2026-11-15",
+    "author": "Siavash Sadighi",
+    "image": "",
+    "outbound_links": [
+      "aws.amazon.com",
+      "sec.gov"
+    ],
+    "posted_iso": "2026-11-15",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The T+1 Switch Broke My Settlement Code Before Breakfast",
+    "slug": "t-plus-one-settlement-algo-traders-2024",
+    "meta_description": "The US moved to T+1 settlement on May 28, 2024. Here's what it broke in retail algo trading code, how the industry handled it, and what to fix now.",
+    "date": "October 01, 2024",
+    "date_iso": "2024-10-01",
+    "author": "Bryce Donlan",
+    "image": "https://images.pexels.com/photos/5833273/pexels-photo-5833273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "dtcc.com"
+    ],
+    "posted_iso": "2026-11-15",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
