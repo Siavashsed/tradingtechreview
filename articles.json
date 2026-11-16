@@ -446,5 +446,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Trading Bot Aced the Backtest, Then Lost $2,140 in Eleven Days",
+    "slug": "debug-trading-bot-fails-live",
+    "meta_description": "A trading bot that worked in backtests but fails live usually has a simulation bug, not a strategy bug. How to find it by diffing event logs.",
+    "date": "November 16, 2026",
+    "date_iso": "2026-11-16",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/4709289/pexels-photo-4709289.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "papers.ssrn.com",
+      "ams.org",
+      "sec.gov"
+    ],
+    "posted_iso": "2026-11-16",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
