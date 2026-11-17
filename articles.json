@@ -464,5 +464,24 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Python Position Sizing Engine Should Treat Kelly as a Ceiling",
+    "slug": "python-kelly-volatility-position-sizing",
+    "meta_description": "Build a Python position sizing engine with the Kelly criterion as a cap and volatility targeting as the driver. Real code, real drawdowns.",
+    "date": "November 17, 2026",
+    "date_iso": "2026-11-17",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/16018144/pexels-photo-16018144.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "princeton.edu",
+      "nber.org",
+      "papers.ssrn.com",
+      "sciencedirect.com"
+    ],
+    "posted_iso": "2026-11-17",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
