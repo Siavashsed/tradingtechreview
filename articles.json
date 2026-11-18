@@ -483,5 +483,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Walk-Forward Optimization Killed My Best Strategy, and It Was Right",
+    "slug": "walk-forward-optimization-stop-curve-fitting",
+    "meta_description": "Walk-forward optimization explained by a working algo trader: window settings, efficiency thresholds, and the traps that still let curve-fitting slip through.",
+    "date": "November 18, 2026",
+    "date_iso": "2026-11-18",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/38947200/pexels-photo-38947200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ssrn.com",
+      "ams.org",
+      "wiley.com"
+    ],
+    "posted_iso": "2026-11-18",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
