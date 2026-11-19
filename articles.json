@@ -501,5 +501,25 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "I Run Real Money on IBKR, Prototype on Alpaca, and Rarely Touch Tradier",
+    "slug": "broker-api-ibkr-alpaca-tradier",
+    "meta_description": "Broker API for algorithmic trading: an engineer compares Interactive Brokers, Alpaca and Tradier on fills, data, rate limits and real failure modes.",
+    "date": "November 19, 2026",
+    "date_iso": "2026-11-19",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "interactivebrokers.com",
+      "docs.alpaca.markets",
+      "docs.tradier.com",
+      "papers.ssrn.com",
+      "sec.gov"
+    ],
+    "posted_iso": "2026-11-19",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
