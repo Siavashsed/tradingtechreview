@@ -521,5 +521,24 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Streamlit Trading Dashboard Should Refresh Less Than You Think",
+    "slug": "streamlit-trading-dashboard-live-market-data",
+    "meta_description": "Build a trading dashboard with Python, Streamlit and live market data. Cache quotes, refresh only the chart, and keep order logic away from the UI.",
+    "date": "November 20, 2026",
+    "date_iso": "2026-11-20",
+    "author": "Sam Nakamura",
+    "image": "https://images.pexels.com/photos/5833860/pexels-photo-5833860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "github.com",
+      "docs.alpaca.markets",
+      "docs.streamlit.io",
+      "onlinelibrary.wiley.com"
+    ],
+    "posted_iso": "2026-11-20",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
