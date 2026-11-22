@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://siavashsed.github.io/tradingtechreview/</loc><lastmod>2026-11-21</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/about/</loc><lastmod>2026-11-21</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/contact/</loc><lastmod>2026-11-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/privacy/</loc><lastmod>2026-11-21</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/about/</loc><lastmod>2026-11-22</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/contact/</loc><lastmod>2026-11-22</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/privacy/</loc><lastmod>2026-11-22</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/backtest-lying-math-says-so/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets-build/</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/pine-script-first-python-later/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -41,4 +41,6 @@
   <url><loc>https://siavashsed.github.io/tradingtechreview/broker-api-ibkr-alpaca-tradier/</loc><lastmod>2026-11-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/streamlit-trading-dashboard-live-market-data/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/telegram-discord-trade-alerts/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/monitor-live-trading-bot-grafana-telegram/</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/t-plus-1-settlement-2024-algo-traders/</loc><lastmod>2024-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
