@@ -558,5 +558,44 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Trading Bot's Dashboard Matters Less Than Its Silence Alert",
+    "slug": "monitor-live-trading-bot-grafana-telegram",
+    "meta_description": "Monitoring a live trading bot with Grafana, Prometheus and Telegram alerts: what to export, which rules page you, and why silence is the real alarm.",
+    "date": "November 22, 2026",
+    "date_iso": "2026-11-22",
+    "author": "Sam Nakamura",
+    "image": "https://images.pexels.com/photos/27641095/pexels-photo-27641095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sre.google",
+      "sec.gov",
+      "prometheus.io",
+      "core.telegram.org",
+      "grafana.com"
+    ],
+    "posted_iso": "2026-11-22",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "T+1 Went Live in May 2024 and Broke My Settlement Assumptions",
+    "slug": "t-plus-1-settlement-2024-algo-traders",
+    "meta_description": "The US moved to T+1 settlement on May 28, 2024. Here's what it broke in a retail algo stack, who got hurt, and what to fix in your code.",
+    "date": "May 20, 2024",
+    "date_iso": "2024-05-20",
+    "author": "Idris Bello",
+    "image": "https://images.pexels.com/photos/4911663/pexels-photo-4911663.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "dtcc.com",
+      "gov.uk"
+    ],
+    "posted_iso": "2026-11-22",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
