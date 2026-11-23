@@ -597,5 +597,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Stop Order Is a Market Order in Disguise",
+    "slug": "order-types-algo-traders-limit-stop-ioc-iceberg",
+    "meta_description": "Limit, stop, IOC and iceberg orders explained for algo traders, with code, failure modes and the mistakes that cost real money.",
+    "date": "November 23, 2026",
+    "date_iso": "2026-11-23",
+    "author": "Idris Bello",
+    "image": "https://images.pexels.com/photos/39212596/pexels-photo-39212596.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "interactivebrokers.com",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-11-23",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
