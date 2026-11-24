@@ -615,5 +615,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Why My Trading Bots Run in Docker After Knight's $440M Mistake",
+    "slug": "docker-for-traders-reproducible-environments",
+    "meta_description": "Docker for traders explained by someone who lost money without it. Pin versions, tag images by commit, and make live match backtest.",
+    "date": "November 24, 2026",
+    "date_iso": "2026-11-24",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/6804581/pexels-photo-6804581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sec.gov",
+      "stackoverflow.co",
+      "docs.docker.com"
+    ],
+    "posted_iso": "2026-11-24",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
