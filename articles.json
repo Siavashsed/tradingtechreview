@@ -633,5 +633,25 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Trading Bot Doesn't Need Withdrawal Rights, Ever",
+    "slug": "secure-trading-bot-api-keys",
+    "meta_description": "Learn how to secure API keys and withdrawal permissions for trading bots: IP whitelisting, key scoping, and secrets storage that actually holds up.",
+    "date": "November 25, 2026",
+    "date_iso": "2026-11-25",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/706500/pexels-photo-706500.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "chainalysis.com",
+      "gitguardian.com",
+      "owasp.org",
+      "binance.com",
+      "coindesk.com"
+    ],
+    "posted_iso": "2026-11-25",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
