@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://siavashsed.github.io/tradingtechreview/</loc><lastmod>2026-11-26</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/about/</loc><lastmod>2026-11-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/contact/</loc><lastmod>2026-11-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://siavashsed.github.io/tradingtechreview/privacy/</loc><lastmod>2026-11-26</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/</loc><lastmod>2026-11-27</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/about/</loc><lastmod>2026-11-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/contact/</loc><lastmod>2026-11-27</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/privacy/</loc><lastmod>2026-11-27</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/backtest-lying-math-says-so/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/real-time-crypto-screener-websockets-build/</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/pine-script-first-python-later/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -47,4 +47,5 @@
   <url><loc>https://siavashsed.github.io/tradingtechreview/docker-for-traders-reproducible-environments/</loc><lastmod>2026-11-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/secure-trading-bot-api-keys/</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/tradingtechreview/machine-learning-trading-signals-pitfalls/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://siavashsed.github.io/tradingtechreview/software-engineer-to-full-time-trader-tools/</loc><lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
