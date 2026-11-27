@@ -671,5 +671,22 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "I Quit My Dev Job to Trade. These Tools Saved Me",
+    "slug": "software-engineer-to-full-time-trader-tools",
+    "meta_description": "What a software engineer turned full-time trader wishes he'd set up on day one: a journal database, honest backtests, and tooling that tells you when you're wrong.",
+    "date": "November 27, 2026",
+    "date_iso": "2026-11-27",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/39295600/pexels-photo-39295600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "papers.ssrn.com",
+      "finra.org"
+    ],
+    "posted_iso": "2026-11-27",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
