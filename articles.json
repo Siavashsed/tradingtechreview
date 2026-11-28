@@ -688,5 +688,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Vectorbt Beats Backtrader for Research, and Nothing Else Is Close",
+    "slug": "best-python-backtesting-libraries-compared",
+    "meta_description": "Which Python backtesting library fits your strategy? A working trader compares vectorbt, backtesting.py, backtrader and NautilusTrader, with real trade-offs.",
+    "date": "November 28, 2026",
+    "date_iso": "2026-11-28",
+    "author": "Alex Turner",
+    "image": "https://images.pexels.com/photos/5380651/pexels-photo-5380651.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ams.org",
+      "github.com",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-11-28",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
